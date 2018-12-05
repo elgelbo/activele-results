@@ -32,7 +32,7 @@ var options = {
     }
   },
   // Rendering options
-  "base": "file:///C:/Users/mgelbman/Desktop/node/activeLE-results/src", // Base path that's used to load files (images, css, js) when they aren't referenced using a host
+  "base": "file:///C:/Users/mgelbman/Desktop/node/activeLE-results/src/", // Base path that's used to load files (images, css, js) when they aren't referenced using a host
 }
 
 const createPDF = (goods) => {
