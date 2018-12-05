@@ -15,11 +15,11 @@
     },
   
     "header": {
-      "height": "0.75in",
+      "height": "0.5in",
       "contents": '<div style="text-align: center;">ActiveLE Text Message Survey Results</div>'
     },
     "footer": {
-      "height": "0.7in",
+      "height": "0.5in",
       "contents": {
         default: '<span style="color: #444;">Page {{page}} of {{pages}}</span>', // fallback value
       }

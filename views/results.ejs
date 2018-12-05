@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="./test.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <h1>   YO <%- JSON.stringify(money.count) %>
-    </h1>  
+
+  <div class="container summary">
+
+    <div class="title">
+      <h1>Results Summary</h1>
+      <h3>Active LE Text Message Survey</h3>
+    </div>
+    <div class="results-summary">
+      <p>
+        Total Responses = <span>
+          <%- JSON.stringify(clean.total) %></span></p>
+      <p>
+        Complete =
+        <span>
+          <%- JSON.stringify(clean.complete.count) %>
+          <span>
+            (<%- clean.complete.percent %> %)
+          </span>
+        </span>
+      </p>
+      <p>
+        Spanish =
+        <span>
+          <%- JSON.stringify(clean.spanish.count) %>
+          <span>
+            (<%- clean.spanish.percent %> %)
+          </span>
+        </span>
+      </p>
+    </div>
+  </div>
+  <div class="container results">
+    <% money.surveys.forEach(function(drink, index) { %>
+    <div class="result">
+      <div class="title">
+        <h1>Response #
+          <%= index+1 %>
+        </h1>
+        <h3>Active LE Text Message Survey</h3>
+      </div>
+      <p>
+        <%= drink.phone %>
+      </p>
+      <p>
+        <%= drink.complete %>
+      </p>
+      <p>
+        <%= drink.spanish %>
+      </p>
+    </div>
+
+    <% }); %>
+  </div>
 </body>
+
 </html>
