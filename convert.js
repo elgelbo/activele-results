@@ -37,7 +37,7 @@ const ejsSingle = async (money, questions) => {
 const ejsSummary = async (money, clean, questions) => {
     var htmlContent = fs.readFileSync(__dirname + '/views/summary.ejs', 'utf8');
     var htmlRenderized = ejs.render(htmlContent, { filename: 'summary.ejs', surveys: money.surveys, summary: clean, questions: questions });
-    writeFileStream('./dist/summary.html', htmlRenderized);
+    writeFileStream('./dist/index.html', htmlRenderized);
     return htmlRenderized;
   }
 
