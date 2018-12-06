@@ -45,7 +45,7 @@ function writeFileStream(filePath, data) {
 }
 
 const createPDF = (goods) => {
-  pdf.create(goods, options).toFile('./output/pdf/results.pdf', function (err, res) {
+  pdf.create(goods, options).toFile('./pdf/results.pdf', function (err, res) {
     if (err) return console.log(err);
     console.log(res); // { filename: '/app/businesscard.pdf' }
   });
@@ -54,7 +54,7 @@ const createPDF = (goods) => {
 const ejsMaker = async (money, clean) => {
   var htmlContent = fs.readFileSync(__dirname + '/views/results.ejs', 'utf8');
   var htmlRenderized = ejs.render(htmlContent, { filename: 'results.ejs', money: money, clean: clean });
-  writeFileStream('./output/html/results.html', htmlRenderized);
+  writeFileStream('./src/results.html', htmlRenderized);
   return htmlRenderized;
 }
 

@@ -1,6 +1,6 @@
 /* roboto-regular - latin_latin-ext */
 @font-face {
-  font-family: 'Roboto-Regular';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/roboto-v18-latin_latin-ext-regular.eot'); /* IE9 Compat Modes */
@@ -44,7 +44,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Roboto-Regular", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+  font-family: "Roboto", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
   Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
   font-style: normal;
@@ -58,13 +58,42 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+
+h1, h2, h3 {
+  font-weight: 900;
+}
+h4, h5, h6 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
 .summary {
   line-height: 1;
 }
 
-/* BUILDING BLOCKS */
+.summary-question {
+  margin-top: 2em;
+  max-width: 550px;
+}
+
+.summary-question h2 {
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
 .title {
 border-bottom: solid 2px black;
+}
+
+#map {
+  width: 650px;
+  height: 500px;
+}
+#map5 {
+  width: 650px;
+  height: 500px;
 }
 /* .container {
   padding-top: 4.5rem;
@@ -83,13 +112,14 @@ border-bottom: solid 2px black;
   color: grey;
 }
 
-
-
 @media print {
   .summary {
     page-break-after:always;
   }
   .result {
     page-break-after:always;
+  }
+  .leaflet-control-container {
+   visibility: hidden; 
   }
 }
