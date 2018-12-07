@@ -1,5 +1,8 @@
 var fs = require('fs');
 const ejs = require('ejs');
+var axios = require('axios')
+const endPoint = 'http://activele-survey.herokuapp.com/api/results'
+const summary = require('./summary');
 var pdf = require('html-pdf');
 const mapOptions = require('./config/pdfOptions_map')
 const esriResults = require('./esriResults')
@@ -12,10 +15,10 @@ function writeFileStream(filePath, data) {
   })
 }
 
-const ejsMap = async (esriResults) => {
-  var htmlContent = await fs.readFileSync(__dirname + '/views/map.ejs', 'utf8');
-  var htmlRenderized = await ejs.render(htmlContent, { esriResults: esriResults });
-  writeFileStream('./dist/map.html', htmlRenderized);
+const ejsAssemble = async (esriResults, clean) => {
+  var htmlContent = await fs.readFileSync(__dirname + '/views/index.ejs', 'utf8');
+  var htmlRenderized = await ejs.render(htmlContent, { filename: __dirname + '/views/partials/map.ejs', filename2: __dirname + '/views/partials/textSummary.ejs', esriResults: esriResults, summary: clean });
+  writeFileStream('./dist/index.html', htmlRenderized);
   // return htmlRenderized;
   // pdf.create(htmlRenderized, mapOptions).toFile('./pdf/map.pdf', function (err, res) {
   //   if (err) return console.log(err);
@@ -25,7 +28,9 @@ const ejsMap = async (esriResults) => {
 
 const go = async () => {
   try {
-    ejsMap(esriResults);
+    const response = await axios.get(endPoint);
+    const clean = summary.pipeline(response.data.surveys);
+    ejsAssemble(esriResults, clean);
   } catch (error) {
     console.error(error);
   }

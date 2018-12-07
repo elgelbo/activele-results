@@ -1,1 +1,42 @@
-<!-- <%- include('user/show', {user: user}); %> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+  <link rel="stylesheet" href="../dist/bootstrap.css">
+  <link rel="stylesheet" href="../dist/style.css">
+</head>
+
+<body>
+  <ul class="nav justify-content-center basic">
+    <li class="nav-item">
+      <a class="nav-link" href="#esri-map">Summary of Map Comments</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#text-summary">Summary of Text Message Survey</a>
+    </li>
+  </ul>
+  <div class="container">
+    <div class="result map-summary">
+      <div class="title">
+        <h1>Summary of Map Comments</h1>
+      </div>
+    </div>
+    <%- include(filename, {esriResults: esriResults}); %>
+    <div class="result text-summary" name="text-summary" id="text-summary">
+      <div class="title">
+        <h1>Summary of Text Message Survey</h1>
+      </div>
+    </div>
+    <%- include(filename2, {summary: summary}); %>
+  </div>
+</body>
+
+</html>

@@ -69,7 +69,21 @@ h4{
 h5, h6 {
   margin-top: 1em;
   font-size: 1em;
-  font-weight: grey;
+  color: grey;
+}
+
+.basic {
+  background-color: slategray;
+  padding: 0.75em;
+  box-shadow: 5px orange;
+  margin-bottom: 3em;
+}
+
+.basic a {
+  font-weight: 900;
+  font-size: 1.25em;
+  color: white;
+  text-transform: uppercase;
 }
 
 /* .summary-question h4 {
