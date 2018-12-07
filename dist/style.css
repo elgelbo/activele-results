@@ -62,12 +62,17 @@ html {
 h1, h2, h3 {
   font-weight: 900;
 }
-h4, h5, h6 {
+h4{
   font-size: 1.25em;
-  font-weight: bold;
+  font-weight: grey;
+}
+h5, h6 {
+  margin-top: 1em;
+  font-size: 1em;
+  font-weight: grey;
 }
 
-.summary-question h4 {
+/* .summary-question h4 {
   font-size: 1.5em;
 }
 
@@ -82,36 +87,86 @@ h4, h5, h6 {
   font-style: normal;
   font-size: 2em;
   margin-bottom: 0.5em;
+} */
+.result h4 {
+  color: grey;
+}
+.title {
+  border-bottom: solid 2px black;
 }
 
-.title {
-border-bottom: solid 2px black;
+.result {
+  /* width indcluded for individual responses fix to handle with class */
+  /* width: 600px; */
+  margin-top: 2em;
 }
+
+/* .result table-sm {
+  margin-top: 2em;
+  font-size: 0.75em;
+  line-height: 1em;
+} */
 
 #map {
-  width: 650px;
-  height: 500px;
+  width: 100%;
+  height: 600px;
+  margin: 1.5em 0 1.5em 0;
 }
 #map5 {
-  width: 650px;
-  height: 500px;
+  width: 100%;
+  height: 600px;
+  margin: 1.5em 0 1.5em 0;
 }
 
+
 #map8 {
-  width: 650px;
-  height: 500px;
+  width: 100%;
+  height: 600px;
+  margin: 1.5em 0 1.5em 0;
+}
+
+#irse {
+  width: 100%;
+  height: 600px;
+  margin: 1.5em 0 1.5em 0;
 }
 
 
 @media print {
-  .summary {
-    page-break-after:always;
+  #map {
+    width: 550px;
+    height: 500px;
   }
-  .result {
-    page-break-after:always;
+  #map5 {
+    width: 550px;
+    height: 500px;
+  }
+  #map8 {
+    width: 550px;
+    height: 500px;
+  }
+  .question1 {
+    page-break-before: always;
+  }
+  .question3 {
+    page-break-before: always;
+  }
+  .question6 {
+    page-break-before: always;
+  }
+  .question6 {
+    page-break-before: always;
+  }
+  .question8 {
+    page-break-before: always;
+  }  
+  .question10 {
+    page-break-before: always;
+  }
+  .individual:nth-child(n+2) {
+    page-break-before: always;
   }
   .leaflet-control-container {
    visibility: hidden; 
   }
-
 }
