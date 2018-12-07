@@ -15,11 +15,56 @@
 </head>
 
 <body>
-  <div class="title">
-    <h1>Summary of Results</h1>
-    <h4>ActiveLE Text Message Survey</h4>
-  </div>
-  <div class="result summary">
+  <ul class="nav justify-content-center basic">
+    <li class="nav-item">
+      <a class="nav-link" href="#esri-map">Summary of Map Comments</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#text-summary">Summary of Text Message Survey</a>
+    </li>
+  </ul>
+  <div class="container">
+    <div class="result map-summary">
+      <div class="title">
+        <h1>Summary of Map Comments</h1>
+      </div>
+    </div>
+    <div class="result esri-map">
+  <div id="irse"></div>
+  <script>
+    var irseMap = L.map('irse').setView([33.6933447075328, -117.38131905537], 12);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+      maxZoom: 18,
+      id: 'mapbox.streets'
+    }).addTo(irseMap);
+    var irseGeo = [{"type":"Feature","properties":{"comment":"Would be great if kids had a path to ride bikes and scooters so they don’t plow into other kids walking to/from school from Westwind Dr to Regatta Way. Thank you for the consideration.","email":"Ms_cio@hotmail.com","mode":null,"status":null},"geometry":{"type":"Point","coordinates":[-117.401328334618,33.6967947656104]}},{"type":"Feature","properties":{"comment":"Most of Lakeshore Dr is missing sidewalks although parts are now being paved. Would be great to see the whole street from Lake to Main St properly paved for walking and biking.  Thank you","email":"Ms_cio@hotmail.com","mode":"Walking","status":"Like"},"geometry":{"type":"Point","coordinates":[-117.38131905537,33.6933447075328]}},{"type":"Feature","properties":{"comment":"Walking path from Tuscany Hills Elementary to Canyon lake Little Pony Street gate","email":"Kkwmorris@gmail.com","mode":"Walking","status":"Like"},"geometry":{"type":"Point","coordinates":[-117.285373251161,33.6888521190228]}},{"type":"Feature","properties":{"comment":"There should be a bike lane / path AND sidewalks along grand avenue for our Withrow and Lakeside students.","email":"sueite@gmail.com","mode":"Walking","status":"Dislike"},"geometry":{"type":"Point","coordinates":[-117.389510521699,33.6752664601398]}},{"type":"Feature","properties":{"comment":"bike lane should come down Nichols, Collier Ave","email":"hoggie_bear@yahoo.com","mode":"Biking","status":null},"geometry":{"type":"Point","coordinates":[-117.358107218554,33.7042969363677]}},{"type":"Feature","properties":{"comment":"dangerous corner for bike, needs bike lane","email":"hoggie_bear@yahoo.com","mode":"Biking","status":null},"geometry":{"type":"Point","coordinates":[-117.364716181566,33.6871137212841]}},{"type":"Feature","properties":{"comment":"common route for cyclist, need bike lane and road improvements, bumps on shoulder hard on bikes","email":"hoggie_bear@yahoo.com","mode":"Biking","status":null},"geometry":{"type":"Point","coordinates":[-117.383845696259,33.6635336525556]}},{"type":"Feature","properties":{"comment":"My son Vance Gerdes lives at 28066 Lindell Rd. , he walks to school everyday with no sidewalk. The area has traffic & has no space for pedestrians to walk,  it also has no bike path.  If the city put either one along El Toror rd. it would be wonderful!","email":"cgerdes714@gmail.com","mode":"Walking","status":"Dislike"},"geometry":{"type":"Point","coordinates":[-117.342904457855,33.7113834536362]}},{"type":"Feature","properties":{"comment":"bad","email":null,"mode":"Walking","status":"Dislike"},"geometry":{"type":"Point","coordinates":[-117.346787385677,33.705071985821]}}]
+    geojsonLayer = L.geoJson(irseGeo, {
+      style: function (feature) {
+        if (feature.properties.status === 'Like') {
+          return { color: "#31e0a3" };
+        } else if (feature.properties.status === 'Dislike') {
+          return { color: "#e05131" };
+        } else {
+          return { color: "#9b9fa5" };
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return new L.CircleMarker(latlng, { radius: 5, fillOpacity: 0.75 });
+      },
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(
+          '<p>'+feature.properties.comment +'</p>'+'<p>'+feature.properties.status +'</p>'+'<p>'+feature.properties.mode +'</p>'
+          );
+      }
+    });
+    irseMap.addLayer(geojsonLayer);</script>
+</div>
+    <div class="result text-summary" name="text-summary" id="text-summary">
+      <div class="title">
+        <h1>Summary of Text Message Survey</h1>
+      </div>
+    </div>
+    <div class="result summary">
     <div class="title">
       <h4>Survey Participation</h4>
     </div>
@@ -1434,7 +1479,8 @@ see limits.
           
         </ol>
       </div>
-    </div>
+  </div>
+  </div>
 </body>
 
 </html>
