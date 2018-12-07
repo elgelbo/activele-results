@@ -1,0 +1,18 @@
+<div class="result map-comments">
+    <div class="title">
+      <h4>Map Comments</h4>
+    </div>
+    <div class="details">
+      <h5>
+        A total of
+        <%- esriResults.features.length %> participants provided input on the online map.
+      </h5>
+      <ol>
+        <% esriResults.features.forEach(function(point, index) { %>
+        <li>
+          <%= point.properties.comment %>
+        </li>
+        <% }); %>
+      </ol>
+    </div>
+  </div>
