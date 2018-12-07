@@ -10,220 +10,20 @@
     crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
     crossorigin=""></script>
-  <link rel="stylesheet" href="bootstrap.css">
-  <link rel="stylesheet" href="summary.css">
+  <link rel="stylesheet" href="../dist/bootstrap.css">
+  <link rel="stylesheet" href="../dist/style.css">
 </head>
 
 <body>
-  <div class="summary">
+  <div class="title">
+    <h1>Summary of Results</h1>
+    <h4>ActiveLE Text Message Survey</h4>
+  </div>
+  <div class="result summary">
     <div class="title">
-      <h1>Overall Summary</h1>
-      <h4>Active LE Text Message Survey</h4>
+      <h4>Survey Participation</h4>
     </div>
-    <div class="results-summary">
-      <div class="summary-question overall">
-        <div class="title">
-          <h4>Survey Participation</h4>
-        </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col" class="text-center"># of Responses</th>
-              <th scope="col" class="text-center">% of Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Completed Surveys</th>
-              <td class="text-center">
-                43
-              </td>
-              <td class="text-center">
-                78.2 %
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Spanish Surveys</th>
-              <td class="text-center">
-                2
-              </td>
-              <td class="text-center">
-                3.6 %
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Total Responses</th>
-              <td class="text-center">
-                55
-              </td>
-              <td class="text-center">
-                100%
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="summary-question age">
-        <div class="title">
-          <h4>Age of Participants</h4>
-        </div>
-        <h5>The average age of survey participants is
-          34.5. </h5>
-      </div>
-      <div class="summary-question age">
-        <div class="title">
-          <h4>Opt-In for Future Notifications</h4>
-        </div>
-        <h5>A total of
-          34 participants requested future notifications about ActiveLE. </h5>
-        <ol>
-          
-          <li>
-            jnormandin2012@gmail.com
-          </li>
-          
-          <li>
-            Agalinis@chenryanmobility.com
-          </li>
-          
-          <li>
-            tigertron22@gmail.com
-          </li>
-          
-          <li>
-            dan.york@yahoo.com
-          </li>
-          
-          <li>
-            rglaser@riversidesheriff.org
-          </li>
-          
-          <li>
-            Kcousins1976@gmail.com
-          </li>
-          
-          <li>
-            llovegren@riversidetransit.com
-          </li>
-          
-          <li>
-            joeforgi@yahoo.com.au
-          </li>
-          
-          <li>
-            Kelvin232@juno.com
-          </li>
-          
-          <li>
-            sarahbrender@gmail.com
-          </li>
-          
-          <li>
-            luzncs@hotmail.com
-          </li>
-          
-          <li>
-            Recreation@lake-Elsinore.org
-          </li>
-          
-          <li>
-            Debi.sutherland@infor.com
-          </li>
-          
-          <li>
-            gemmaleon74@icloud.com
-          </li>
-          
-          <li>
-            Darmenta1045@gmail.com
-          </li>
-          
-          <li>
-            sueite@gmail.com
-          </li>
-          
-          <li>
-            brandiryals@live.com
-          </li>
-          
-          <li>
-            Signsr4ever@gmail.com
-          </li>
-          
-          <li>
-            Sap612@aol.com
-          </li>
-          
-          <li>
-            rachel2006.rj@gmail.com
-          </li>
-          
-          <li>
-            Ajaia@yahoo.com
-          </li>
-          
-          <li>
-            Lilliepond70@aol.com
-          </li>
-          
-          <li>
-            Mlopezpick@gmail.com
-          </li>
-          
-          <li>
-            kkwmorris@gmail.com
-          </li>
-          
-          <li>
-            Joyshu@hotmail.com
-          </li>
-          
-          <li>
-            jolyn_chow@yahoo.com
-          </li>
-          
-          <li>
-            Donkeki3@yahoo.com
-          </li>
-          
-          <li>
-            sashaellis31@icloud.com
-          </li>
-          
-          <li>
-            Barrera_89@msn.com
-          </li>
-          
-          <li>
-            tmhalways@gmail.com
-          </li>
-          
-          <li>
-            1anthonyxd7@gmail.com
-          </li>
-          
-          <li>
-            awalk123@ymail.com
-          </li>
-          
-          <li>
-            s.hildebrandt04@gmail.com
-          </li>
-          
-          <li>
-            0juan23flores@gmail.com
-          </li>
-          
-        </ol>
-      </div>
-    </div>
-    <div class="summary-question question1">
-      <div class="title">
-        <h4>
-          Where do you live?
-        </h4>
-      </div>
+    <div class="details">
       <table class="table">
         <thead>
           <tr>
@@ -234,44 +34,254 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">Question #2 Responses</th>
-            <td class="text-center">
+            <th scope="row" style="width: 25%">
+              Completed Surveys
+            </th>
+            <td class="text-center" style="width: 50%">
+              43
+            </td>
+            <td class="text-center" style="width: 25%">
+              78.2%
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" style="width: 25%">
+              Spanish Surveys
+            </th>
+            <td class="text-center" style="width: 50%">
+              2
+            </td>
+            <td class="text-center" style="width: 25%">
+              3.6%
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" style="width: 25%">
+              Total Surveys
+            </th>
+            <td class="text-center" style="width: 50%">
+              55
+            </td>
+            <td class="text-center" style="width: 25%">
+              100%
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="result age">
+    <div class="title">
+      <h4>Age of Participants</h4>
+    </div>
+    <div class="details">
+      <h5>
+        The average age of survey participants is
+         and ranged from
+         years old to
+         years old.
+      </h5>
+    </div>
+  </div>
+  <div class="result email">
+    <div class="title">
+      <h4>Opt-In for Future Notifications</h4>
+    </div>
+    <div class="details">
+      <h5>
+        A total of
+        34 participants requested future notifications about ActiveLE.
+      </h5>
+      <ol>
+        
+        <li>
+          jnormandin2012@gmail.com
+        </li>
+        
+        <li>
+          Agalinis@chenryanmobility.com
+        </li>
+        
+        <li>
+          tigertron22@gmail.com
+        </li>
+        
+        <li>
+          dan.york@yahoo.com
+        </li>
+        
+        <li>
+          rglaser@riversidesheriff.org
+        </li>
+        
+        <li>
+          Kcousins1976@gmail.com
+        </li>
+        
+        <li>
+          llovegren@riversidetransit.com
+        </li>
+        
+        <li>
+          joeforgi@yahoo.com.au
+        </li>
+        
+        <li>
+          Kelvin232@juno.com
+        </li>
+        
+        <li>
+          sarahbrender@gmail.com
+        </li>
+        
+        <li>
+          luzncs@hotmail.com
+        </li>
+        
+        <li>
+          Recreation@lake-Elsinore.org
+        </li>
+        
+        <li>
+          Debi.sutherland@infor.com
+        </li>
+        
+        <li>
+          gemmaleon74@icloud.com
+        </li>
+        
+        <li>
+          Darmenta1045@gmail.com
+        </li>
+        
+        <li>
+          sueite@gmail.com
+        </li>
+        
+        <li>
+          brandiryals@live.com
+        </li>
+        
+        <li>
+          Signsr4ever@gmail.com
+        </li>
+        
+        <li>
+          Sap612@aol.com
+        </li>
+        
+        <li>
+          rachel2006.rj@gmail.com
+        </li>
+        
+        <li>
+          Ajaia@yahoo.com
+        </li>
+        
+        <li>
+          Lilliepond70@aol.com
+        </li>
+        
+        <li>
+          Mlopezpick@gmail.com
+        </li>
+        
+        <li>
+          kkwmorris@gmail.com
+        </li>
+        
+        <li>
+          Joyshu@hotmail.com
+        </li>
+        
+        <li>
+          jolyn_chow@yahoo.com
+        </li>
+        
+        <li>
+          Donkeki3@yahoo.com
+        </li>
+        
+        <li>
+          sashaellis31@icloud.com
+        </li>
+        
+        <li>
+          Barrera_89@msn.com
+        </li>
+        
+        <li>
+          tmhalways@gmail.com
+        </li>
+        
+        <li>
+          1anthonyxd7@gmail.com
+        </li>
+        
+        <li>
+          awalk123@ymail.com
+        </li>
+        
+        <li>
+          s.hildebrandt04@gmail.com
+        </li>
+        
+        <li>
+          0juan23flores@gmail.com
+        </li>
+        
+      </ol>
+    </div>
+  </div>
+  <div class="result question1">
+    <div class="title">
+      <h4>
+        Where do you live?
+      </h4>
+    </div>
+    <div class="details">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col" class="text-center"># of Responses</th>
+            <th scope="col" class="text-center">% of Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" style="width: 25%">
+              Total Responses
+            </th>
+            <td class="text-center" style="width: 50%">
               51
             </td>
-            <td class="text-center">
-              92.7 %
+            <td class="text-center" style="width: 25%">
+              92.7%
             </td>
           </tr>
           <tr>
-            <th scope="row">Total Responses</th>
-            <td class="text-center">
+            <th scope="row" style="width: 25%">
+              Total Surveys
+            </th>
+            <td class="text-center" style="width: 50%">
               55
             </td>
-            <td class="text-center">
+            <td class="text-center" style="width: 25%">
               100%
             </td>
           </tr>
         </tbody>
       </table>
-      <div id="map"></div>
-      <script>
-        var center = [-98.333709,35.5994];
-        var mymap = L.map('map').setView([center[1], center[0]], 4);
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-          maxZoom: 18,
-          id: 'mapbox.streets'
-        }).addTo(mymap);
-        var myGeo = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.40609,33.689904]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.14919,34.147264]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.10658,33.594933]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.212003,33.581421]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.324882,33.675057]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.25667,33.575169]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.4086,33.678273]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.324882,33.675057]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-78.518228,39.759062]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.81482,33.751794]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.25999,33.945247]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.10685,33.810337]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.38207,33.707687]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3802,33.681043]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.324882,33.675057]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3919,33.666163]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3847,33.674269]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.33,33.69]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.29873,33.651201]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39023,33.685456]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.266434,33.630652]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.38702,33.666974]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.38493,33.690499]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.29201,33.685199]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39623,33.70172]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39679,33.700734]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.393054,33.666039]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.25994,33.662435]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.26063,33.624425]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.32233,33.699883]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.25207,33.660578]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.24936,33.659354]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.28686,33.678085]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39301,33.687518]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3955,33.679299]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.28022,33.618296]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.30241,33.711278]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.27239,33.688309]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37043,33.685372]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.29908,33.647473]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.32233,33.699883]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.20104,33.544646]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3488,33.680092]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3986,33.688101]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-97.8531,30.5788]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39272,33.679849]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39419,33.671945]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-79.16,40.62]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.21888,33.581547]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.2415,33.5939]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.26328,33.624646]}}]}
-          L.geoJSON(myGeo).addTo(mymap);
-        var group = new L.featureGroup(myGeo);</script>
     </div>
-    <div class="summary-question question2">
-
-      <div class="title">
-        <h4>
-          On a typical day, how do you travel around your community to shop, eat, run errands, or for social or recreational purposes?
-        </h4>
-      </div>
+  </div>
+  <div class="result question2">
+    <div class="title">
+      <h4>
+        On a typical day, how do you travel around your community to shop, eat, run errands, or for social or recreational purposes?
+      </h4>
+    </div>
+    <div class="details">
       <table class="table">
         <thead>
           <tr>
@@ -283,132 +293,148 @@
         <tbody>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Drove Alone
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               26
             </td>
-            <td class="text-center">
-              54.2
+            <td class="text-center" style="width: 25%">
+              54.2%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Combination
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               10
             </td>
-            <td class="text-center">
-              20.8
+            <td class="text-center" style="width: 25%">
+              20.8%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Carpool
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               4
             </td>
-            <td class="text-center">
-              8.3
+            <td class="text-center" style="width: 25%">
+              8.3%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Other
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               3
             </td>
-            <td class="text-center">
-              6.3
+            <td class="text-center" style="width: 25%">
+              6.3%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Walk
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               3
             </td>
-            <td class="text-center">
-              6.3
+            <td class="text-center" style="width: 25%">
+              6.3%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Bike
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               2
             </td>
-            <td class="text-center">
-              4.2
+            <td class="text-center" style="width: 25%">
+              4.2%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Motorcycle / Scooter
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               0
             </td>
-            <td class="text-center">
-              0
+            <td class="text-center" style="width: 25%">
+              0%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Taxi / Shared Vehicle
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               0
             </td>
-            <td class="text-center">
-              0
+            <td class="text-center" style="width: 25%">
+              0%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Public Transportation
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               0
             </td>
-            <td class="text-center">
-              0
+            <td class="text-center" style="width: 25%">
+              0%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">Total</th>
-            <td class="text-center">
+            <th scope="row" style="width: 25%">
+              Total Responses
+            </th>
+            <td class="text-center" style="width: 50%">
               48
             </td>
-            <td class="text-center">
+            <td class="text-center" style="width: 25%">
               100%
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="summary-question question3">
-
-      <div class="title">
-        <h4>
-          Do You Currently Work?
-        </h4>
-      </div>
+  </div>
+  <div class="result home-map">
+    <div id="map"></div>
+    <script>
+      var center = [-98.333709,35.5994];
+      var mymap = L.map('map').setView([center[1], center[0]], 4);
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        id: 'mapbox.streets'
+      }).addTo(mymap);
+      var myGeo = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.40609,33.689904]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.14919,34.147264]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.10658,33.594933]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.212003,33.581421]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.324882,33.675057]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.25667,33.575169]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.4086,33.678273]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.324882,33.675057]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-78.518228,39.759062]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.81482,33.751794]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.25999,33.945247]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.10685,33.810337]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.38207,33.707687]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3802,33.681043]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.324882,33.675057]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3919,33.666163]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3847,33.674269]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.33,33.69]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.29873,33.651201]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39023,33.685456]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.266434,33.630652]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.38702,33.666974]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.38493,33.690499]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.29201,33.685199]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39623,33.70172]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39679,33.700734]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.393054,33.666039]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.25994,33.662435]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.26063,33.624425]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.32233,33.699883]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.25207,33.660578]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.24936,33.659354]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.28686,33.678085]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39301,33.687518]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3955,33.679299]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.28022,33.618296]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.30241,33.711278]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.27239,33.688309]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37043,33.685372]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.29908,33.647473]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.32233,33.699883]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.20104,33.544646]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3488,33.680092]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3986,33.688101]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-97.8531,30.5788]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39272,33.679849]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.39419,33.671945]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-79.16,40.62]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.21888,33.581547]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.2415,33.5939]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.26328,33.624646]}}]}
+        L.geoJSON(myGeo).addTo(mymap);
+      var group = new L.featureGroup(myGeo);</script>
+  </div>
+  <div class="result question3">
+    <div class="title">
+      <h4>
+        Do You Currently Work?
+      </h4>
+    </div>
+    <div class="details">
       <table class="table">
         <thead>
           <tr>
@@ -420,48 +446,51 @@
         <tbody>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Yes
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               34
             </td>
-            <td class="text-center">
-              70.8 %
+            <td class="text-center" style="width: 25%">
+              70.8%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               No
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               14
             </td>
-            <td class="text-center">
-              29.2 %
+            <td class="text-center" style="width: 25%">
+              29.2%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">Total</th>
-            <td class="text-center">
+            <th scope="row" style="width: 25%">
+              Total Responses
+            </th>
+            <td class="text-center" style="width: 50%">
               48
             </td>
-            <td class="text-center">
+            <td class="text-center" style="width: 25%">
               100%
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="summary-question question4">
-
-      <div class="title">
-        <h4>
-          Where do you work?
-        </h4>
-      </div>
+  </div>
+  <div class="result question4">
+    <div class="title">
+      <h4>
+        Where do you work?
+      </h4>
+    </div>
+    <div class="details">
       <table class="table">
         <thead>
           <tr>
@@ -472,42 +501,38 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">Question #4 Responses</th>
-            <td class="text-center">
+            <th scope="row" style="width: 25%">
+              Total Responses
+            </th>
+            <td class="text-center" style="width: 50%">
               31
             </td>
-            <td class="text-center">
-              56.4 %
+            <td class="text-center" style="width: 25%">
+              56.4%
             </td>
           </tr>
           <tr>
-            <th scope="row">Total Responses</th>
-            <td class="text-center">
+            <th scope="row" style="width: 25%">
+              Total Surveys
+            </th>
+            <td class="text-center" style="width: 50%">
               55
             </td>
-            <td class="text-center">
+            <td class="text-center" style="width: 25%">
               100%
             </td>
           </tr>
         </tbody>
       </table>
-      <div id="map5"></div>
-      <script>
-        var center = [-117.739035,33.730982];
-        var fifthMap = L.map('map5').setView([center[1], center[0]], 9);
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-          maxZoom: 18,
-          id: 'mapbox.streets'
-        }).addTo(fifthMap);
-        var geo5 = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.2107,33.5608]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.14919,34.147264]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.324882,33.675057]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.24124,33.594097]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.32736,33.668264]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.33152,33.667723]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.329323,33.6685]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37106,33.998005]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.35124,33.983217]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.35124,33.983217]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.2107,33.5608]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.38,33.67]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.331547,33.669117]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.1474,33.4946]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.26606,33.630366]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.761725,33.531086]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.32717,33.696341]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37023,33.679888]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.316,33.3147]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.25207,33.660578]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.56683,33.895039]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3126,33.665432]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.10502,33.740929]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.65798,33.596464]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.26365,34.04948]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.0767,33.3653]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.9117,33.8348]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.180243,33.716684]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.2584,34.049729]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.40137,34.004832]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3392,33.69]}}]}
-          L.geoJSON(geo5).addTo(fifthMap);</script>
     </div>
-    <div class="summary-question question5">
-      <div class="title">
-        <h4>
-          How do you normally travel to/from work?
-        </h4>
-      </div>
+  </div>
+  <div class="result question5">
+    <div class="title">
+      <h4>
+        How do you normally travel to/from work?
+      </h4>
+    </div>
+    <div class="details">
       <table class="table">
         <thead>
           <tr>
@@ -519,131 +544,148 @@
         <tbody>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Drove Alone
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               22
             </td>
-            <td class="text-center">
-              71
+            <td class="text-center" style="width: 25%">
+              71%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Carpool
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               3
             </td>
-            <td class="text-center">
-              9.7
+            <td class="text-center" style="width: 25%">
+              9.7%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Walk
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               3
             </td>
-            <td class="text-center">
-              9.7
+            <td class="text-center" style="width: 25%">
+              9.7%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Other
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               1
             </td>
-            <td class="text-center">
-              3.2
+            <td class="text-center" style="width: 25%">
+              3.2%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Combination
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               1
             </td>
-            <td class="text-center">
-              3.2
+            <td class="text-center" style="width: 25%">
+              3.2%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Public Transportation
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               1
             </td>
-            <td class="text-center">
-              3.2
+            <td class="text-center" style="width: 25%">
+              3.2%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Motorcycle / Scooter
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               0
             </td>
-            <td class="text-center">
-              0
+            <td class="text-center" style="width: 25%">
+              0%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Taxi / Shared Vehicle
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               0
             </td>
-            <td class="text-center">
-              0
+            <td class="text-center" style="width: 25%">
+              0%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Bike
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               0
             </td>
-            <td class="text-center">
-              0
+            <td class="text-center" style="width: 25%">
+              0%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">Total</th>
-            <td class="text-center">
+            <th scope="row" style="width: 25%">
+              Total Responses
+            </th>
+            <td class="text-center" style="width: 50%">
               31
             </td>
-            <td class="text-center">
+            <td class="text-center" style="width: 25%">
               100%
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="summary-question question6">
-      <div class="title">
-        <h4>
-          Do you currently go to school?
-        </h4>
-      </div>
+  </div>
+  <div class="result work-map">
+    <div id="map5"></div>
+    <script>
+      var center1 = [-117.739035,33.730982];
+      var mymap5 = L.map('map5').setView([center1[1], center1[0]], 9);
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        id: 'mapbox.streets'
+      }).addTo(mymap5);
+      var myGeo5 = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.2107,33.5608]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.14919,34.147264]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.324882,33.675057]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.24124,33.594097]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.32736,33.668264]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.33152,33.667723]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.329323,33.6685]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37106,33.998005]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.35124,33.983217]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.35124,33.983217]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.2107,33.5608]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.38,33.67]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.331547,33.669117]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.1474,33.4946]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.26606,33.630366]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.761725,33.531086]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.32717,33.696341]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37023,33.679888]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.316,33.3147]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.25207,33.660578]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.56683,33.895039]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3126,33.665432]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.10502,33.740929]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.65798,33.596464]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.26365,34.04948]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.0767,33.3653]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.9117,33.8348]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.180243,33.716684]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.2584,34.049729]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-118.40137,34.004832]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.3392,33.69]}}]}
+        L.geoJSON(myGeo5).addTo(mymap5);
+      var group = new L.featureGroup(myGeo5);</script>
+  </div>
+  <div class="result question6">
+    <div class="title">
+      <h4>
+        Do you currently go to school?
+      </h4>
+    </div>
+    <div class="details">
       <table class="table">
         <thead>
           <tr>
@@ -653,96 +695,39 @@
           </tr>
         </thead>
         <tbody>
-          
           <tr>
-            <th scope="row">
-              Yes
+            <th scope="row" style="width: 25%">
+              Total Responses
             </th>
-            <td class="text-center">
-              11
-            </td>
-            <td class="text-center">
-              24.4 %
-            </td>
-          </tr>
-          
-          <tr>
-            <th scope="row">
-              No
-            </th>
-            <td class="text-center">
-              34
-            </td>
-            <td class="text-center">
-              75.6 %
-            </td>
-          </tr>
-          
-          <tr>
-            <th scope="row">Total</th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               45
             </td>
-            <td class="text-center">
-              100%
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="summary-question question7">
-      <div class="title">
-        <h4>
-          Where do you go to school?
-        </h4>
-      </div>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-center"># of Responses</th>
-            <th scope="col" class="text-center">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Question #8 Responses</th>
-            <td class="text-center">
-              11
-            </td>
-            <td class="text-center">
-              20.0 %
+            <td class="text-center" style="width: 25%">
+              %
             </td>
           </tr>
           <tr>
-            <th scope="row">Total Responses</th>
-            <td class="text-center">
+            <th scope="row" style="width: 25%">
+              Total Surveys
+            </th>
+            <td class="text-center" style="width: 50%">
               55
             </td>
-            <td class="text-center">
+            <td class="text-center" style="width: 25%">
               100%
             </td>
           </tr>
         </tbody>
       </table>
-      <div id="map8"></div>
-      <!-- <pre>{"question":"Where do you go to school?","responses":["lakesidehighschool","lakesidehighschool","lakesidehighschool","temescalcanyonhighschool","keithmccarthyacademy","uci","lakeelsinorehighschool","canyonlake","ucla","mtsanjacintocollege","mtsanjacintocollege"],"names":["Lakeside High School, Lake Elsinore, California 92530, United States","Lakeside High School, Lake Elsinore, California 92530, United States","Lakeside High School, Lake Elsinore, California 92530, United States","Soncy Road, Canyon, Texas 79015, United States","Academy on the Hills, 10 Mareblu, Aliso Viejo, California 92656, United States","UCI- ARC Sports Fields, 680 California Ave, Irvine, California 92617, United States","Lakeside High School, Lake Elsinore, California 92530, United States","Canyon Lake Gas Dock, Cyn Lake, California 92587, United States","UCLA Lake Arrowhead Conference Center, 850 Willow Creek Rd., Lake Arrowhead, California 92352, United States","Mount San Jacinto College, Menifee, California 92584, United States","Mount San Jacinto College, Menifee, California 92584, United States"],"points":{"features":{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37976950000001,33.670612]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37976950000001,33.670612]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37976950000001,33.670612]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-101.93794,34.968294]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.70346,33.57269]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.82689,33.64315]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.38275,33.668694]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.274826,33.683666]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.18671,34.265423]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.16803,33.675]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.16803,33.675]}}]},"bbox":[-117.82689,33.57269,-101.93794,34.968294],"center":{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-109.88241500000001,34.270492000000004]}}},"total":11,"percent":"20.0"}</pre> -->
-      <script>
-        var center = [-109.88241500000001,34.270492000000004];
-        var ateMap = L.map('map8').setView([center[1], center[0]], 5);
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-          maxZoom: 18,
-          id: 'mapbox.streets'
-        }).addTo(ateMap);
-        var geo8 = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37976950000001,33.670612]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37976950000001,33.670612]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37976950000001,33.670612]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-101.93794,34.968294]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.70346,33.57269]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.82689,33.64315]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.38275,33.668694]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.274826,33.683666]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.18671,34.265423]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.16803,33.675]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.16803,33.675]}}]}
-          L.geoJSON(geo8).addTo(ateMap);</script>
     </div>
-    <div class="summary-question question8">
-      <div class="title">
-        <h4>
-          How do you normally travel to/from school?
-        </h4>
-      </div>
+  </div>
+  <div class="result question7">
+    <div class="title">
+      <h4>
+        How do you normally travel to/from school?
+      </h4>
+    </div>
+    <div class="details">
       <table class="table">
         <thead>
           <tr>
@@ -754,132 +739,148 @@
         <tbody>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Combination
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               3
             </td>
-            <td class="text-center">
-              27.3
+            <td class="text-center" style="width: 25%">
+              27.3%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Drove Alone
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               3
             </td>
-            <td class="text-center">
-              27.3
+            <td class="text-center" style="width: 25%">
+              27.3%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Carpool
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               2
             </td>
-            <td class="text-center">
-              18.2
+            <td class="text-center" style="width: 25%">
+              18.2%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Other
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               1
             </td>
-            <td class="text-center">
-              9.1
+            <td class="text-center" style="width: 25%">
+              9.1%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Bike
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               1
             </td>
-            <td class="text-center">
-              9.1
+            <td class="text-center" style="width: 25%">
+              9.1%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Walk
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               1
             </td>
-            <td class="text-center">
-              9.1
+            <td class="text-center" style="width: 25%">
+              9.1%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Motorcycle / Scooter
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               0
             </td>
-            <td class="text-center">
-              0
+            <td class="text-center" style="width: 25%">
+              0%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Taxi / Shared Vehicle
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               0
             </td>
-            <td class="text-center">
-              0
+            <td class="text-center" style="width: 25%">
+              0%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Public Transportation
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               0
             </td>
-            <td class="text-center">
-              0
+            <td class="text-center" style="width: 25%">
+              0%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">Total</th>
-            <td class="text-center">
+            <th scope="row" style="width: 25%">
+              Total Responses
+            </th>
+            <td class="text-center" style="width: 50%">
               11
             </td>
-            <td class="text-center">
+            <td class="text-center" style="width: 25%">
               100%
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="summary-question question9">
-
-      <div class="title">
-        <h4>
-          In general, how easy/difficult do you feel it is to walk 🚶 in Lake Elsinore?
-        </h4>
-      </div>
+  </div>
+  <div class="result school-map">
+    <div id="map8"></div>
+    <script>
+      var center2 = [-109.88241500000001,34.270492000000004];
+      var mymap8 = L.map('map8').setView([center2[1], center2[0]], 5);
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        id: 'mapbox.streets'
+      }).addTo(mymap8);
+      var myGeo8 = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37976950000001,33.670612]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37976950000001,33.670612]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.37976950000001,33.670612]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-101.93794,34.968294]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.70346,33.57269]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.82689,33.64315]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.38275,33.668694]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.274826,33.683666]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.18671,34.265423]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.16803,33.675]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-117.16803,33.675]}}]}
+        L.geoJSON(myGeo8).addTo(mymap8);
+      var group = new L.featureGroup(myGeo8);</script>
+  </div>
+  <div class="result question8">
+    <div class="title">
+      <h4>
+        In general, how easy/difficult do you feel it is to walk 🚶 in Lake Elsinore?
+      </h4>
+    </div>
+    <div class="details">
       <table class="table">
         <thead>
           <tr>
@@ -891,83 +892,87 @@
         <tbody>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Somewhat Difficult
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               22
             </td>
-            <td class="text-center">
-              48.9
+            <td class="text-center" style="width: 25%">
+              48.9%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Very Difficult
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               8
             </td>
-            <td class="text-center">
-              17.8
+            <td class="text-center" style="width: 25%">
+              17.8%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Neutral
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               8
             </td>
-            <td class="text-center">
-              17.8
+            <td class="text-center" style="width: 25%">
+              17.8%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Somewhat Easy
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               6
             </td>
-            <td class="text-center">
-              13.3
+            <td class="text-center" style="width: 25%">
+              13.3%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Very Easy
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               1
             </td>
-            <td class="text-center">
-              2.2
+            <td class="text-center" style="width: 25%">
+              2.2%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">Total</th>
-            <td class="text-center">
+            <th scope="row" style="width: 25%">
+              Total Responses
+            </th>
+            <td class="text-center" style="width: 50%">
               45
             </td>
-            <td class="text-center">
+            <td class="text-center" style="width: 25%">
               100%
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="summary-question question10">
-      <div class="title">
-        <h4>
-          What are the biggest challenges for walking 🚶 in Lake Elsinore? What keeps you from walking more?
-        </h4>
-      </div>
+  </div>
+  <div class="result question9">
+    <div class="title">
+      <h4>
+        What are the biggest challenges for walking 🚶 in Lake Elsinore? What keeps you from walking more?
+      </h4>
+    </div>
+    <div class="details">
       <ol>
         
         <li>
@@ -1147,15 +1152,15 @@
         </li>
         
       </ol>
-
     </div>
-    <div class="summary-question question11">
-
-      <div class="title">
-        <h4>
-          In general, how easy/difficult do you feel it is to bike 🚴‍ in Lake Elsinore?
-        </h4>
-      </div>
+  </div>
+  <div class="result question10">
+    <div class="title">
+      <h4>
+        In general, how easy/difficult do you feel it is to bike 🚴‍ in Lake Elsinore?
+      </h4>
+    </div>
+    <div class="details">
       <table class="table">
         <thead>
           <tr>
@@ -1167,266 +1172,269 @@
         <tbody>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Somewhat Difficult
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               15
             </td>
-            <td class="text-center">
-              34.1
+            <td class="text-center" style="width: 25%">
+              34.1%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Very Difficult
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               12
             </td>
-            <td class="text-center">
-              27.3
+            <td class="text-center" style="width: 25%">
+              27.3%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Neutral
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               12
             </td>
-            <td class="text-center">
-              27.3
+            <td class="text-center" style="width: 25%">
+              27.3%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Somewhat Easy
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               3
             </td>
-            <td class="text-center">
-              6.8
+            <td class="text-center" style="width: 25%">
+              6.8%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">
+            <th scope="row" style="width: 25%">
               Very Easy
             </th>
-            <td class="text-center">
+            <td class="text-center" style="width: 50%">
               2
             </td>
-            <td class="text-center">
-              4.5
+            <td class="text-center" style="width: 25%">
+              4.5%
             </td>
           </tr>
           
           <tr>
-            <th scope="row">Total</th>
-            <td class="text-center">
-              45
+            <th scope="row" style="width: 25%">
+              Total Responses
+            </th>
+            <td class="text-center" style="width: 50%">
+              44
             </td>
-            <td class="text-center">
+            <td class="text-center" style="width: 25%">
               100%
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="summary-question question12">
+  </div>
+  <div class="result question11">
       <div class="title">
         <h4>
           What are the biggest challenges for biking 🚴‍ in Lake Elsinore? What keeps you from biking more?
         </h4>
       </div>
-      <ol>
-        
-        <li>
-          Would like more bike lanes
-        </li>
-        
-        <li>
-          No facilities
-        </li>
-        
-        <li>
-          Safety
-        </li>
-        
-        <li>
-          Lack facilities
-        </li>
-        
-        <li>
-          No bike lines
-        </li>
-        
-        <li>
-          narrow streets
-        </li>
-        
-        <li>
-          No bike lanes
-        </li>
-        
-        <li>
-          Poor lighting and narrow streets
-        </li>
-        
-        <li>
-          Interfacing with vehicles
-        </li>
-        
-        <li>
-          Lack of bike lanes
-        </li>
-        
-        <li>
-          Road conditions. Lighting. Homeless.
-        </li>
-        
-        <li>
-          Nowhere close for me to ride to really except the outlets and I&#39;m afraid to cross that narrow part over the creekbed that would put me directly in the road.
-        </li>
-        
-        <li>
-          We need badly need a sidewalk ramp by the entrance to Huntsman Mobile Home Park on Machado!!
-        </li>
-        
-        <li>
-          Need more bike lanes
-        </li>
-        
-        <li>
-          Cars hitting me or my
-        </li>
-        
-        <li>
-          cars hitting you
-        </li>
-        
-        <li>
-          Don&#39;t have a bike
-        </li>
-        
-        <li>
-          Cars driving too fast
-        </li>
-        
-        <li>
-          My age
-        </li>
-        
-        <li>
-          Cars driving not respecting a biker.
-        </li>
-        
-        <li>
-          The biggest challenge is I don&#39;t have a bike, but if I did it would be that the side walks are bumpy and small. I don&#39;t own a bike but when I did, I could only
-        </li>
-        
-        <li>
-          Hills
-        </li>
-        
-        <li>
-          Safety since Ive heard of way too many people get hit on Lake Street Grand Ave Riverside Drive and Lakeshore
-        </li>
-        
-        <li>
-          No dedicated bike Lanes connecting major routes and fast traffic.  Congested traffic at peak times.
-        </li>
-        
-        <li>
-          Drivers not abiding by speed limits
+      <div class="details">
+        <ol>
+          
+          <li>
+            Would like more bike lanes
+          </li>
+          
+          <li>
+            No facilities
+          </li>
+          
+          <li>
+            Safety
+          </li>
+          
+          <li>
+            Lack facilities
+          </li>
+          
+          <li>
+            No bike lines
+          </li>
+          
+          <li>
+            narrow streets
+          </li>
+          
+          <li>
+            No bike lanes
+          </li>
+          
+          <li>
+            Poor lighting and narrow streets
+          </li>
+          
+          <li>
+            Interfacing with vehicles
+          </li>
+          
+          <li>
+            Lack of bike lanes
+          </li>
+          
+          <li>
+            Road conditions. Lighting. Homeless.
+          </li>
+          
+          <li>
+            Nowhere close for me to ride to really except the outlets and I&#39;m afraid to cross that narrow part over the creekbed that would put me directly in the road.
+          </li>
+          
+          <li>
+            We need badly need a sidewalk ramp by the entrance to Huntsman Mobile Home Park on Machado!!
+          </li>
+          
+          <li>
+            Need more bike lanes
+          </li>
+          
+          <li>
+            Cars hitting me or my
+          </li>
+          
+          <li>
+            cars hitting you
+          </li>
+          
+          <li>
+            Don&#39;t have a bike
+          </li>
+          
+          <li>
+            Cars driving too fast
+          </li>
+          
+          <li>
+            My age
+          </li>
+          
+          <li>
+            Cars driving not respecting a biker.
+          </li>
+          
+          <li>
+            The biggest challenge is I don&#39;t have a bike, but if I did it would be that the side walks are bumpy and small. I don&#39;t own a bike but when I did, I could only
+          </li>
+          
+          <li>
+            Hills
+          </li>
+          
+          <li>
+            Safety since Ive heard of way too many people get hit on Lake Street Grand Ave Riverside Drive and Lakeshore
+          </li>
+          
+          <li>
+            No dedicated bike Lanes connecting major routes and fast traffic.  Congested traffic at peak times.
+          </li>
+          
+          <li>
+            Drivers not abiding by speed limits
 see limits.
-        </li>
-        
-        <li>
-          Not enough sidewalks
-        </li>
-        
-        <li>
-          Safety. Speed limits on highway and lack of bike lane
-        </li>
-        
-        <li>
-          Busy streets
-        </li>
-        
-        <li>
-          The hills are mainly a struggle but also the traffic is sometimes hard to maneuver around.
-        </li>
-        
-        <li>
-          Speed limit of cars
-        </li>
-        
-        <li>
-          Lack of bike lanes especially on Lakeshire Dr to get down town or Diamond Dr/ Railroad canyon
-        </li>
-        
-        <li>
-          No crosswalks
-        </li>
-        
-        <li>
-          Same as above, plus I dont have a bike with gears to go up hill.
-        </li>
-        
-        <li>
-          Please put a bike path from Tuscany Hills Elementary school to the gate at Little Pony Dr. in canyon lake for school children
-        </li>
-        
-        <li>
-          Not enough safe routes, not enough bike lanes, speeds too high when roads are shared with automobiles, passing vehicles do not provide adequate cushion, laws not adequately enforced
-        </li>
-        
-        <li>
-          There are barely any bike lanes and the road surface is very rough.
-        </li>
-        
-        <li>
-          Don&#39;t feel comfortable. Streets small and crowded
-        </li>
-        
-        <li>
-          No trails or proper space to safely bike
-        </li>
-        
-        <li>
-          I would say the lack of sidewalks, crosswalks, bike lanes, and the recklessness of other drivers.
-        </li>
-        
-        <li>
-          Some places have very tiny streets
-        </li>
-        
-        <li>
-          Por el lado donde vivo (Grand Ave) la banqueta es hecha de tierra. La
-        </li>
-        
-        <li>
-          Poor sidewalks or lack of. Safety. Bike lanes needed.
-        </li>
-        
-        <li>
-          Not enough bike lanes or paved sidewalks and crosswalks
-        </li>
-        
-        <li>
-          Rocks, glass, debris, and thorns due to dry conditions make it easier for riders to get flat tires and other damages. Certain areas are difficult to cross and ride through due to fast traffic and having to share the road with vehicles.
-        </li>
-        
-      </ol>
-
+          </li>
+          
+          <li>
+            Not enough sidewalks
+          </li>
+          
+          <li>
+            Safety. Speed limits on highway and lack of bike lane
+          </li>
+          
+          <li>
+            Busy streets
+          </li>
+          
+          <li>
+            The hills are mainly a struggle but also the traffic is sometimes hard to maneuver around.
+          </li>
+          
+          <li>
+            Speed limit of cars
+          </li>
+          
+          <li>
+            Lack of bike lanes especially on Lakeshire Dr to get down town or Diamond Dr/ Railroad canyon
+          </li>
+          
+          <li>
+            No crosswalks
+          </li>
+          
+          <li>
+            Same as above, plus I dont have a bike with gears to go up hill.
+          </li>
+          
+          <li>
+            Please put a bike path from Tuscany Hills Elementary school to the gate at Little Pony Dr. in canyon lake for school children
+          </li>
+          
+          <li>
+            Not enough safe routes, not enough bike lanes, speeds too high when roads are shared with automobiles, passing vehicles do not provide adequate cushion, laws not adequately enforced
+          </li>
+          
+          <li>
+            There are barely any bike lanes and the road surface is very rough.
+          </li>
+          
+          <li>
+            Don&#39;t feel comfortable. Streets small and crowded
+          </li>
+          
+          <li>
+            No trails or proper space to safely bike
+          </li>
+          
+          <li>
+            I would say the lack of sidewalks, crosswalks, bike lanes, and the recklessness of other drivers.
+          </li>
+          
+          <li>
+            Some places have very tiny streets
+          </li>
+          
+          <li>
+            Por el lado donde vivo (Grand Ave) la banqueta es hecha de tierra. La
+          </li>
+          
+          <li>
+            Poor sidewalks or lack of. Safety. Bike lanes needed.
+          </li>
+          
+          <li>
+            Not enough bike lanes or paved sidewalks and crosswalks
+          </li>
+          
+          <li>
+            Rocks, glass, debris, and thorns due to dry conditions make it easier for riders to get flat tires and other damages. Certain areas are difficult to cross and ride through due to fast traffic and having to share the road with vehicles.
+          </li>
+          
+        </ol>
+      </div>
     </div>
-  </div>
 </body>
 
 </html>
