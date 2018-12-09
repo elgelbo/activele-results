@@ -15,15 +15,21 @@
 </head>
 
 <body>
-  <ul class="nav justify-content-center basic">
+  <!-- <ul class="nav justify-content-center basic">
     <li class="nav-item">
       <a class="nav-link" href="#esri-map">Summary of Map Comments</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#text-summary">Summary of Text Message Survey</a>
     </li>
-  </ul>
+  </ul> -->
   <div class="container">
+    <div class="result text-summary" name="text-summary" id="text-summary">
+      <div class="title">
+        <h1>Summary of Text Message Survey</h1>
+      </div>
+    </div>
+    <%- include(filename2, {summary: summary}); %>
     <div class="result map-summary">
       <div class="title">
         <h1>Summary of Map Comments</h1>
@@ -31,12 +37,6 @@
     </div>
     <%- include(filename, {esriResults: esriResults}); %>
     <%- include(mapIndiv, {esriResults: esriResults}); %>
-    <div class="result text-summary" name="text-summary" id="text-summary">
-      <div class="title">
-        <h1>Summary of Text Message Survey</h1>
-      </div>
-    </div>
-    <%- include(filename2, {summary: summary}); %>
   </div>
 </body>
 

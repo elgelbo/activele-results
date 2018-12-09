@@ -2,9 +2,9 @@ const turf = require('@turf/turf');
 function cleanString(s) {
   return s.replace(/[^A-Za-z0-9_]/g, "");
 }
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
 exports.pipeline = (surveys) => {
+  const notFlag = new Array();
   const complete = new Array();
   const spanish = new Array();
   const age = new Array();
@@ -29,65 +29,69 @@ exports.pipeline = (surveys) => {
   const q12 = new Array();
   const q13 = new Array();
   surveys.forEach(survey => {
-    complete.push(survey.complete);
-    spanish.push(survey.spanish);
-    q1.push(survey.responses[0]);
-    if (survey.responses[1] != null) {
-      q2.push(Object.values(survey.responses[1]).toString());
-      q2Name.push(survey.home.place_name);
-      q2Point.push(turf.point(survey.home.geometry.coordinates));
-    }
-    if (survey.responses[2] != null) {
-      q3.push(parseInt(Object.values(survey.responses[2])));
-    }
-    if (survey.responses[3] != null) {
-      q4.push(Object.values(survey.responses[3]).toString());
-    }
-    if (survey.work.geometry != null) {
-      q5.push(Object.values(survey.responses[1]).toString());
-      q5Name.push(survey.work.place_name);
-      q5Point.push(turf.point(survey.work.geometry.coordinates));
-    }
-    if (survey.responses[5] != null && survey.responses[5].answer != 'skip') {
-      q6.push(parseInt(Object.values(survey.responses[5])));
-    }
-    if (survey.responses[6] != null) {
-      q7.push(Object.values(survey.responses[6]).toString());
-    }
-    // NEED TO GET COUNT BY HS NAME
-    if (survey.responses[7] != null && survey.responses[7].answer != 'skip') {
-      q8.push(cleanString(Object.values(survey.responses[7]).toString().toLowerCase()));
-      q8Name.push(survey.school.place_name);
-      q8Point.push(turf.point(survey.school.geometry.coordinates));
-    }
-    if (survey.responses[8] != null && survey.responses[8].answer != 'skip') {
-      q9.push(parseInt(Object.values(survey.responses[8])));
-    }
-    if (survey.responses[9] != null) {
-      q10.push(parseInt(Object.values(survey.responses[9])));
-    }
-    if (survey.responses[10] != null) {
-      q11.push(Object.values(survey.responses[10]));
-    }
-    if (survey.responses[11] != null) {
-      q12.push(parseInt(Object.values(survey.responses[11])));
-    }
-    if (survey.responses[12] != null) {
-      q13.push(Object.values(survey.responses[12]));
-    }
-    if (survey.responses[13] != null) {
-      age.push(parseInt(Object.values(survey.responses[13])));
-    }
-    if (survey.responses[14] != null) {
-      if (JSON.parse(Object.values(survey.responses[14])) === true && survey.responses[15] != null) {
-        var emailString = Object.values(survey.responses[15]).toString().split(' ');
-        email.push(emailString[0]);
+    if (survey.flag != true) {
+      notFlag.push(false);
+      complete.push(survey.complete);
+      spanish.push(survey.spanish);
+      q1.push(survey.responses[0]);
+      if (survey.responses[1] != null) {
+        q2.push(Object.values(survey.responses[1]).toString());
+        q2Name.push(survey.home.place_name);
+        q2Point.push(turf.point(survey.home.geometry.coordinates, {'place_name': survey.responses[1]}));
+      }
+      if (survey.responses[2] != null) {
+        q3.push(parseInt(Object.values(survey.responses[2])));
+      }
+      if (survey.responses[3] != null) {
+        q4.push(Object.values(survey.responses[3]).toString());
+      }
+      if (survey.work.geometry != null) {
+        q5.push(Object.values(survey.responses[1]).toString());
+        q5Name.push(survey.work.place_name);
+        q5Point.push(turf.point(survey.work.geometry.coordinates));
+      }
+      if (survey.responses[5] != null && survey.responses[5].answer != 'skip') {
+        q6.push(parseInt(Object.values(survey.responses[5])));
+      }
+      if (survey.responses[6] != null) {
+        q7.push(Object.values(survey.responses[6]).toString());
+      }
+      // NEED TO GET COUNT BY HS NAME
+      if (survey.responses[7] != null && survey.responses[7].answer != 'skip') {
+        q8.push(cleanString(Object.values(survey.responses[7]).toString().toLowerCase()));
+        q8Name.push(survey.school.place_name);
+        q8Point.push(turf.point(survey.school.geometry.coordinates));
+      }
+      if (survey.responses[8] != null && survey.responses[8].answer != 'skip') {
+        q9.push(parseInt(Object.values(survey.responses[8])));
+      }
+      if (survey.responses[9] != null) {
+        q10.push(parseInt(Object.values(survey.responses[9])));
+      }
+      if (survey.responses[10] != null) {
+        q11.push(Object.values(survey.responses[10]));
+      }
+      if (survey.responses[11] != null) {
+        q12.push(parseInt(Object.values(survey.responses[11])));
+      }
+      if (survey.responses[12] != null) {
+        q13.push(Object.values(survey.responses[12]));
+      }
+      if (survey.responses[13] != null) {
+        age.push(parseInt(Object.values(survey.responses[13])));
+      }
+      if (survey.responses[14] != null) {
+        if (JSON.parse(Object.values(survey.responses[14])) === true && survey.responses[15] != null) {
+          var emailString = Object.values(survey.responses[15]).toString().split(' ');
+          email.push(emailString[0]);
+        }
       }
     }
   });
   const homePoints = turf.featureCollection(q2Point);
   const workPoints = turf.featureCollection(q5Point);
   const schoolPoints = turf.featureCollection(q8Point);
+
   const q3Summary = [
     {
       'title': 'Walk',
@@ -283,17 +287,26 @@ exports.pipeline = (surveys) => {
       'percent': JSON.parse((q12.filter(el => el === 5).length / q12.length.toFixed(1) * 100).toFixed(1)),
     }
   ];
+  const surveyTotal = notFlag.length;
+  const sumAge = age.reduce(
+    ( accumulator, currentValue ) => accumulator + currentValue,
+    0
+  );
   const summary = {
-    'total': surveys.length,
+    'total': surveyTotal,
     'complete': {
       'count': complete.filter(el => el === true).length,
-      'percent': (parseFloat(complete.filter(el => el === true).length / surveys.length) * 100).toFixed(1)
+      'percent': (parseFloat(complete.filter(el => el === true).length / surveyTotal) * 100).toFixed(1)
     },
     'spanish': {
       'count': spanish.filter(el => el === true).length,
-      'percent': (parseFloat(spanish.filter(el => el === true).length / surveys.length) * 100).toFixed(1)
+      'percent': (parseFloat(spanish.filter(el => el === true).length / surveyTotal) * 100).toFixed(1)
     },
-    'age': (age.reduce(reducer)/age.length).toFixed(1),
+    'age': {
+      'average': (sumAge/age.length).toFixed(1),
+      'low': Math.min(...age),
+      'high': Math.max(...age)
+    },
     'email': {
       'list': email,
       'total': email.length
@@ -308,12 +321,12 @@ exports.pipeline = (surveys) => {
       },
       'total': q2.length,
       'question': 'Where do you live?',
-      'percent': ((q2.length / surveys.length) * 100).toFixed(1)
+      'percent': ((q2.length / surveyTotal) * 100).toFixed(1)
     },
     'question3': {
       'question': 'On a typical day, how do you travel around your community to shop, eat, run errands, or for social or recreational purposes?',
       'total': q3.length,
-      'percent': ((q3.length / surveys.length) * 100).toFixed(1),
+      'percent': ((q3.length / surveyTotal) * 100).toFixed(1),
       'responses': q3Summary.sort(function (a, b) {
         return a.count - b.count;
       }).reverse()
@@ -342,12 +355,12 @@ exports.pipeline = (surveys) => {
       },
       'total': q5.length,
       'question': 'Where do you work?',
-      'percent': ((q5.length / surveys.length) * 100).toFixed(1)
+      'percent': ((q5.length / surveyTotal) * 100).toFixed(1)
     },
     'question6': {
       'question': 'How do you normally travel to/from work?',
       'total': q6.length,
-      'percent': ((q6.length / surveys.length) * 100).toFixed(1),
+      'percent': ((q6.length / surveyTotal) * 100).toFixed(1),
       'responses': q6Summary.sort(function (a, b) {
         return a.count - b.count;
       }).reverse()
@@ -376,12 +389,12 @@ exports.pipeline = (surveys) => {
           'center': turf.center(schoolPoints)
         },
         'total': q8.length,
-        'percent': ((q8.length / surveys.length) * 100).toFixed(1)   
+        'percent': ((q8.length / surveyTotal) * 100).toFixed(1)   
     },
     'question9': {
       'question': 'How do you normally travel to/from school?',
       'total': q9.length,
-      'percent': ((q9.length / surveys.length) * 100).toFixed(1),
+      'percent': ((q9.length / surveyTotal) * 100).toFixed(1),
       'responses': q9Summary.sort(function (a, b) {
         return a.count - b.count;
       }).reverse()
@@ -389,7 +402,7 @@ exports.pipeline = (surveys) => {
     'question10': {
       'question': 'In general, how easy/difficult do you feel it is to walk 🚶 in Lake Elsinore?',
       'total': q10.length,
-      'percent': ((q10.length / surveys.length) * 100).toFixed(1),
+      'percent': ((q10.length / surveyTotal) * 100).toFixed(1),
       // 'responses': q10
       'responses': q10Summary.sort(function (a, b) {
         return a.count - b.count;
@@ -398,13 +411,13 @@ exports.pipeline = (surveys) => {
     'question11': {
       'question': 'What are the biggest challenges for walking 🚶 in Lake Elsinore? What keeps you from walking more?',
       'total': q11.length,
-      'percent': ((q11.length / surveys.length) * 100).toFixed(1),
+      'percent': ((q11.length / surveyTotal) * 100).toFixed(1),
       'responses': q11
     },
     'question12': {
       'question': 'In general, how easy/difficult do you feel it is to bike 🚴‍ in Lake Elsinore?',
       'total': q12.length,
-      'percent': ((q12.length / surveys.length) * 100).toFixed(1),
+      'percent': ((q12.length / surveyTotal) * 100).toFixed(1),
       'responses': q12Summary.sort(function (a, b) {
         return a.count - b.count;
       }).reverse()
@@ -412,7 +425,7 @@ exports.pipeline = (surveys) => {
     'question13': {
       'question': 'What are the biggest challenges for biking 🚴‍ in Lake Elsinore? What keeps you from biking more?',
       'total': q13.length,
-      'percent': ((q13.length / surveys.length) * 100).toFixed(1),
+      'percent': ((q13.length / surveyTotal) * 100).toFixed(1),
       'responses': q13
     }
   };

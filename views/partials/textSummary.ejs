@@ -1,543 +1,551 @@
 <div class="result summary">
-    <div class="title">
-      <h4>Survey Participation</h4>
-    </div>
-    <div class="details">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-center"># of Responses</th>
-            <th scope="col" class="text-center">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Completed Surveys
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.complete.count) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              <%- summary.complete.percent %>%
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Spanish Surveys
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.spanish.count) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              <%- summary.spanish.percent %>%
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Surveys
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              100%
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="title">
+    <h4>Survey Participation</h4>
   </div>
-  <div class="result age">
-    <div class="title">
-      <h4>Age of Participants</h4>
-    </div>
-    <div class="details">
-      <h5>
-        The average age of survey participants is
-        <%- summary.age.average %> and ranged from
-        <%- summary.age.low %> years old to
-        <%- summary.age.high %> years old.
-      </h5>
-    </div>
+  <div class="details">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="text-center"># of Responses</th>
+          <th scope="col" class="text-center">% of Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Completed Surveys
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.complete.count) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            <%- summary.complete.percent %>%
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Spanish Surveys
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.spanish.count) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            <%- summary.spanish.percent %>%
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Surveys
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            100%
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="result email">
-    <div class="title">
-      <h4>Opt-In for Future Notifications</h4>
-    </div>
-    <div class="details">
-      <h5>
-        A total of
-        <%- summary.email.total %> participants requested future notifications about ActiveLE.
-      </h5>
-      <ol>
-        <% summary.email.list.forEach(function(e, index) { %>
-        <li>
-          <%= e %>
-        </li>
+</div>
+<div class="result age">
+  <div class="title">
+    <h4>Age of Participants</h4>
+  </div>
+  <div class="details">
+    <h5>
+      The average age of survey participants is
+      <%- summary.age.average %> and ranged from
+      <%- summary.age.low %> years old to
+      <%- summary.age.high %> years old.
+    </h5>
+  </div>
+</div>
+<div class="result email">
+  <div class="title">
+    <h4>Opt-In for Future Notifications</h4>
+  </div>
+  <div class="details">
+    <h5>
+      A total of
+      <%- summary.email.total %> participants requested future notifications about ActiveLE.
+    </h5>
+    <ol>
+      <% summary.email.list.forEach(function(e, index) { %>
+      <li>
+        <%= e %>
+      </li>
+      <% }); %>
+    </ol>
+  </div>
+</div>
+<div class="result question1">
+  <div class="title">
+    <h4>
+      <%- summary.question2.question %>
+    </h4>
+  </div>
+  <div class="details">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="text-center"># of Responses</th>
+          <th scope="col" class="text-center">% of Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Responses
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.question2.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            <%- summary.question2.percent %>%
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Surveys
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            100%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="result question2">
+  <div class="title">
+    <h4>
+      <%- summary.question3.question %>
+    </h4>
+  </div>
+  <div class="details">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="text-center"># of Responses</th>
+          <th scope="col" class="text-center">% of Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% summary.question3.responses.forEach(function(ans, index) { %>
+        <tr>
+          <th scope="row" style="width: 25%">
+            <%= ans.title %>
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%= ans.count %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            <%- ans.percent %>%
+          </td>
+        </tr>
         <% }); %>
-      </ol>
-    </div>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Responses
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.question3.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            100%
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="result question1">
-    <div class="title">
-      <h4>
-        <%- summary.question2.question %>
-      </h4>
-    </div>
-    <div class="details">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-center"># of Responses</th>
-            <th scope="col" class="text-center">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Responses
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.question2.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              <%- summary.question2.percent %>%
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Surveys
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              100%
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+</div>
+<div class="result home-map">
+  <div id="map"></div>
+  <script>
+    var center = <%- JSON.stringify(summary.question2.points.center.geometry.coordinates) %>;
+    var mymap = L.map('map').setView([
+          33.65892430743777, -117.35012054443358
+        ], 10);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+      maxZoom: 18,
+      id: 'mapbox.streets'
+    }).addTo(mymap);
+    var myGeo = <%- JSON.stringify(summary.question2.points.features) %>
+      homeLayer = L.geoJson(myGeo, {
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup(
+            '<p>' + JSON.stringify(feature.properties.answer) + '</p>' + '<p>'
+          );
+        }
+      });
+      mymap.addLayer(homeLayer);</script>
+</div>
+<div class="result question3">
+  <div class="title">
+    <h4>
+      <%- summary.question4.question %>
+    </h4>
   </div>
-  <div class="result question2">
-    <div class="title">
-      <h4>
-        <%- summary.question3.question %>
-      </h4>
-    </div>
-    <div class="details">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-center"># of Responses</th>
-            <th scope="col" class="text-center">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% summary.question3.responses.forEach(function(ans, index) { %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              <%= ans.title %>
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%= ans.count %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              <%- ans.percent %>%
-            </td>
-          </tr>
-          <% }); %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Responses
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.question3.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              100%
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="result home-map">
-    <div id="map"></div>
-    <script>
-      var center = <%- JSON.stringify(summary.question2.points.center.geometry.coordinates) %>;
-      var mymap = L.map('map').setView([center[1], center[0]], 4);
-      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-        maxZoom: 18,
-        id: 'mapbox.streets'
-      }).addTo(mymap);
-      var myGeo = <%- JSON.stringify(summary.question2.points.features) %>
-        L.geoJSON(myGeo).addTo(mymap);
-      var group = new L.featureGroup(myGeo);</script>
-  </div>
-  <div class="result question3">
-    <div class="title">
-      <h4>
-        <%- summary.question4.question %>
-      </h4>
-    </div>
-    <div class="details">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-center"># of Responses</th>
-            <th scope="col" class="text-center">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% summary.question4.responses.forEach(function(ans, index) { %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              <%= ans.title %>
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%= ans.count %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              <%- ans.percent %>%
-            </td>
-          </tr>
-          <% }); %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Responses
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.question4.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              100%
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="result question4">
-    <div class="title">
-      <h4>
-        <%- summary.question5.question %>
-      </h4>
-    </div>
-    <div class="details">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-center"># of Responses</th>
-            <th scope="col" class="text-center">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Responses
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.question5.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              <%- summary.question5.percent %>%
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Surveys
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              100%
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="result question5">
-    <div class="title">
-      <h4>
-        <%- summary.question6.question %>
-      </h4>
-    </div>
-    <div class="details">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-center"># of Responses</th>
-            <th scope="col" class="text-center">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% summary.question6.responses.forEach(function(ans, index) { %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              <%= ans.title %>
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%= ans.count %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              <%- ans.percent %>%
-            </td>
-          </tr>
-          <% }); %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Responses
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.question6.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              100%
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="result work-map">
-    <div id="map5"></div>
-    <script>
-      var center1 = <%- JSON.stringify(summary.question5.points.center.geometry.coordinates) %>;
-      var mymap5 = L.map('map5').setView([center1[1], center1[0]], 9);
-      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-        maxZoom: 18,
-        id: 'mapbox.streets'
-      }).addTo(mymap5);
-      var myGeo5 = <%- JSON.stringify(summary.question5.points.features) %>
-        L.geoJSON(myGeo5).addTo(mymap5);
-      var group = new L.featureGroup(myGeo5);</script>
-  </div>
-  <div class="result question6">
-    <div class="title">
-      <h4>
-        <%- summary.question7.question %>
-      </h4>
-    </div>
-    <div class="details">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-center"># of Responses</th>
-            <th scope="col" class="text-center">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Responses
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.question7.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              <%- summary.question7.percent %>%
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Surveys
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              100%
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="result question7">
-    <div class="title">
-      <h4>
-        <%- summary.question9.question %>
-      </h4>
-    </div>
-    <div class="details">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-center"># of Responses</th>
-            <th scope="col" class="text-center">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% summary.question9.responses.forEach(function(ans, index) { %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              <%= ans.title %>
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%= ans.count %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              <%- ans.percent %>%
-            </td>
-          </tr>
-          <% }); %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Responses
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.question9.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              100%
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="result school-map">
-    <div id="map8"></div>
-    <script>
-      var center2 = <%- JSON.stringify(summary.question8.points.center.geometry.coordinates) %>;
-      var mymap8 = L.map('map8').setView([center2[1], center2[0]], 5);
-      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-        maxZoom: 18,
-        id: 'mapbox.streets'
-      }).addTo(mymap8);
-      var myGeo8 = <%- JSON.stringify(summary.question8.points.features) %>
-        L.geoJSON(myGeo8).addTo(mymap8);
-      var group = new L.featureGroup(myGeo8);</script>
-  </div>
-  <div class="result question8">
-    <div class="title">
-      <h4>
-        <%- summary.question10.question %>
-      </h4>
-    </div>
-    <div class="details">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-center"># of Responses</th>
-            <th scope="col" class="text-center">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% summary.question10.responses.forEach(function(ans, index) { %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              <%= ans.title %>
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%= ans.count %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              <%- ans.percent %>%
-            </td>
-          </tr>
-          <% }); %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Responses
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.question10.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              100%
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="result question9">
-    <div class="title">
-      <h4>
-        <%- summary.question11.question %>
-      </h4>
-    </div>
-    <div class="details">
-      <ol>
-        <% summary.question11.responses.forEach(function(ans, index) { %>
-        <li>
-          <%= ans %>
-        </li>
+  <div class="details">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="text-center"># of Responses</th>
+          <th scope="col" class="text-center">% of Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% summary.question4.responses.forEach(function(ans, index) { %>
+        <tr>
+          <th scope="row" style="width: 25%">
+            <%= ans.title %>
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%= ans.count %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            <%- ans.percent %>%
+          </td>
+        </tr>
         <% }); %>
-      </ol>
-    </div>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Responses
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.question4.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            100%
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="result question10">
-    <div class="title">
-      <h4>
-        <%- summary.question12.question %>
-      </h4>
-    </div>
-    <div class="details">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-center"># of Responses</th>
-            <th scope="col" class="text-center">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% summary.question12.responses.forEach(function(ans, index) { %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              <%= ans.title %>
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%= ans.count %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              <%- ans.percent %>%
-            </td>
-          </tr>
-          <% }); %>
-          <tr>
-            <th scope="row" style="width: 25%">
-              Total Responses
-            </th>
-            <td class="text-center" style="width: 50%">
-              <%- JSON.stringify(summary.question12.total) %>
-            </td>
-            <td class="text-center" style="width: 25%">
-              100%
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+</div>
+<div class="result question4">
+  <div class="title">
+    <h4>
+      <%- summary.question5.question %>
+    </h4>
   </div>
-  <div class="result question11">
-      <div class="title">
-        <h4>
-          <%- summary.question13.question %>
-        </h4>
-      </div>
-      <div class="details">
-        <ol>
-          <% summary.question13.responses.forEach(function(ans, index) { %>
-          <li>
-            <%= ans %>
-          </li>
-          <% }); %>
-        </ol>
-      </div>
+  <div class="details">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="text-center"># of Responses</th>
+          <th scope="col" class="text-center">% of Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Responses
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.question5.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            <%- summary.question5.percent %>%
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Surveys
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            100%
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>
+<div class="result question5">
+  <div class="title">
+    <h4>
+      <%- summary.question6.question %>
+    </h4>
+  </div>
+  <div class="details">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="text-center"># of Responses</th>
+          <th scope="col" class="text-center">% of Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% summary.question6.responses.forEach(function(ans, index) { %>
+        <tr>
+          <th scope="row" style="width: 25%">
+            <%= ans.title %>
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%= ans.count %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            <%- ans.percent %>%
+          </td>
+        </tr>
+        <% }); %>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Responses
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.question6.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            100%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="result work-map">
+  <div id="map5"></div>
+  <script>
+    var center1 = <%- JSON.stringify(summary.question5.points.center.geometry.coordinates) %>;
+    var mymap5 = L.map('map5').setView([center1[1], center1[0]], 9);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+      maxZoom: 18,
+      id: 'mapbox.streets'
+    }).addTo(mymap5);
+    var myGeo5 = <%- JSON.stringify(summary.question5.points.features) %>
+      L.geoJSON(myGeo5).addTo(mymap5);
+    var group = new L.featureGroup(myGeo5);</script>
+</div>
+<div class="result question6">
+  <div class="title">
+    <h4>
+      <%- summary.question7.question %>
+    </h4>
+  </div>
+  <div class="details">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="text-center"># of Responses</th>
+          <th scope="col" class="text-center">% of Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Responses
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.question7.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            <%- summary.question7.percent %>%
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Surveys
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            100%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="result question7">
+  <div class="title">
+    <h4>
+      <%- summary.question9.question %>
+    </h4>
+  </div>
+  <div class="details">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="text-center"># of Responses</th>
+          <th scope="col" class="text-center">% of Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% summary.question9.responses.forEach(function(ans, index) { %>
+        <tr>
+          <th scope="row" style="width: 25%">
+            <%= ans.title %>
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%= ans.count %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            <%- ans.percent %>%
+          </td>
+        </tr>
+        <% }); %>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Responses
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.question9.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            100%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="result school-map">
+  <div id="map8"></div>
+  <script>
+    var center2 = <%- JSON.stringify(summary.question8.points.center.geometry.coordinates) %>;
+    var mymap8 = L.map('map8').setView([center2[1], center2[0]], 9);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+      maxZoom: 18,
+      id: 'mapbox.streets'
+    }).addTo(mymap8);
+    var myGeo8 = <%- JSON.stringify(summary.question8.points.features) %>
+      L.geoJSON(myGeo8).addTo(mymap8);
+    var group = new L.featureGroup(myGeo8);</script>
+</div>
+<div class="result question8">
+  <div class="title">
+    <h4>
+      <%- summary.question10.question %>
+    </h4>
+  </div>
+  <div class="details">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="text-center"># of Responses</th>
+          <th scope="col" class="text-center">% of Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% summary.question10.responses.forEach(function(ans, index) { %>
+        <tr>
+          <th scope="row" style="width: 25%">
+            <%= ans.title %>
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%= ans.count %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            <%- ans.percent %>%
+          </td>
+        </tr>
+        <% }); %>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Responses
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.question10.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            100%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="result question9">
+  <div class="title">
+    <h4>
+      <%- summary.question11.question %>
+    </h4>
+  </div>
+  <div class="details">
+    <ol>
+      <% summary.question11.responses.forEach(function(ans, index) { %>
+      <li>
+        <%= ans %>
+      </li>
+      <% }); %>
+    </ol>
+  </div>
+</div>
+<div class="result question10">
+  <div class="title">
+    <h4>
+      <%- summary.question12.question %>
+    </h4>
+  </div>
+  <div class="details">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="text-center"># of Responses</th>
+          <th scope="col" class="text-center">% of Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% summary.question12.responses.forEach(function(ans, index) { %>
+        <tr>
+          <th scope="row" style="width: 25%">
+            <%= ans.title %>
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%= ans.count %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            <%- ans.percent %>%
+          </td>
+        </tr>
+        <% }); %>
+        <tr>
+          <th scope="row" style="width: 25%">
+            Total Responses
+          </th>
+          <td class="text-center" style="width: 50%">
+            <%- JSON.stringify(summary.question12.total) %>
+          </td>
+          <td class="text-center" style="width: 25%">
+            100%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="result question11">
+  <div class="title">
+    <h4>
+      <%- summary.question13.question %>
+    </h4>
+  </div>
+  <div class="details">
+    <ol>
+      <% summary.question13.responses.forEach(function(ans, index) { %>
+      <li>
+        <%= ans %>
+      </li>
+      <% }); %>
+    </ol>
+  </div>
+</div>

@@ -15,42 +15,47 @@
 </head>
 
 <body>
-    <% surveys.forEach(function(survey, index) { %>
-      <div class="result individual">
-        <div class="title">
-          <h1>Response #
-            <%= index+1 %>
-          </h1>
-          <h4>Active LE Text Message Survey</h4>
-        </div>
-        <div class="details">
-          <table class="table table-sm">
-            <thead>
-              <tr>
-                <th scope="col">Question #</th>
-                <th scope="col" class="text-center">Question</th>
-                <th scope="col" class="text-center">Answer</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% survey.responses.forEach(function(resp, index) { %>
-              <tr>
-                <th scope="row" style="width: 15%">
-                  <%= index+1 %>
-                </th>
-                <td class="text-center" style="width: 50%">
-                  <%- questions[index].text %>
-                </td>
-                <td class="text-center" style="width: 35%">
-                  <%= Object.values(resp) %>
-                </td>
-              </tr>
-              <% }); %>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <% }); %>
+  <% surveys.forEach(function(survey, index) { %>
+  <% if ( survey.flag != true) { %>
+  <p class="flag">Completed Survey</p>
+  <div class="result individual">
+    <div class="title">
+      <h1>Response #
+        <%= index+1 %>
+      </h1>
+      <h4>Active LE Text Message Survey</h4>
+      <pre><%= survey._id %></pre>
+    </div>
+    <div class="details">
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">Question #</th>
+            <th scope="col" class="text-center">Question</th>
+            <th scope="col" class="text-center">Answer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% survey.responses.forEach(function(resp, index) { %>
+          <tr>
+            <th scope="row" style="width: 15%">
+              <%= index+1 %>
+            </th>
+            <td class="text-center" style="width: 50%">
+              <%- questions[index].text %>
+            </td>
+            <td class="text-center" style="width: 35%">
+              <%= Object.values(resp) %>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <% } %>
+  <% }); %>
+
 </body>
 
 </html>

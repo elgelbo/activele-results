@@ -18,13 +18,13 @@ function writeFileStream(filePath, data) {
 
 const ejsSingle = async (money, questions) => {
   var htmlContent = await fs.readFileSync(__dirname + '/views/results.ejs', 'utf8');
-  var htmlRenderized = await ejs.render(htmlContent, { filename: 'results.ejs', surveys: money.surveys, questions: questions });
+  var htmlRenderized = await ejs.render(htmlContent, { filename: 'results.ejs', surveys: money, questions: questions });
   writeFileStream('./dist/results.html', htmlRenderized);
   // return htmlRenderized;
-  pdf.create(htmlRenderized, singleOptions).toFile('./pdf/results.pdf', function (err, res) {
-    if (err) return console.log(err);
-    console.log(res);
-  });
+  // pdf.create(htmlRenderized, singleOptions).toFile('./pdf/results.pdf', function (err, res) {
+  //   if (err) return console.log(err);
+  //   console.log(res);
+  // });
 }
 
 const ejsSummary = async (clean) => {
@@ -42,9 +42,16 @@ const ejsSummary = async (clean) => {
 const go = async () => {
   try {
     const response = await axios.get(endPoint);
-    const clean = summary.pipeline(response.data.surveys);
-    ejsSingle(response.data, questions);
-    ejsSummary(clean, questions);
+    const notFlag = [];
+    const surveys = response.data.surveys;
+    surveys.forEach(survey => {
+      if (survey.flag != true) {
+        notFlag.push(survey);
+      }
+    });
+    // const clean = summary.pipeline(notFlag);
+    ejsSingle(notFlag, questions);
+    // ejsSummary(clean, questions);
   } catch (error) {
     console.error(error);
   }

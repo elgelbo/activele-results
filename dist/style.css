@@ -86,6 +86,12 @@ h5, h6 {
   text-transform: uppercase;
 }
 
+.flag {
+  font-style: italic;
+  color:orangered;
+  text-transform: uppercase;
+}
+
 /* .summary-question h4 {
   font-size: 1.5em;
 }
@@ -147,6 +153,13 @@ h5, h6 {
 
 
 @media print {
+  .basic {
+    display: none;
+  }
+  #irse {
+    width: 550px;
+    height: 500px;
+  }
   #map {
     width: 550px;
     height: 500px;
@@ -158,6 +171,9 @@ h5, h6 {
   #map8 {
     width: 550px;
     height: 500px;
+  }
+  .text-summary {
+    page-break-before: always;
   }
   .question1 {
     page-break-before: always;

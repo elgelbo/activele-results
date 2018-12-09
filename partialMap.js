@@ -20,7 +20,7 @@ const ejsAssemble = async (esriResults, clean) => {
   var htmlRenderized = await ejs.render(htmlContent, { filename: __dirname + '/views/partials/map.ejs', mapIndiv: __dirname + '/views/partials/mapComments.ejs', filename2: __dirname + '/views/partials/textSummary.ejs', esriResults: esriResults, summary: clean });
   writeFileStream('./dist/index.html', htmlRenderized);
   // return htmlRenderized;
-  // pdf.create(htmlRenderized, mapOptions).toFile('./pdf/map.pdf', function (err, res) {
+  // pdf.create(htmlRenderized, mapOptions).toFile('./pdf/summary2.pdf', function (err, res) {
   //   if (err) return console.log(err);
   //   console.log(res);
   // });
