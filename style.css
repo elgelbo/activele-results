@@ -91,23 +91,6 @@ h5, h6 {
   color:orangered;
   text-transform: uppercase;
 }
-
-/* .summary-question h4 {
-  font-size: 1.5em;
-}
-
-.summary-question h5 {
-  font-size: 1em;
-  color: grey;
-  padding-top: 0.5em;
-}
-
-.summary-question h2 {
-  font-weight: 900;
-  font-style: normal;
-  font-size: 2em;
-  margin-bottom: 0.5em;
-} */
 .result h4 {
   color: grey;
 }
@@ -115,9 +98,13 @@ h5, h6 {
   border-bottom: solid 2px black;
 }
 
+.individual table tr:first-of-type {
+  border-top: 0;
+}
+
 .result {
   /* width indcluded for individual responses fix to handle with class */
-  /* width: 600px; */
+  width: 600px;
   margin-top: 2em;
 }
 
@@ -153,6 +140,7 @@ h5, h6 {
 
 
 @media print {
+  
   .basic {
     display: none;
   }
@@ -172,7 +160,13 @@ h5, h6 {
     width: 550px;
     height: 500px;
   }
-  .text-summary {
+  .home-map{
+    page-break-before: always;
+  }
+  .work-map{
+    page-break-before: always;
+  }
+  .school-map{
     page-break-before: always;
   }
   .question1 {
@@ -192,6 +186,11 @@ h5, h6 {
   }  
   .question10 {
     page-break-before: always;
+  }
+  .map-summary {
+    page-break-before: always;
+    page-break-after: auto;
+    margin-bottom: -1.5em;
   }
   .individual:nth-child(n+2) {
     page-break-before: always;
