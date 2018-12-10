@@ -21,10 +21,10 @@ const ejsSingle = async (money, questions) => {
   var htmlRenderized = await ejs.render(htmlContent, { filename: 'results.ejs', surveys: money, questions: questions });
   writeFileStream('./dist/results.html', htmlRenderized);
   // return htmlRenderized;
-  // pdf.create(htmlRenderized, singleOptions).toFile('./pdf/results.pdf', function (err, res) {
-  //   if (err) return console.log(err);
-  //   console.log(res);
-  // });
+  pdf.create(htmlRenderized, singleOptions).toFile('./pdf/results_2018.12.10.pdf', function (err, res) {
+    if (err) return console.log(err);
+    console.log(res);
+  });
 }
 
 const ejsSummary = async (clean) => {

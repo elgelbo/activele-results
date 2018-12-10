@@ -7,6 +7,7 @@ exports.pipeline = (surveys) => {
   const notFlag = new Array();
   const complete = new Array();
   const spanish = new Array();
+  const commute = new Array();
   const age = new Array();
   const email = new Array();
   const q1 = new Array();
@@ -86,11 +87,34 @@ exports.pipeline = (surveys) => {
           email.push(emailString[0]);
         }
       }
+      // if home and if work
+      if (survey.home.geometry != null && survey.work.geometry != null) {
+        const commuteGeo =       {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": survey.home.geometry.coordinates          },
+          "properties": {
+            "origin_id": survey.home.id,
+            "origin_city": survey.home.text,
+            "origin_country": "US",
+            "origin_lon": survey.home.geometry.coordinates[0],
+            "origin_lat": survey.home.geometry.coordinates[1],
+            "destination_id": survey.work.id,
+            "destination_city": survey.work.text,
+            "destination_country": "US",
+            "destination_lon": survey.work.geometry.coordinates[0],
+            "destination_lat": survey.work.geometry.coordinates[1]
+          }
+        };
+        commute.push(commuteGeo);
+      }
     }
   });
   const homePoints = turf.featureCollection(q2Point);
   const workPoints = turf.featureCollection(q5Point);
   const schoolPoints = turf.featureCollection(q8Point);
+  const commuteGroup = turf.featureCollection(commute);
 
   const q3Summary = [
     {
@@ -427,7 +451,8 @@ exports.pipeline = (surveys) => {
       'total': q13.length,
       'percent': ((q13.length / surveyTotal) * 100).toFixed(1),
       'responses': q13
-    }
+    },
+    'commute': commuteGroup
   };
   return summary;
 }

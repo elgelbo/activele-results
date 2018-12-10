@@ -23,21 +23,20 @@
       <a class="nav-link" href="#text-summary">Summary of Text Message Survey</a>
     </li>
   </ul> -->
-  <div class="container">
-    <div class="result text-summary" name="text-summary" id="text-summary">
-      <div class="title">
-        <h1>Summary of Text Message Survey</h1>
-      </div>
+<div class="page-size">
+  <div class="result text-summary">
+    <div class="title">
+      <h1>Summary of Text Message Survey</h1>
     </div>
-    <%- include(filename2, {summary: summary}); %>
-    <div class="result map-summary">
-      <div class="title">
-        <h1>Summary of Map Comments</h1>
-      </div>
+  </div>
+  <%- include(filename2, {summary: summary}); %>
+  <div class="result map-summary">
+    <div class="title">
+      <h1>Summary of Map Comments</h1>
     </div>
     <%- include(filename, {esriResults: esriResults}); %>
     <%- include(mapIndiv, {esriResults: esriResults}); %>
   </div>
 </body>
-
+</div>
 </html>
