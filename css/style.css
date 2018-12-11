@@ -104,7 +104,7 @@ h5, h6 {
 
 .result {
   /* width indcluded for individual responses fix to handle with class */
-  width: 600px;
+  /* width: 600px; */
   margin-top: 2em;
 }
 
