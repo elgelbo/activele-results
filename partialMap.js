@@ -1,7 +1,7 @@
 var fs = require('fs');
 const ejs = require('ejs');
 var axios = require('axios')
-const endPoint = 'http://activele-survey.herokuapp.com/api/results'
+const endPoint = 'http://activele-survey.herokuapp.com/api/summary'
 const summary = require('./summary');
 var pdf = require('html-pdf');
 const mapOptions = require('./config/pdfOptions_map')
@@ -29,8 +29,7 @@ const ejsAssemble = async (esriResults, clean) => {
 const go = async () => {
   try {
     const response = await axios.get(endPoint);
-    const clean = summary.pipeline(response.data.surveys);
-    ejsAssemble(esriResults, clean);
+    ejsAssemble(esriResults, response.data);
   } catch (error) {
     console.error(error);
   }

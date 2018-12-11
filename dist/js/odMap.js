@@ -1,4 +1,4 @@
-function createHomeMap(center, myGeo) {
+function createODMap(center, myGeo) {
   console.log(JSON.stringify(myGeo.features[0]));
    var mymap = L.map('map').setView([
     center[1], center[0]
@@ -7,7 +7,6 @@ function createHomeMap(center, myGeo) {
     maxZoom: 18,
     id: 'mapbox.streets'
   }).addTo(mymap);    
-
 
   var oneToManyFlowmapLayer = L.canvasFlowmapLayer(myGeo, {
     pathDisplayMode: 'selection',
@@ -25,4 +24,3 @@ function createHomeMap(center, myGeo) {
     }
   });
 }
-
