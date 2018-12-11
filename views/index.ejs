@@ -18,18 +18,24 @@
 
 <body>
   <div class="container">
+    <div class="result flow-summary">
+      <div class="title">
+        <h1>Journey from Home to Work</h1>
+      </div>
+      <%- include('partials/flowMap', {summary: summary}); %>
+    </div>
     <div class="result text-summary">
       <div class="title">
-        <h1>Summary of Text Message Survey</h1>
+        <h1>Summary of Text Message Surveys</h1>
       </div>
     </div>
-    <%- include(filename2, {summary: summary}); %>
+    <%- include('partials/textSummary', {summary: summary}); %>
     <div class="result map-summary">
       <div class="title">
         <h1>Summary of Map Comments</h1>
       </div>
-      <%- include(filename, {esriResults: esriResults}); %>
-      <%- include(mapIndiv, {esriResults: esriResults}); %>
+      <%- include('partials/map', {esriResults: esriResults}); %>
+      <%- include('partials/mapComments', {esriResults: esriResults}); %>
     </div>
   </div>
 </body>

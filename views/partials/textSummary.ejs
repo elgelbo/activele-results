@@ -172,8 +172,6 @@
   <script>
     var center = <%- JSON.stringify(summary.question2.points.center.geometry.coordinates) %>;
     var homeGeo = <%- JSON.stringify(summary.question2.points.features) %>;
-    var newGeo = <%- JSON.stringify(summary.commute) %>;
-    console.log(newGeo);
     createHomeMap(center, homeGeo)</script>
 </div>
 <div class="result question3">
