@@ -305,17 +305,12 @@
   </div>
 </div>
 <div class="result work-map">
-  <div id="map5"></div>
+  <div id="workMap"></div>
+  <script src="../dist/js/createWorkMap.js"></script>
   <script>
-    var center1 = <%- JSON.stringify(summary.question5.points.center.geometry.coordinates) %>;
-    var mymap5 = L.map('map5').setView([center1[1], center1[0]], 9);
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-      maxZoom: 18,
-      id: 'mapbox.streets'
-    }).addTo(mymap5);
-    var myGeo5 = <%- JSON.stringify(summary.question5.points.features) %>
-      L.geoJSON(myGeo5).addTo(mymap5);
-    var group = new L.featureGroup(myGeo5);</script>
+    var centerWork = <%- JSON.stringify(summary.question5.points.center.geometry.coordinates) %>;
+    var workGeo = <%- JSON.stringify(summary.question5.points.features) %>;
+    createWorkMap(centerWork, workGeo)</script>  
 </div>
 <div class="result question6">
   <div class="title">
@@ -404,17 +399,12 @@
   </div>
 </div>
 <div class="result school-map">
-  <div id="map8"></div>
+  <div id="schoolMap"></div>
+  <script src="../dist/js/createSchoolMap.js"></script>
   <script>
-    var center2 = <%- JSON.stringify(summary.question8.points.center.geometry.coordinates) %>;
-    var mymap8 = L.map('map8').setView([center2[1], center2[0]], 9);
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-      maxZoom: 18,
-      id: 'mapbox.streets'
-    }).addTo(mymap8);
-    var myGeo8 = <%- JSON.stringify(summary.question8.points.features) %>
-      L.geoJSON(myGeo8).addTo(mymap8);
-    var group = new L.featureGroup(myGeo8);</script>
+    var centerSchool = <%- JSON.stringify(summary.question8.points.center.geometry.coordinates) %>;
+    var schoolGeo = <%- JSON.stringify(summary.question8.points.features) %>;
+    createSchoolMap(centerSchool, schoolGeo)</script>
 </div>
 <div class="result question8">
   <div class="title">

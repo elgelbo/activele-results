@@ -1,3 +1,4 @@
+<!-- TODO REFACTOR TO COMPONENTS IN SEPERATE JS FILE -->
 <div class="result esri-map">
   <div id="irse"></div>
   <script>
@@ -21,8 +22,22 @@
         return new L.CircleMarker(latlng, { radius: 5, fillOpacity: 0.75 });
       },
       onEachFeature: function (feature, layer) {
+        console.log(feature);
+        if (feature.properties.status === null) {
+          var theStatus = 'n/a'
+        } else {
+          var theStatus = feature.properties.status;
+        }
+        if (feature.properties.mode === null) {
+          var theMode = 'n/a'
+        } else {
+          var theMode = feature.properties.mode;
+        }
+        
         layer.bindPopup(
-          '<p>'+feature.properties.comment +'</p>'+'<p>'+feature.properties.status +'</p>'+'<p>'+feature.properties.mode +'</p>'
+          '<p>'+'<b>Comment: </b>' + feature.properties.comment +'</p>'+
+          '<p>'+'<b>Status: </b>' + theStatus +'</p>'+
+          '<p>'+'<b>Mode: </b>' + theMode +'</p>'
           );
       }
     });
