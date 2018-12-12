@@ -24,4 +24,5 @@ function createODMap(center, myGeo) {
       oneToManyFlowmapLayer.selectFeaturesForPathDisplay(e.sharedDestinationFeatures, 'SELECTION_NEW');
     }
   });
+  
 }

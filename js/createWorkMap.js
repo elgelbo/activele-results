@@ -1,12 +1,14 @@
-function createHomeMap(center, myGeo) {
-  var mymap = L.map('map').setView([
+function createWorkMap(center, workGeo) {
+  var workmap = L.map('workMap').setView([
     center[1], center[0]
   ], 9);
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 18,
     id: 'mapbox.streets'
-  }).addTo(mymap);
-  homeLayer = L.geoJson(myGeo, {
+  }).addTo(workmap);
+  console.log(workGeo);
+  
+  workLayer = L.geoJson(workGeo, {
     style: function (feature) {
       if (feature.properties.mode === 1) {
         return {
@@ -85,7 +87,7 @@ function createHomeMap(center, myGeo) {
         return {
           radius: 5,
           weight: 1,
-          color: 'rgb(255, 255, 255)',
+          color: 'rgb(255, 255, 99)',
           fillColor: 'rgba(255, 255, 255, 0.6)',
           fillOpacity: 0.6
         };
@@ -139,7 +141,7 @@ function createHomeMap(center, myGeo) {
         }
     }
   });
-  mymap.addLayer(homeLayer);
-  mymap.addLayer(homeLayer).fitBounds(homeLayer.getBounds());
+  workmap.addLayer(workLayer);
+  workmap.addLayer(workLayer).fitBounds(workLayer.getBounds());
 }
 
