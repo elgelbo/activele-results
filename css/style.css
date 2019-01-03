@@ -103,16 +103,14 @@ h5, h6 {
 }
 
 .result {
-  /* width indcluded for individual responses fix to handle with class */
-  /* width: 600px; */
   margin-top: 2em;
 }
 
-/* .result table-sm {
-  margin-top: 2em;
+.individual {
   font-size: 0.75em;
   line-height: 1em;
-} */
+}
+
 
 #map {
   width: 100%;
@@ -146,7 +144,9 @@ h5, h6 {
 
 
 @media print {
-  
+  .result {
+    width: 600px;
+  }
   .basic {
     display: none;
   }
@@ -166,6 +166,9 @@ h5, h6 {
     width: 550px;
     height: 500px;
   }
+  .text-summary{
+    page-break-before: always;
+  }
   .home-map{
     page-break-before: always;
   }
@@ -175,9 +178,9 @@ h5, h6 {
   .school-map{
     page-break-before: always;
   }
-  .question1 {
+  /* .question1 {
     page-break-before: always;
-  }
+  } */
   .question3 {
     page-break-before: always;
   }
