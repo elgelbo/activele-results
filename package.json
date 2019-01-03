@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "summary": "node convertSummary",
+    "results": "node convertResults",
+    "publish": "git subtree push --prefix dist origin gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elgelbo/activele-results"
   },
   "keywords": [],
   "author": "",
