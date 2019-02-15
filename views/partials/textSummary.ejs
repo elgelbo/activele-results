@@ -74,7 +74,13 @@
     <ol>
       <% summary.email.list.forEach(function(e, index) { %>
       <li>
-        <%= e %>
+        <%
+          var fields = e.split('@');
+          var placeholder = '*';
+          var red = fields[0].slice(0, 3) + placeholder.repeat(fields[0].length - 3) + '@' + placeholder.repeat(fields[0].length - 4) + fields[1].slice(-4);
+          console.log(red);
+        %>
+        <%= red %>
       </li>
       <% }); %>
     </ol>
