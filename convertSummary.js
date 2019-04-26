@@ -3,7 +3,10 @@ const ejs = require('ejs');
 var axios = require('axios')
 const endPoint = 'http://activele-survey.herokuapp.com/api/summary'
 const esriResults = require('./helpers/esriResults')
-
+const activity = require('./data/recos');
+const activityCount = require('./data/recosCount');
+const pedPlacesCount = require('./data/pedPlaces');
+const bikePlacesCount = require('./data/bikePlaces');
 var pdf = require('html-pdf');
 const summaryOptions = require('./config/pdfOptions_summary')
 
@@ -21,7 +24,13 @@ const ejsAssemble = async (esriResults, clean) => {
     ejs.renderFile('./views/index.ejs',
       {
         esriResults: esriResults,
-        summary: clean
+        summary: clean,
+        activity,
+        activityCount,
+        places: {
+          "ped": pedPlacesCount,
+          "bike": bikePlacesCount
+        }
       }, (err, html) => {
         if (err) { throw (err); }
         const fixed = html.replace(/a*(\.\.\/dist\/)/g, '')
@@ -39,7 +48,7 @@ const ejsAssemble = async (esriResults, clean) => {
 const go = async () => {
   try {
     const response = await axios.get(endPoint);
-    ejsAssemble(esriResults, response.data);
+    ejsAssemble(esriResults, response.data, );
   } catch (error) {
     console.error(error);
   }

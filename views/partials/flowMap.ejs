@@ -4,6 +4,5 @@
   <script>
     var center = <%- JSON.stringify(summary.question2.points.center.geometry.coordinates) %>;
     var newGeo = <%- JSON.stringify(summary.commute) %>;
-    console.log(newGeo);
     createODMap(center, newGeo)</script>
 </div>

@@ -22,7 +22,6 @@
         return new L.CircleMarker(latlng, { radius: 5, fillOpacity: 0.75 });
       },
       onEachFeature: function (feature, layer) {
-        console.log(feature);
         if (feature.properties.status === null) {
           var theStatus = 'n/a'
         } else {

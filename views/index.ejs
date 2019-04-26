@@ -39,6 +39,15 @@
       <%- include('partials/map', {esriResults: esriResults}); %>
       <%- include('partials/mapComments', {esriResults: esriResults}); %>
     </div>
+    <div class="result map-summary">
+      <div class="title">
+        <h1>Outreach Activity</h1>
+      </div>
+    <%- include('partials/recosMap', {activity}); %>
+    <%- include('partials/recos', {activity}); %>
+    </div>
+
+
   </div>
 </body>
 

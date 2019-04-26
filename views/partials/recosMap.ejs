@@ -1,0 +1,43 @@
+<!-- TODO REFACTOR TO COMPONENTS IN SEPERATE JS FILE -->
+<div class="result esri-map">
+  <div id="recos"></div>
+  <script>
+    var recosMap = L.map('recos').setView([33.6933447075328, -117.38131905537], 12);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+      maxZoom: 18,
+      id: 'mapbox.streets'
+    }).addTo(recosMap);
+    var recosGeo = <%- JSON.stringify(activity.features) %>
+    geojsonLayer = L.geoJson(recosGeo, {
+      style: function (feature) {
+        if (feature.properties.type === 'agree') {
+          return { color: "#31e0a3" };
+        } else if (feature.properties.type === 'comment') {
+          return { color: "#e05131" };
+        } else {
+          return { color: "#9b9fa5" };
+        }
+      },
+      pointToLayer: function (feature, latlng) {
+        return new L.CircleMarker(latlng, { radius: 5, fillOpacity: 0.75 });
+      },
+      onEachFeature: function (feature, layer) {       
+        if (feature.properties.group === null) {
+          var theMode = 'n/a'
+        } else {
+          var theMode = feature.properties.group;
+        }
+        if (!feature.properties.comment) {
+          var theComment = 'n/a'
+        } else {
+          var theComment = feature.properties.comment;
+        }        
+        layer.bindPopup(
+          '<p>'+'<b>Comment: </b>' + theComment +'</p>'+
+          // '<p>'+'<b>Status: </b>' + theStatus +'</p>'+
+          '<p>'+'<b>Mode: </b>' + theMode +'</p>'
+          );
+      }
+    });
+    recosMap.addLayer(geojsonLayer);</script>
+</div>

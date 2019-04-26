@@ -1,0 +1,44 @@
+<!-- TODO REFACTOR TO COMPONENTS IN SEPERATE JS FILE -->
+
+<div class="result map-comments">
+  <div class="title">
+    <h4>Summary of Outreach Activity Results</h4>
+  </div>
+  <div class="details">
+    <h5>
+      A total of
+      <%- activity.features.length %> comments were collected during the outreach activity.
+    </h5>
+    <h4>Agreement</h4>
+    <p>
+      A total of
+      <%- activityCount %> comments agreed with recommendations presented during the outreach activity.
+    </p>
+    <h4>Agreement for Bike Recommendations</h4>
+    <ol>
+      <% places.bike.forEach(function(point, index) { %>
+      <li>
+      <%= point.name %> (<%= point.count %>)
+      </li>
+      <% }); %>
+    </ol>
+    <h4>Agreement for Pedestrian Recommendations</h4>
+    <ol>
+      <% places.ped.forEach(function(point, index) { %>
+      <li>
+      <%= point.name %> (<%= point.count %>)
+      </li>
+      <% }); %>
+    </ol>
+    <h4>Suggestions</h4>
+    <ol>
+      <% activity.features.forEach(function(point, index) { %>
+      <% if ( point.properties.type === 'comment') { %>
+      <li>
+        <%= point.properties.comment %>
+      </li>
+      <% } %>
+      <% }); %>
+    </ol>
+  </div>
+</div>

@@ -24,7 +24,8 @@ const singleResult_PDFoptions = {
   },
   // Rendering options
   "base": "file:///C:/Users/mgelbman/Desktop/node/activeLE-results/dist/", // Base path that's used to load files (images, css, js) when they aren't referenced using a host
-  "type": "pdf"         // only used for types png & jpeg
+  "type": "pdf",         // only used for types png & jpeg
+  "renderDelay": 10000
 }
 
 module.exports = singleResult_PDFoptions;
