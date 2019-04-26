@@ -136,6 +136,13 @@ h5, h6 {
   margin: 1.5em 0 1.5em 0;
 }
 
+#recos {
+  width: 100%;
+  height: 600px;
+  margin: 1.5em 0 1.5em 0;
+}
+
+
 #flow {
   width: 100%;
   height: 600px;
@@ -144,43 +151,28 @@ h5, h6 {
 
 
 @media print {
-  .result {
+  /* .result {
     width: 600px;
-  }
+  } */
   .basic {
     display: none;
   }
-  #irse {
-    width: 550px;
-    height: 500px;
-  }
-  #map {
-    width: 550px;
-    height: 500px;
-  }
-  #workMap {
-    width: 550px;
-    height: 500px;
-  }
-  #schoolMap {
-    width: 550px;
-    height: 500px;
-  }
+
   .text-summary{
     page-break-before: always;
   }
-  .home-map{
-    page-break-before: always;
-  }
-  .work-map{
-    page-break-before: always;
-  }
-  .school-map{
-    page-break-before: always;
-  }
-  /* .question1 {
+  /* .home-map{
     page-break-before: always;
   } */
+  /* .work-map{
+    page-break-before: always;
+  } */
+  /* .school-map{
+    page-break-before: always;
+  } */
+  .question1 {
+    page-break-before: always;
+  }
   .question3 {
     page-break-before: always;
   }
