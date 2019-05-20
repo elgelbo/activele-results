@@ -35,7 +35,7 @@ const ejsAssemble = async (esriResults, clean) => {
         if (err) { throw (err); }
         const fixed = html.replace(/a*(\.\.\/dist\/)/g, '')
         writeFileStream('./dist/index.html', fixed);
-        pdf.create(html, summaryOptions).toFile('./pdf/ActiveLE_Summary_201980103.pdf', function (err, res) {
+        pdf.create(html, summaryOptions).toFile('./pdf/ActiveLE_Summary_20190520.pdf', function (err, res) {
           if (err) return console.log(err);
           console.log(res);
         });
