@@ -1,11 +1,11 @@
 require('dotenv').config();
 var axios = require('axios')
 const endPoint = 'http://activele-survey.herokuapp.com/api/results'
-const summary = require('./summary');
+// const summary = require('../summary');
 const turf = require('@turf/turf');
 var MapboxClient = require('@mapbox/mapbox-sdk/services/geocoding');
 var client = MapboxClient({ accessToken: process.env.MAPBOX_TOKEN });
-var Answers = require('./models/Answers');
+var Answers = require('../models/Answers');
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise; //USE ES6 PROMISES see:http://mongoosejs.com/docs/promises.html#plugging-in-your-own-promises-library
 
@@ -55,6 +55,17 @@ async function codeGeo(input) {
   return resp.body;
 }
 
+
+async function reverseGeo(search) {
+  // client.reverseGeocode('mapbox.places', long, lat, function )
+  const resp = await client.reverseGeocode({
+    query: search,
+    limit: 1,
+    countries: ['us']
+  }).send();
+  return resp.body;
+}
+
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
   () => {
     console.log('🔗 👌 🔗 👌 🔗 👌 🔗 👌 Mongoose connection open.')
@@ -72,21 +83,40 @@ async function asyncForEach(array, callback) {
 async function go() {
   try {
     const response = await axios.get(endPoint);
+    var addr = {};
     await asyncForEach(response.data.surveys, async (survey) => {
-      console.log(survey);
-      if (survey._id == '5bbd055974c8ee00135ee03e') {
-        // console.log(survey);
-        // const fixed = await codeGeo(`temescal canyon high school Lake Elsinore, CA 92530`);
-        const answers = await Answers.findOneAndUpdate({
-          _id: '5bbd055974c8ee00135ee03e'
-        }, {
-            flag: true
-          }, {
-            new: true,
-            upsert: true
-          }).exec();
-        console.log(answers);
+      if (survey.school.geometry) {
+        const geo = turf.point(survey.school.geometry.coordinates)
+        if (!turf.booleanWithin(geo, acceptBounds.features[0])) {
+          console.log(survey._id);
+        }
       }
+      // console.log(survey.home.geometry);
+      // if (survey._id == '5ce82fc1ae3386001467350f') {
+      //   console.log(survey.responses[7].answer);
+      //   // const fixed = await codeGeo(`Temescal Canyon High School, Lake Elsinore, CA`);
+      //   // console.log(fixed.features[0]);
+      //   // // 5ce82fc1ae3386001467350f
+      //   // fixed.features.forEach(ult => {
+      //   //   // console.log();
+      //   //   if (ult.place_type.includes('address')) {
+      //   //     // console.log(ult);
+      //   //     const it = ult;
+      //   //     addr = it;
+      //   //   }
+      //   // });
+      //   // // console.log(fixed);
+      //   // // break
+      //   const answers = await Answers.findOneAndUpdate({
+      //     _id: '5ce82fc1ae3386001467350f'
+      //   }, {
+      //       school: survey.home
+      //     }, {
+      //       new: true,
+      //       upsert: true
+      //     }).exec();
+      //   console.log(answers);
+      // }
 
     });
     mongoose.connection.close();
