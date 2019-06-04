@@ -1,0 +1,2855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Active LE Text Message Survey Results</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84557238-3"></script>
+  <script src="js/tag.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.6.0/Tween.min.js"></script>
+  <script src="js/CanvasFlowmapLayer.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="result flow-summary">
+      <div class="title">
+        <h1>Journey from Home to Work</h1>
+      </div>
+      <div class="result flow-map">
+        <div id="flow"></div>
+        <script src="js/odMap.js"></script>
+        <script>
+          var center = [-117.57226, 33.682832000000005];
+          var newGeo = { "details": { "type": "FeatureCollection", "features": [{ "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.40609, 33.689904] }, "properties": { "origin_id": "address.992156846204130", "origin_city": "Rock Point Drive", "origin_country": "US", "origin_lon": -117.40609, "origin_lat": 33.689904, "destination_id": "place.3331078861431510", "destination_city": "Murrieta", "destination_country": "US", "destination_lon": -117.2107, "destination_lat": 33.5608, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-118.14919, 34.147264] }, "properties": { "origin_id": "address.6402751087353226", "origin_city": "North Raymond Avenue", "origin_country": "US", "origin_lon": -118.14919, "origin_lat": 34.147264, "destination_id": "address.6402751087353226", "destination_city": "North Raymond Avenue", "destination_country": "US", "destination_lon": -118.14919, "destination_lat": 34.147264, "mode": 1 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.10658, 33.594933] }, "properties": { "origin_id": "address.6489325873265444", "origin_city": "Capri Drive", "origin_country": "US", "origin_lon": -117.10658, "origin_lat": 33.594933, "destination_id": "address.4284344382265602", "destination_city": "N Main St", "destination_country": "US", "destination_lon": -117.324882, "destination_lat": 33.675057, "mode": 9 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.212003, 33.581421] }, "properties": { "origin_id": "address.1044766924140466", "origin_city": "Colony Drive", "origin_country": "US", "origin_lon": -117.212003, "origin_lat": 33.581421, "destination_id": "address.1090455720098514", "destination_city": "Clinton Keith Road", "destination_country": "US", "destination_lon": -117.24124, "destination_lat": 33.594097, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.324882, 33.675057] }, "properties": { "origin_id": "address.4284344382265602", "origin_city": "N Main St", "origin_country": "US", "origin_lon": -117.324882, "origin_lat": 33.675057, "destination_id": "address.4284344382265602", "destination_city": "N Main St", "destination_country": "US", "destination_lon": -117.32736, "destination_lat": 33.668264, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.25667, 33.575169] }, "properties": { "origin_id": "address.4049520770411228", "origin_city": "Vineyard Knoll Drive", "origin_country": "US", "origin_lon": -117.25667, "origin_lat": 33.575169, "destination_id": "address.1781308941607486", "destination_city": "Limited Ave", "destination_country": "US", "destination_lon": -117.33152, "destination_lat": 33.667723, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.4086, 33.678273] }, "properties": { "origin_id": "address.8548357703253892", "origin_city": "Amorose Street", "origin_country": "US", "origin_lon": -117.4086, "origin_lat": 33.678273, "destination_id": "address.3435030121834176", "destination_city": "West Graham Avenue", "destination_country": "US", "destination_lon": -117.329323, "destination_lat": 33.6685, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.324882, 33.675057] }, "properties": { "origin_id": "address.4284344382265602", "origin_city": "N Main St", "origin_country": "US", "origin_lon": -117.324882, "origin_lat": 33.675057, "destination_id": "address.576742419757790", "destination_city": "Market Street", "destination_country": "US", "destination_lon": -117.37106, "destination_lat": 33.998005, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.81482, 33.751794] }, "properties": { "origin_id": "address.6555990849392010", "origin_city": "Lucero Way", "origin_country": "US", "origin_lon": -117.81482, "origin_lat": 33.751794, "destination_id": "address.6548214036670422", "destination_city": "3rd Street", "destination_country": "US", "destination_lon": -117.35124, "destination_lat": 33.983217, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.25999, 33.945247] }, "properties": { "origin_id": "address.1198785101921746", "origin_city": "Pigeon Pass Road", "origin_country": "US", "origin_lon": -117.25999, "origin_lat": 33.945247, "destination_id": "address.6548214036670422", "destination_city": "3rd Street", "destination_country": "US", "destination_lon": -117.35124, "destination_lat": 33.983217, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.32669, 33.673224] }, "properties": { "origin_id": "address.1449889208881966", "origin_city": "North Spring Street", "origin_country": "US", "origin_lon": -117.32669, "origin_lat": 33.673224, "destination_id": "place.3331078861431510", "destination_city": "Murrieta", "destination_country": "US", "destination_lon": -117.2107, "destination_lat": 33.5608, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.3802, 33.681043] }, "properties": { "origin_id": "address.5991052002128154", "origin_city": "Colonial Circle", "origin_country": "US", "origin_lon": -117.3802, "origin_lat": 33.681043, "destination_id": "postcode.7424157464134450", "destination_city": "92530", "destination_country": "US", "destination_lon": -117.38, "destination_lat": 33.67, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.324882, 33.675057] }, "properties": { "origin_id": "address.557136047983822", "origin_city": "N Main St", "origin_country": "US", "origin_lon": -117.324882, "origin_lat": 33.675057, "destination_id": "address.2014185042385160", "destination_city": "West Graham Avenue", "destination_country": "US", "destination_lon": -117.331547, "destination_lat": 33.669117, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.39023, 33.685456] }, "properties": { "origin_id": "address.4892732234072280", "origin_city": "North Lake Drive", "origin_country": "US", "origin_lon": -117.39023, "origin_lat": 33.685456, "destination_id": "place.7886189461762070", "destination_city": "Temecula", "destination_country": "US", "destination_lon": -117.1474, "destination_lat": 33.4946, "mode": 6 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.266434, 33.630652] }, "properties": { "origin_id": "address.2936762922462956", "origin_city": "Great Falls Road", "origin_country": "US", "origin_lon": -117.266434, "origin_lat": 33.630652, "destination_id": "address.2936762922462956", "destination_city": "Great Falls Road", "destination_country": "US", "destination_lon": -117.26606, "destination_lat": 33.630366, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.39623, 33.70172] }, "properties": { "origin_id": "address.4224486325470034", "origin_city": "Coconut Way", "origin_country": "US", "origin_lon": -117.39623, "origin_lat": 33.70172, "destination_id": "address.5945531487045416", "destination_city": "Katella Street", "destination_country": "US", "destination_lon": -117.761725, "destination_lat": 33.531086, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.39679, 33.700734] }, "properties": { "origin_id": "address.6189102340872140", "origin_city": "Kiwi Way", "origin_country": "US", "origin_lon": -117.39679, "origin_lat": 33.700734, "destination_id": "address.5386112319922356", "destination_city": "3rd Street", "destination_country": "US", "destination_lon": -117.32717, "destination_lat": 33.696341, "mode": 1 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.393054, 33.666039] }, "properties": { "origin_id": "address.8887600610720202", "origin_city": "Lancashire Drive", "origin_country": "US", "origin_lon": -117.393054, "origin_lat": 33.666039, "destination_id": "address.7849359374089268", "destination_city": "Riverside Drive", "destination_country": "US", "destination_lon": -117.37023, "destination_lat": 33.679888, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.26063, 33.624425] }, "properties": { "origin_id": "address.1300633362474516", "origin_city": "Windwood Lane", "origin_country": "US", "origin_lon": -117.26063, "origin_lat": 33.624425, "destination_id": "place.9219597389787290", "destination_city": "Camp Pendleton", "destination_country": "US", "destination_lon": -117.316, "destination_lat": 33.3147, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.25207, 33.660578] }, "properties": { "origin_id": "address.4929704065783982", "origin_city": "Silver Creek", "origin_country": "US", "origin_lon": -117.25207, "origin_lat": 33.660578, "destination_id": "address.4929704065783982", "destination_city": "Silver Creek", "destination_country": "US", "destination_lon": -117.25207, "destination_lat": 33.660578, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.39301, 33.687518] }, "properties": { "origin_id": "address.2996725824037702", "origin_city": "Schooner Lane", "origin_country": "US", "origin_lon": -117.39301, "origin_lat": 33.687518, "destination_id": "address.7510834265847216", "destination_city": "Parkridge Avenue", "destination_country": "US", "destination_lon": -117.56683, "destination_lat": 33.895039, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.3955, 33.679299] }, "properties": { "origin_id": "address.6687274363741874", "origin_city": "Olive Grove Street", "origin_country": "US", "origin_lon": -117.3955, "origin_lat": 33.679299, "destination_id": "address.1279618974194480", "destination_city": "Mill Street", "destination_country": "US", "destination_lon": -117.3126, "destination_lat": 33.665432, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.30241, 33.711278] }, "properties": { "origin_id": "address.4356009097687712", "origin_city": "Flutterbye Street", "origin_country": "US", "origin_lon": -117.30241, "origin_lat": 33.711278, "destination_id": "address.2229330399338182", "destination_city": "Main Street", "destination_country": "US", "destination_lon": -118.10502, "destination_lat": 33.740929, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.27239, 33.688309] }, "properties": { "origin_id": "address.4408489629845840", "origin_city": "Buggywhip Court", "origin_country": "US", "origin_lon": -117.27239, "origin_lat": 33.688309, "destination_id": "address.3959593963272278", "destination_city": "Marguerite Parkway", "destination_country": "US", "destination_lon": -117.65798, "destination_lat": 33.596464, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.29908, 33.647473] }, "properties": { "origin_id": "address.5404661376296972", "origin_city": "Home Plate", "origin_country": "US", "origin_lon": -117.29908, "origin_lat": 33.647473, "destination_id": "address.2987891453034148", "destination_city": "Anderson Street", "destination_country": "US", "destination_lon": -117.26365, "destination_lat": 34.04948, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.20104, 33.544646] }, "properties": { "origin_id": "address.1041158482027038", "origin_city": "Champlain Ave", "origin_country": "US", "origin_lon": -117.20104, "origin_lat": 33.544646, "destination_id": "place.1239080883357360", "destination_city": "Pala", "destination_country": "US", "destination_lon": -117.0767, "destination_lat": 33.3653, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.3488, 33.680092] }, "properties": { "origin_id": "address.7934520562295418", "origin_city": "Saltbush", "origin_country": "US", "origin_lon": -117.3488, "origin_lat": 33.680092, "destination_id": "place.7749226041161420", "destination_city": "Anaheim", "destination_country": "US", "destination_lon": -117.9117, "destination_lat": 33.8348, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.3986, 33.688101] }, "properties": { "origin_id": "address.8022447104174186", "origin_city": "Sunswept Drive", "origin_country": "US", "origin_lon": -117.3986, "origin_lat": 33.688101, "destination_id": "address.8212546252239294", "destination_city": "Sherman Road", "destination_country": "US", "destination_lon": -117.180243, "destination_lat": 33.716684, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.39419, 33.671945] }, "properties": { "origin_id": "address.6898658365684326", "origin_city": "via Bonica", "origin_country": "US", "origin_lon": -117.39419, "origin_lat": 33.671945, "destination_id": "address.8897053814051988", "destination_city": "Elenda Street", "destination_country": "US", "destination_lon": -118.40137, "destination_lat": 34.004832, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-116.99533, 33.743007] }, "properties": { "origin_id": "address.1532353623362892", "origin_city": "West Acacia Avenue", "origin_country": "US", "origin_lon": -116.99533, "origin_lat": 33.743007, "destination_id": "neighborhood.275078", "destination_city": "North Elsinore", "destination_country": "US", "destination_lon": -117.3392, "destination_lat": 33.69, "mode": 6 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.32159, 33.704677] }, "properties": { "origin_id": "address.8612169406220836", "origin_city": "Promise Road", "origin_country": "US", "origin_lon": -117.32159, "origin_lat": 33.704677, "destination_id": "address.8896253189056346", "destination_city": "Wilshire Boulevard", "destination_country": "US", "destination_lon": -118.2584, "destination_lat": 34.049729, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.324882, 33.675057] }, "properties": { "origin_id": "address.8351469419211382", "origin_city": "N Main St", "origin_country": "US", "origin_lon": -117.324882, "origin_lat": 33.675057, "destination_id": "address.8351469419211382", "destination_city": "N Main St", "destination_country": "US", "destination_lon": -117.324882, "destination_lat": 33.675057, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.39481, 33.703869] }, "properties": { "origin_id": "address.8558492390830896", "origin_city": "Antelope Street", "origin_country": "US", "origin_lon": -117.39481, "origin_lat": 33.703869, "destination_id": "address.6852208513517848", "destination_city": "Avenida Cesar Chavez", "destination_country": "US", "destination_lon": -118.14901, "destination_lat": 34.039089, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.426231, 33.72279] }, "properties": { "origin_id": "address.5552720166531490", "origin_city": "Eagles Nest Drive", "origin_country": "US", "origin_lon": -117.426231, "origin_lat": 33.72279, "destination_id": "postcode.7424157464134450", "destination_city": "92530", "destination_country": "US", "destination_lon": -117.38, "destination_lat": 33.67, "mode": 6 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.3037262, 33.62041092] }, "properties": { "origin_id": "address.3073089648142330", "origin_city": "Elderberry Rdg", "origin_country": "US", "origin_lon": -117.3037262, "origin_lat": 33.62041092, "destination_id": "address.1191051588681246", "destination_city": "Pulsar Court", "destination_country": "US", "destination_lon": -117.497839, "destination_lat": 33.799297, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.393945, 33.665828] }, "properties": { "origin_id": "address.2966281818586786", "origin_city": "Little John Way", "origin_country": "US", "origin_lon": -117.393945, "origin_lat": 33.665828, "destination_id": "address.00925834437023", "destination_city": "E 7th St", "destination_country": "US", "destination_lon": -116.94505, "destination_lat": 33.78025, "mode": 2 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.3998, 33.7272] }, "properties": { "origin_id": "neighborhood.267475", "origin_city": "Alberhill", "origin_country": "US", "origin_lon": -117.3998, "origin_lat": 33.7272, "destination_id": "place.9820912572201310", "destination_city": "Riverside", "destination_country": "US", "destination_lon": -117.3962, "destination_lat": 33.9534, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.260757, 33.610059] }, "properties": { "origin_id": "address.2083952154205534", "origin_city": "Hunwut Drive", "origin_country": "US", "origin_lon": -117.260757, "origin_lat": 33.610059, "destination_id": "address.7027376830359884", "destination_city": "California Oaks Road", "destination_country": "US", "destination_lon": -117.202827, "destination_lat": 33.574661, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.254183, 33.661739] }, "properties": { "origin_id": "address.1389207232922566", "origin_city": "Bramble Court", "origin_country": "US", "origin_lon": -117.254183, "origin_lat": 33.661739, "destination_id": "address.2013326715978046", "destination_city": "West Minthorn Street", "destination_country": "US", "destination_lon": -117.333022, "destination_lat": 33.682273, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.323247, 33.67371] }, "properties": { "origin_id": "address.849905302223372", "origin_city": "Lookout St", "origin_country": "US", "origin_lon": -117.323247, "origin_lat": 33.67371, "destination_id": "address.8312008618185652", "destination_city": "South Andreasen Drive", "destination_country": "US", "destination_lon": -117.112566, "destination_lat": 33.115101, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.320215, 33.695754] }, "properties": { "origin_id": "address.5336684254473552", "origin_city": "Bankhall Street", "origin_country": "US", "origin_lon": -117.320215, "origin_lat": 33.695754, "destination_id": "address.00925632432509", "destination_city": "Keller Rd", "destination_country": "US", "destination_lon": -117.16815, "destination_lat": 33.62626, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.3887, 33.697652] }, "properties": { "origin_id": "address.3343948453013508", "origin_city": "Ivy Court", "origin_country": "US", "origin_lon": -117.3887, "origin_lat": 33.697652, "destination_id": "address.3343948453013508", "destination_city": "Ivy Court", "destination_country": "US", "destination_lon": -117.3887, "destination_lat": 33.697652, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.333159, 33.670275] }, "properties": { "origin_id": "address.5208371936943998", "origin_city": "North Lindsay Street", "origin_country": "US", "origin_lon": -117.333159, "origin_lat": 33.670275, "destination_id": "address.3008199271393366", "destination_city": "Commercial Street", "destination_country": "US", "destination_lon": -117.129264, "destination_lat": 32.705685, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.394006, 33.685561] }, "properties": { "origin_id": "address.3513460093952568", "origin_city": "Maritime Circle", "origin_country": "US", "origin_lon": -117.394006, "origin_lat": 33.685561, "destination_id": "address.3513460093952568", "destination_city": "Maritime Circle", "destination_country": "US", "destination_lon": -117.394006, "destination_lat": 33.685561, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.388783, 33.676164] }, "properties": { "origin_id": "address.4913725262992592", "origin_city": "Alvarado Street", "origin_country": "US", "origin_lon": -117.388783, "origin_lat": 33.676164, "destination_id": "postcode.7424157464134450", "destination_city": "92530", "destination_country": "US", "destination_lon": -117.38, "destination_lat": 33.67, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.307264, 33.704045] }, "properties": { "origin_id": "address.8727430651924066", "origin_city": "Cressida Street", "origin_country": "US", "origin_lon": -117.307264, "origin_lat": 33.704045, "destination_id": "address.00925519534007", "destination_city": "Nandina Ave", "destination_country": "US", "destination_lon": -117.23705, "destination_lat": 33.86822, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.319324, 33.701888] }, "properties": { "origin_id": "address.7143362261019426", "origin_city": "Chambord Drive", "origin_country": "US", "origin_lon": -117.319324, "origin_lat": 33.701888, "destination_id": "poi.2611340172458", "destination_city": "Next Advanced Medicine", "destination_country": "US", "destination_lon": -117.794026, "destination_lat": 33.675706, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.0342, 33.2184] }, "properties": { "origin_id": "place.15274096467662550", "origin_city": "Valley Center", "origin_country": "US", "origin_lon": -117.0342, "origin_lat": 33.2184, "destination_id": "address.6273309684060580", "destination_city": "S Harbor Boulevard", "destination_country": "US", "destination_lon": -117.919347, "destination_lat": 33.830247, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.307214, 33.663197] }, "properties": { "origin_id": "address.2854422169385362", "origin_city": "Avenue 9", "origin_country": "US", "origin_lon": -117.307214, "origin_lat": 33.663197, "destination_id": "place.11678998856575970", "destination_city": "Irvine", "destination_country": "US", "destination_lon": -117.826, "destination_lat": 33.6857, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.251022, 33.66161] }, "properties": { "origin_id": "address.3330702763997696", "origin_city": "Mossy Gln", "origin_country": "US", "origin_lon": -117.251022, "origin_lat": 33.66161, "destination_id": "address.1747642692417652", "destination_city": "Hancock Avenue", "destination_country": "US", "destination_lon": -117.1816909, "destination_lat": 33.5663309, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.3896908, 33.680929] }, "properties": { "origin_id": "address.4763831177072752", "origin_city": "Teakwood Street", "origin_country": "US", "origin_lon": -117.3896908, "origin_lat": 33.680929, "destination_id": "poi.3315714821624", "destination_city": "Corona Main St. Park and Ride", "destination_country": "US", "destination_lon": -117.564899, "destination_lat": 33.880764, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.364273, 33.64978] }, "properties": { "origin_id": "address.7406881855396998", "origin_city": "Santa Rosa Drive", "origin_country": "US", "origin_lon": -117.364273, "origin_lat": 33.64978, "destination_id": "address.1354444628173010", "destination_city": "Ortega Hw", "destination_country": "US", "destination_lon": -117.66140747, "destination_lat": 33.50183868, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.39324, 33.699149] }, "properties": { "origin_id": "address.4300869949644028", "origin_city": "Stoneridge Terrace", "origin_country": "US", "origin_lon": -117.39324, "origin_lat": 33.699149, "destination_id": "address.6470840131647924", "destination_city": "East Rincon Street", "destination_country": "US", "destination_lon": -117.561956, "destination_lat": 33.887124, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.32221, 33.691626] }, "properties": { "origin_id": "address.6978436788180600", "origin_city": "Hightower Street", "origin_country": "US", "origin_lon": -117.32221, "origin_lat": 33.691626, "destination_id": "address.1011429551879542", "destination_city": "Chino Corona Rd", "destination_country": "US", "destination_lon": -117.662979, "destination_lat": 33.875092, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.31089, 33.661491] }, "properties": { "origin_id": "address.6031373306106172", "origin_city": "Greenskeeper", "origin_country": "US", "origin_lon": -117.31089, "origin_lat": 33.661491, "destination_id": "address.00925322262971", "destination_city": "Highway 74", "destination_country": "US", "destination_lon": -117.33112, "destination_lat": 33.69855, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.3273, 33.6681] }, "properties": { "origin_id": "place.10407455359841670", "origin_city": "Lake Elsinore", "origin_country": "US", "origin_lon": -117.3273, "origin_lat": 33.6681, "destination_id": "neighborhood.289453", "destination_city": "North Arroyo", "destination_country": "US", "destination_lon": -118.1677, "destination_lat": 34.1614, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.256674, 33.656876] }, "properties": { "origin_id": "address.8005032473610712", "origin_city": "Botany Court", "origin_country": "US", "origin_lon": -117.256674, "origin_lat": 33.656876, "destination_id": "place.3331078861431510", "destination_city": "Murrieta", "destination_country": "US", "destination_lon": -117.2107, "destination_lat": 33.5608, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.308938, 33.707476] }, "properties": { "origin_id": "address.7583116509995534", "origin_city": "Belle Isis Court", "origin_country": "US", "origin_lon": -117.308938, "origin_lat": 33.707476, "destination_id": "address.1618650517642888", "destination_city": "Winchester Road", "destination_country": "US", "destination_lon": -117.166091, "destination_lat": 33.520656, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.399488, 33.694354] }, "properties": { "origin_id": "address.5099304819823032", "origin_city": "Sandpiper Drive", "origin_country": "US", "origin_lon": -117.399488, "origin_lat": 33.694354, "destination_id": "address.5099304819823032", "destination_city": "Sandpiper Drive", "destination_country": "US", "destination_lon": -117.399488, "destination_lat": 33.694354, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.368439, 33.678799] }, "properties": { "origin_id": "address.502941896201604", "origin_city": "Joy Street", "origin_country": "US", "origin_lon": -117.368439, "origin_lat": 33.678799, "destination_id": "place.11741308809618150", "destination_city": "San Diego", "destination_country": "US", "destination_lon": -117.1628, "destination_lat": 32.7174, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.283921, 33.615779] }, "properties": { "origin_id": "address.73964834386524", "origin_city": "Jennifer Drive", "origin_country": "US", "origin_lon": -117.283921, "origin_lat": 33.615779, "destination_id": "address.00917912113259", "destination_city": "E Garvey Ave S", "destination_country": "US", "destination_lon": -117.88869, "destination_lat": 34.07097, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.343113, 33.712582] }, "properties": { "origin_id": "address.2954781920386466", "origin_city": "Lindell Road", "origin_country": "US", "origin_lon": -117.343113, "origin_lat": 33.712582, "destination_id": "address.00925301801911", "destination_city": "Lake St", "destination_country": "US", "destination_lon": -117.39015, "destination_lat": 33.69722, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.414456, 33.69294] }, "properties": { "origin_id": "address.3329470394191874", "origin_city": "Gateway Drive", "origin_country": "US", "origin_lon": -117.414456, "origin_lat": 33.69294, "destination_id": "address.7026596082221044", "destination_city": "Westwind Drive", "destination_country": "US", "destination_lon": -117.4001, "destination_lat": 33.697161, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.376814, 33.692672] }, "properties": { "origin_id": "address.8168667660039470", "origin_city": "Cimarron Road", "origin_country": "US", "origin_lon": -117.376814, "origin_lat": 33.692672, "destination_id": "place.12936694378752010", "destination_city": "San Bernardino", "destination_country": "US", "destination_lon": -117.2898, "destination_lat": 34.1083, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.320941, 33.704918] }, "properties": { "origin_id": "address.8798190632735840", "origin_city": "Promise Road", "origin_country": "US", "origin_lon": -117.320941, "origin_lat": 33.704918, "destination_id": "poi.2654289872203", "destination_city": "Employee Store", "destination_country": "US", "destination_lon": -117.759572, "destination_lat": 33.662657, "mode": 3 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.343862, 33.634151] }, "properties": { "origin_id": "address.7405174906664492", "origin_city": "Churchill Street", "origin_country": "US", "origin_lon": -117.343862, "origin_lat": 33.634151, "destination_id": "address.6690982222435524", "destination_city": "Business Park Drive", "destination_country": "US", "destination_lon": -117.16569, "destination_lat": 33.50116, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.376404, 33.68821] }, "properties": { "origin_id": "address.3728058644054806", "origin_city": "Broadway Street", "origin_country": "US", "origin_lon": -117.376404, "origin_lat": 33.68821, "destination_id": "place.10077606572663780", "destination_city": "Eastvale", "destination_country": "US", "destination_lon": -117.55, "destination_lat": 33.98, "mode": 8 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.288684, 33.687576] }, "properties": { "origin_id": "address.5670874768233186", "origin_city": "Ponte Fiera", "origin_country": "US", "origin_lon": -117.288684, "origin_lat": 33.687576, "destination_id": "address.8154375731558274", "destination_city": "Ponte Russo", "destination_country": "US", "destination_lon": -117.2900269, "destination_lat": 33.6875667, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.339724, 33.703612] }, "properties": { "origin_id": "address.3251260623213038", "origin_city": "Tereticornis Avenue", "origin_country": "US", "origin_lon": -117.339724, "origin_lat": 33.703612, "destination_id": "place.7886189461762070", "destination_city": "Temecula", "destination_country": "US", "destination_lon": -117.1474, "destination_lat": 33.4946, "mode": 9 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.409833, 33.690587] }, "properties": { "origin_id": "address.3404489412223562", "origin_city": "Star Ridge Drive", "origin_country": "US", "origin_lon": -117.409833, "origin_lat": 33.690587, "destination_id": "address.00925322534050", "destination_city": "Canyon Hills Rd", "destination_country": "US", "destination_lon": -117.25251, "destination_lat": 33.65956, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.395141, 33.700652] }, "properties": { "origin_id": "address.6516002512944514", "origin_city": "Nectarine Way", "origin_country": "US", "origin_lon": -117.395141, "origin_lat": 33.700652, "destination_id": "address.00925301801911", "destination_city": "Lake St", "destination_country": "US", "destination_lon": -117.39015, "destination_lat": 33.69722, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.382643, 33.704876] }, "properties": { "origin_id": "address.3258675530885238", "origin_city": "Alderwood Place", "origin_country": "US", "origin_lon": -117.382643, "origin_lat": 33.704876, "destination_id": "place.9820912572201310", "destination_city": "Riverside", "destination_country": "US", "destination_lon": -117.3962, "destination_lat": 33.9534, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.329822, 33.694325] }, "properties": { "origin_id": "address.6757068662831600", "origin_city": "3rd Street", "origin_country": "US", "origin_lon": -117.329822, "origin_lat": 33.694325, "destination_id": "place.7886189461762070", "destination_city": "Temecula", "destination_country": "US", "destination_lon": -117.1474, "destination_lat": 33.4946, "mode": 7 } }, { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-117.31176, 33.627604] }, "properties": { "origin_id": "address.3633846899813700", "origin_city": "Ontario Way", "origin_country": "US", "origin_lon": -117.31176, "origin_lat": 33.627604, "destination_id": "place.9820912572201310", "destination_city": "Riverside", "destination_country": "US", "destination_lon": -117.3962, "destination_lat": 33.9534, "mode": 7 } }] }, "bbox": [-118.14919, 33.2184, -116.99533, 34.147264] };
+          createODMap(center, newGeo)</script>
+      </div>
+    </div>
+    <div class="result text-summary">
+      <div class="title">
+        <h1>Summary of Text Message Surveys</h1>
+      </div>
+    </div>
+    <div class="result summary">
+      <div class="title">
+        <h4>Survey Participation</h4>
+      </div>
+      <div class="details">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"># of Responses</th>
+              <th scope="col" class="text-center">% of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="width: 25%">
+                Completed Surveys
+              </th>
+              <td class="text-center" style="width: 50%">
+                98
+              </td>
+              <td class="text-center" style="width: 25%">
+                84.5%
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 25%">
+                Spanish Surveys
+              </th>
+              <td class="text-center" style="width: 50%">
+                4
+              </td>
+              <td class="text-center" style="width: 25%">
+                3.4%
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Surveys
+              </th>
+              <td class="text-center" style="width: 50%">
+                116
+              </td>
+              <td class="text-center" style="width: 25%">
+                100%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="result age">
+      <div class="title">
+        <h4>Age of Participants</h4>
+      </div>
+      <div class="details">
+        <h5>
+          The average age of survey participants is
+          36.6 and ranged from
+          5 years old to
+          62 years old.
+        </h5>
+      </div>
+    </div>
+    <div class="result email">
+      <div class="title">
+        <h4>Opt-In for Future Notifications</h4>
+      </div>
+      <div class="details">
+        <h5>
+          A total of
+          82 participants requested future notifications about ActiveLE.
+        </h5>
+        <ol>
+
+
+          <li>
+
+            jno***********@**********.com
+          </li>
+
+
+
+          <li>
+
+            Aga*****@****.com
+          </li>
+
+
+
+          <li>
+
+            tig********@*******.com
+          </li>
+
+
+
+          <li>
+
+            dan*****@****.com
+          </li>
+
+
+
+          <li>
+
+            rgl****@***.org
+          </li>
+
+
+
+          <li>
+
+            Kco*********@********.com
+          </li>
+
+
+
+          <li>
+
+            llo******@*****.com
+          </li>
+
+
+
+          <li>
+
+            joe*****@****m.au
+          </li>
+
+
+
+          <li>
+
+            Kel******@*****.com
+          </li>
+
+
+
+          <li>
+
+            sar*********@********.com
+          </li>
+
+
+
+          <li>
+
+            luz***@**.com
+          </li>
+
+
+
+          <li>
+
+            Rec*******@******.org
+          </li>
+
+
+
+          <li>
+
+            Deb************@***********.com
+          </li>
+
+
+
+          <li>
+
+            Ber****@***.com
+          </li>
+
+
+
+          <li>
+
+            gem********@*******.com
+          </li>
+
+
+
+          <li>
+
+            Dar*********@********.com
+          </li>
+
+
+
+          <li>
+
+            sue***@**.com
+          </li>
+
+
+
+          <li>
+
+            bra********@*******.com
+          </li>
+
+
+
+          <li>
+
+            Sig********@*******.com
+          </li>
+
+
+
+          <li>
+
+            Sap***@**.com
+          </li>
+
+
+
+          <li>
+
+            rac**********@*********.com
+          </li>
+
+
+
+          <li>
+
+            Aja**@*.com
+          </li>
+
+
+
+          <li>
+
+            Lil*********@********.com
+          </li>
+
+
+
+          <li>
+
+            Mlo*******@******.com
+          </li>
+
+
+
+          <li>
+
+            kkw******@*****.com
+          </li>
+
+
+
+          <li>
+
+            Joy***@**.com
+          </li>
+
+
+
+          <li>
+
+            jol*******@******.com
+          </li>
+
+
+
+          <li>
+
+            Don*****@****.com
+          </li>
+
+
+
+          <li>
+
+            sas*********@********.com
+          </li>
+
+
+
+          <li>
+
+            Bar*******@******.com
+          </li>
+
+
+
+          <li>
+
+            1an********@*******.com
+          </li>
+
+
+
+          <li>
+
+            awa*****@****.com
+          </li>
+
+
+
+          <li>
+
+            s.h************@***********.com
+          </li>
+
+
+
+          <li>
+
+            0ju**********@*********.com
+          </li>
+
+
+
+          <li>
+
+            tmh******@*****.com
+          </li>
+
+
+
+          <li>
+
+            Tes*@.com
+          </li>
+
+
+
+          <li>
+
+            Uss*******@******.com
+          </li>
+
+
+
+          <li>
+
+            Dan**************@*************.com
+          </li>
+
+
+
+          <li>
+
+            Doo*****@****.com
+          </li>
+
+
+
+          <li>
+
+            sna******@*****.edu
+          </li>
+
+
+
+          <li>
+
+            lau***********@**********.com
+          </li>
+
+
+
+          <li>
+
+            tof******@*****.com
+          </li>
+
+
+
+          <li>
+
+            Keo********@*******.com
+          </li>
+
+
+
+          <li>
+
+            Mrs*****************@****************.com
+          </li>
+
+
+
+          <li>
+
+            Voi***************@**************.com
+          </li>
+
+
+
+          <li>
+
+            Jes******@*****
+          </li>
+
+
+
+          <li>
+
+            Sch***************@**************.com
+          </li>
+
+
+
+          <li>
+
+            dee*********@********.com
+          </li>
+
+
+
+          <li>
+
+            Mur*************@************.com
+          </li>
+
+
+
+          <li>
+
+            pet**********@*********.com
+          </li>
+
+
+
+          <li>
+
+            Lob*****@****.com
+          </li>
+
+
+
+          <li>
+
+            Raj********@*******.com
+          </li>
+
+
+
+          <li>
+
+            Bet***********@**********.com
+          </li>
+
+
+
+          <li>
+
+            Vic**********@*********.com
+          </li>
+
+
+
+          <li>
+
+            che******@*****.com
+          </li>
+
+
+
+          <li>
+
+            asu*******@******.com
+          </li>
+
+
+
+          <li>
+
+            Bri**********@*********.com
+          </li>
+
+
+
+          <li>
+
+            Bec*******@******.com
+          </li>
+
+
+
+          <li>
+
+            Als*******@******.com
+          </li>
+
+
+
+          <li>
+
+            dan*******@******.com
+          </li>
+
+
+
+          <li>
+
+            elv**********@*********.com
+          </li>
+
+
+
+          <li>
+
+            She*****@****.com
+          </li>
+
+
+
+          <li>
+
+            626***@**.com
+          </li>
+
+
+
+          <li>
+
+            Bgr******@*****.com
+          </li>
+
+
+
+          <li>
+
+            Sua****@***.com
+          </li>
+
+
+
+          <li>
+
+            biz*******@******.net
+          </li>
+
+
+
+          <li>
+
+            she*********@********.com
+          </li>
+
+
+
+          <li>
+
+            col*********@********.com
+          </li>
+
+
+
+          <li>
+
+            btu*******@******.com
+          </li>
+
+
+
+          <li>
+
+            kro**********@*********.com
+          </li>
+
+
+
+          <li>
+
+            Jmt***@**.net
+          </li>
+
+
+
+          <li>
+
+            gar*******@******.com
+          </li>
+
+
+
+          <li>
+
+            fra**********@*********.com
+          </li>
+
+
+
+          <li>
+
+            mma******@*****.com
+          </li>
+
+
+
+          <li>
+
+            fuz************@***********.com
+          </li>
+
+
+
+          <li>
+
+            nrb*********@********.com
+          </li>
+
+
+
+          <li>
+
+            Luc********@*******.com
+          </li>
+
+
+
+          <li>
+
+            min*************@************a.us
+          </li>
+
+
+
+
+
+          <li>
+
+            Cra********@*******.com
+          </li>
+
+
+
+          <li>
+
+            rod*************@************.com
+          </li>
+
+
+
+          <li>
+
+            aco*******@******.com
+          </li>
+
+
+        </ol>
+      </div>
+    </div>
+    <div class="result question1">
+      <div class="title">
+        <h4>
+          Where do you live?
+        </h4>
+      </div>
+      <div class="details">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"># of Responses</th>
+              <th scope="col" class="text-center">% of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Responses
+              </th>
+              <td class="text-center" style="width: 50%">
+                111
+              </td>
+              <td class="text-center" style="width: 25%">
+                95.7%
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Surveys
+              </th>
+              <td class="text-center" style="width: 50%">
+                116
+              </td>
+              <td class="text-center" style="width: 25%">
+                100%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="result question2">
+      <div class="title">
+        <h4>
+          On a typical day, how do you travel around your community to shop, eat, run errands, or for social or
+          recreational purposes?
+        </h4>
+      </div>
+      <div class="details">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"># of Responses</th>
+              <th scope="col" class="text-center">% of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Drove Alone
+              </th>
+              <td class="text-center" style="width: 50%">
+                63
+              </td>
+              <td class="text-center" style="width: 25%">
+                57.3%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Combination
+              </th>
+              <td class="text-center" style="width: 50%">
+                27
+              </td>
+              <td class="text-center" style="width: 25%">
+                24.5%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Carpool
+              </th>
+              <td class="text-center" style="width: 50%">
+                8
+              </td>
+              <td class="text-center" style="width: 25%">
+                7.3%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Other
+              </th>
+              <td class="text-center" style="width: 50%">
+                4
+              </td>
+              <td class="text-center" style="width: 25%">
+                3.6%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Bike
+              </th>
+              <td class="text-center" style="width: 50%">
+                3
+              </td>
+              <td class="text-center" style="width: 25%">
+                2.7%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Walk
+              </th>
+              <td class="text-center" style="width: 50%">
+                3
+              </td>
+              <td class="text-center" style="width: 25%">
+                2.7%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Public Transportation
+              </th>
+              <td class="text-center" style="width: 50%">
+                2
+              </td>
+              <td class="text-center" style="width: 25%">
+                1.8%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Motorcycle / Scooter
+              </th>
+              <td class="text-center" style="width: 50%">
+                0
+              </td>
+              <td class="text-center" style="width: 25%">
+                0%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Taxi / Shared Vehicle
+              </th>
+              <td class="text-center" style="width: 50%">
+                0
+              </td>
+              <td class="text-center" style="width: 25%">
+                0%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Responses
+              </th>
+              <td class="text-center" style="width: 50%">
+                110
+              </td>
+              <td class="text-center" style="width: 25%">
+                100%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="result home-map">
+      <div id="map"></div>
+      <script src="js/createHomeMap.js"></script>
+      <script>
+        var center = [-117.57226, 33.682832000000005];
+        var homeGeo = { "type": "FeatureCollection", "features": [{ "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.40609, 33.689904] } }, { "type": "Feature", "properties": { "mode": 1 }, "geometry": { "type": "Point", "coordinates": [-118.14919, 34.147264] } }, { "type": "Feature", "properties": { "mode": 9 }, "geometry": { "type": "Point", "coordinates": [-117.10658, 33.594933] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.212003, 33.581421] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.324882, 33.675057] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.25667, 33.575169] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.4086, 33.678273] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.324882, 33.675057] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.81482, 33.751794] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.25999, 33.945247] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.32669, 33.673224] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.38207, 33.707687] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3802, 33.681043] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.324882, 33.675057] } }, { "type": "Feature", "properties": { "mode": 9 }, "geometry": { "type": "Point", "coordinates": [-117.3919, 33.666163] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3847, 33.674269] } }, { "type": "Feature", "properties": { "mode": 9 }, "geometry": { "type": "Point", "coordinates": [-117.33, 33.69] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.39023, 33.685456] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.266434, 33.630652] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.368049, 33.688213] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.38493, 33.690499] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.29201, 33.685199] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.39623, 33.70172] } }, { "type": "Feature", "properties": { "mode": 1 }, "geometry": { "type": "Point", "coordinates": [-117.39679, 33.700734] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.393054, 33.666039] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.25994, 33.662435] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.26063, 33.624425] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.32233, 33.699883] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.25207, 33.660578] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.24936, 33.659354] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.28686, 33.678085] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.39301, 33.687518] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3955, 33.679299] } }, { "type": "Feature", "properties": { "mode": 2 }, "geometry": { "type": "Point", "coordinates": [-117.28022, 33.618296] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.30241, 33.711278] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.27239, 33.688309] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.37043, 33.685372] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.29908, 33.647473] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.20104, 33.544646] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3488, 33.680092] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3986, 33.688101] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.39272, 33.679849] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.39419, 33.671945] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-116.99533, 33.743007] } }, { "type": "Feature", "properties": { "mode": 1 }, "geometry": { "type": "Point", "coordinates": [-117.21888, 33.581547] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.2415, 33.5939] } }, { "type": "Feature", "properties": { "mode": 2 }, "geometry": { "type": "Point", "coordinates": [-117.26328, 33.624646] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.33533, 33.68414] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.32159, 33.704677] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.39277, 33.688271] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.324882, 33.675057] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.39481, 33.703869] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.426231, 33.72279] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.426231, 33.72279] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3037262, 33.62041092] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.393003, 33.688683] } }, { "type": "Feature", "properties": { "mode": 0 }, "geometry": { "type": "Point", "coordinates": [-117.26956, 33.66702] } }, { "type": "Feature", "properties": { "mode": 2 }, "geometry": { "type": "Point", "coordinates": [-117.393945, 33.665828] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3998, 33.7272] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.260757, 33.610059] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.23474, 33.656261] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.254183, 33.661739] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.355819, 33.688225] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.323247, 33.67371] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.320215, 33.695754] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3887, 33.697652] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.333159, 33.670275] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.394006, 33.685561] } }, { "type": "Feature", "properties": { "mode": 3 }, "geometry": { "type": "Point", "coordinates": [-117.375312, 33.678031] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.388783, 33.676164] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.40034, 33.696526] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.341974, 33.63352] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.388783, 33.676164] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.307264, 33.704045] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.319324, 33.701888] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.0342, 33.2184] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.307214, 33.663197] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.251022, 33.66161] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.329256, 33.67561] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3896908, 33.680929] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.364273, 33.64978] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.381567, 33.695764] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.370191, 33.68508] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.39324, 33.699149] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.32221, 33.691626] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.31089, 33.661491] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3273, 33.6681] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.33081818, 33.69969177] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.256674, 33.656876] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.308938, 33.707476] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.378402, 33.689904] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.401997, 33.69323] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.372419, 33.655935] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.399488, 33.694354] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.368439, 33.678799] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3986567, 33.6967663] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.283921, 33.615779] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.35436, 33.646068] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.343113, 33.712582] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.414456, 33.69294] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.376814, 33.692672] } }, { "type": "Feature", "properties": { "mode": 3 }, "geometry": { "type": "Point", "coordinates": [-117.320941, 33.704918] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.343862, 33.634151] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.376404, 33.68821] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.288684, 33.687576] } }, { "type": "Feature", "properties": { "mode": 9 }, "geometry": { "type": "Point", "coordinates": [-117.339724, 33.703612] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.409833, 33.690587] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.395141, 33.700652] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.382643, 33.704876] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.329822, 33.694325] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.31176, 33.627604] } }] };
+        createHomeMap(center, homeGeo)</script>
+    </div>
+    <div class="result question3">
+      <div class="title">
+        <h4>
+          Do You Currently Work?
+        </h4>
+      </div>
+      <div class="details">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"># of Responses</th>
+              <th scope="col" class="text-center">% of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Yes
+              </th>
+              <td class="text-center" style="width: 50%">
+                81
+              </td>
+              <td class="text-center" style="width: 25%">
+                73.6%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                No
+              </th>
+              <td class="text-center" style="width: 50%">
+                29
+              </td>
+              <td class="text-center" style="width: 25%">
+                26.4%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Responses
+              </th>
+              <td class="text-center" style="width: 50%">
+                110
+              </td>
+              <td class="text-center" style="width: 25%">
+                100%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="result question4">
+      <div class="title">
+        <h4>
+          Where do you work?
+        </h4>
+      </div>
+      <div class="details">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"># of Responses</th>
+              <th scope="col" class="text-center">% of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Responses
+              </th>
+              <td class="text-center" style="width: 50%">
+                74
+              </td>
+              <td class="text-center" style="width: 25%">
+                63.8%
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Surveys
+              </th>
+              <td class="text-center" style="width: 50%">
+                116
+              </td>
+              <td class="text-center" style="width: 25%">
+                100%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="result question5">
+      <div class="title">
+        <h4>
+          How do you normally travel to/from work?
+        </h4>
+      </div>
+      <div class="details">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"># of Responses</th>
+              <th scope="col" class="text-center">% of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Drove Alone
+              </th>
+              <td class="text-center" style="width: 50%">
+                57
+              </td>
+              <td class="text-center" style="width: 25%">
+                77%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Walk
+              </th>
+              <td class="text-center" style="width: 50%">
+                6
+              </td>
+              <td class="text-center" style="width: 25%">
+                8.1%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Combination
+              </th>
+              <td class="text-center" style="width: 50%">
+                4
+              </td>
+              <td class="text-center" style="width: 25%">
+                5.4%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Carpool
+              </th>
+              <td class="text-center" style="width: 50%">
+                4
+              </td>
+              <td class="text-center" style="width: 25%">
+                5.4%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Other
+              </th>
+              <td class="text-center" style="width: 50%">
+                2
+              </td>
+              <td class="text-center" style="width: 25%">
+                2.7%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Public Transportation
+              </th>
+              <td class="text-center" style="width: 50%">
+                1
+              </td>
+              <td class="text-center" style="width: 25%">
+                1.4%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Motorcycle / Scooter
+              </th>
+              <td class="text-center" style="width: 50%">
+                0
+              </td>
+              <td class="text-center" style="width: 25%">
+                0%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Taxi / Shared Vehicle
+              </th>
+              <td class="text-center" style="width: 50%">
+                0
+              </td>
+              <td class="text-center" style="width: 25%">
+                0%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Bike
+              </th>
+              <td class="text-center" style="width: 50%">
+                0
+              </td>
+              <td class="text-center" style="width: 25%">
+                0%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Responses
+              </th>
+              <td class="text-center" style="width: 50%">
+                74
+              </td>
+              <td class="text-center" style="width: 25%">
+                100%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="result work-map">
+      <div id="workMap"></div>
+      <script src="js/createWorkMap.js"></script>
+      <script>
+        var centerWork = [-117.67321, 33.4335425];
+        var workGeo = { "type": "FeatureCollection", "features": [{ "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.2107, 33.5608] } }, { "type": "Feature", "properties": { "mode": 1 }, "geometry": { "type": "Point", "coordinates": [-118.14919, 34.147264] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.324882, 33.675057] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.24124, 33.594097] } }, { "type": "Feature", "properties": { "mode": 1 }, "geometry": { "type": "Point", "coordinates": [-117.32736, 33.668264] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.33152, 33.667723] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.329323, 33.6685] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.37106, 33.998005] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.35124, 33.983217] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.35124, 33.983217] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.2107, 33.5608] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.38, 33.67] } }, { "type": "Feature", "properties": { "mode": 1 }, "geometry": { "type": "Point", "coordinates": [-117.331547, 33.669117] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.1474, 33.4946] } }, { "type": "Feature", "properties": { "mode": 9 }, "geometry": { "type": "Point", "coordinates": [-117.26606, 33.630366] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.761725, 33.531086] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.32717, 33.696341] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.37023, 33.679888] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.316, 33.3147] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.25207, 33.660578] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.56683, 33.895039] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3126, 33.665432] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-118.10502, 33.740929] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.65798, 33.596464] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.26365, 34.04948] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.0767, 33.3653] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.9117, 33.8348] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.180243, 33.716684] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-118.40137, 34.004832] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.3392, 33.69] } }, { "type": "Feature", "properties": { "mode": 3 }, "geometry": { "type": "Point", "coordinates": [-118.2584, 34.049729] } }, { "type": "Feature", "properties": { "mode": 1 }, "geometry": { "type": "Point", "coordinates": [-117.324882, 33.675057] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-118.14901, 34.039089] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.38, 33.67] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.497839, 33.799297] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-116.94505, 33.78025] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3962, 33.9534] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.202827, 33.574661] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.333022, 33.682273] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.112566, 33.115101] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.16815, 33.62626] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3887, 33.697652] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.129264, 32.705685] } }, { "type": "Feature", "properties": { "mode": 1 }, "geometry": { "type": "Point", "coordinates": [-117.394006, 33.685561] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.38, 33.67] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.23705, 33.86822] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.794026, 33.675706] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.919347, 33.830247] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.826, 33.6857] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.1816909, 33.5663309] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.564899, 33.880764] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.66140747, 33.50183868] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.561956, 33.887124] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.662979, 33.875092] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.33112, 33.69855] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-118.1677, 34.1614] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.2107, 33.5608] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.166091, 33.520656] } }, { "type": "Feature", "properties": { "mode": 9 }, "geometry": { "type": "Point", "coordinates": [-117.399488, 33.694354] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.1628, 32.7174] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.88869, 34.07097] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.39015, 33.69722] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.4001, 33.697161] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.2898, 34.1083] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.759572, 33.662657] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.16569, 33.50116] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.55, 33.98] } }, { "type": "Feature", "properties": { "mode": 1 }, "geometry": { "type": "Point", "coordinates": [-117.2900269, 33.6875667] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.1474, 33.4946] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.25251, 33.65956] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.39015, 33.69722] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3962, 33.9534] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.1474, 33.4946] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3962, 33.9534] } }] };
+        createWorkMap(centerWork, workGeo)</script>
+    </div>
+    <div class="result question6">
+      <div class="title">
+        <h4>
+          Do you currently go to school?
+        </h4>
+      </div>
+      <div class="details">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"># of Responses</th>
+              <th scope="col" class="text-center">% of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Responses
+              </th>
+              <td class="text-center" style="width: 50%">
+                102
+              </td>
+              <td class="text-center" style="width: 25%">
+                87.9%
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Surveys
+              </th>
+              <td class="text-center" style="width: 50%">
+                116
+              </td>
+              <td class="text-center" style="width: 25%">
+                100%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="result question7">
+      <div class="title">
+        <h4>
+          How do you normally travel to/from school?
+        </h4>
+      </div>
+      <div class="details">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"># of Responses</th>
+              <th scope="col" class="text-center">% of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Drove Alone
+              </th>
+              <td class="text-center" style="width: 50%">
+                8
+              </td>
+              <td class="text-center" style="width: 25%">
+                38.1%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Combination
+              </th>
+              <td class="text-center" style="width: 50%">
+                5
+              </td>
+              <td class="text-center" style="width: 25%">
+                23.8%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Other
+              </th>
+              <td class="text-center" style="width: 50%">
+                3
+              </td>
+              <td class="text-center" style="width: 25%">
+                14.3%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Carpool
+              </th>
+              <td class="text-center" style="width: 50%">
+                2
+              </td>
+              <td class="text-center" style="width: 25%">
+                9.5%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Walk
+              </th>
+              <td class="text-center" style="width: 50%">
+                2
+              </td>
+              <td class="text-center" style="width: 25%">
+                9.5%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Bike
+              </th>
+              <td class="text-center" style="width: 50%">
+                1
+              </td>
+              <td class="text-center" style="width: 25%">
+                4.8%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Motorcycle / Scooter
+              </th>
+              <td class="text-center" style="width: 50%">
+                0
+              </td>
+              <td class="text-center" style="width: 25%">
+                0%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Taxi / Shared Vehicle
+              </th>
+              <td class="text-center" style="width: 50%">
+                0
+              </td>
+              <td class="text-center" style="width: 25%">
+                0%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Public Transportation
+              </th>
+              <td class="text-center" style="width: 50%">
+                0
+              </td>
+              <td class="text-center" style="width: 25%">
+                0%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Responses
+              </th>
+              <td class="text-center" style="width: 50%">
+                21
+              </td>
+              <td class="text-center" style="width: 25%">
+                100%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="result school-map">
+      <div id="schoolMap"></div>
+      <script src="js/createSchoolMap.js"></script>
+      <script>
+        var centerSchool = [-117.4917685, 33.8969505];
+        var schoolGeo = { "type": "FeatureCollection", "features": [{ "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.37976950000001, 33.670612] } }, { "type": "Feature", "properties": { "mode": 9 }, "geometry": { "type": "Point", "coordinates": [-117.37976950000001, 33.670612] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.37976950000001, 33.670612] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.38, 33.67] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.70346, 33.57269] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.82689, 33.64315] } }, { "type": "Feature", "properties": { "mode": 2 }, "geometry": { "type": "Point", "coordinates": [-117.38275, 33.668694] } }, { "type": "Feature", "properties": { "mode": 1 }, "geometry": { "type": "Point", "coordinates": [-117.274826, 33.683666] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.18671, 34.265423] } }, { "type": "Feature", "properties": { "mode": 6 }, "geometry": { "type": "Point", "coordinates": [-117.16803, 33.675] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.16803, 33.675] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.34, 33.98] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3273, 33.6681] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.3273, 33.6681] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.278671, 33.623902] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.4258895, 33.929483000000005] } }, { "type": "Feature", "properties": { "mode": 7 }, "geometry": { "type": "Point", "coordinates": [-117.794026, 33.675706] } }, { "type": "Feature", "properties": { "mode": 1 }, "geometry": { "type": "Point", "coordinates": [-117.252665, 33.658969] } }, { "type": "Feature", "properties": { "mode": 9 }, "geometry": { "type": "Point", "coordinates": [-117.156647, 33.528478] } }, { "type": "Feature", "properties": { "mode": 8 }, "geometry": { "type": "Point", "coordinates": [-117.38187400000001, 33.669496499999994] } }, { "type": "Feature", "properties": { "mode": 9 }, "geometry": { "type": "Point", "coordinates": [-117.409833, 33.690587] } }] };
+        createSchoolMap(centerSchool, schoolGeo)</script>
+    </div>
+    <div class="result question8">
+      <div class="title">
+        <h4>
+          In general, how easy/difficult do you feel it is to walk 🚶 in Lake Elsinore?
+        </h4>
+      </div>
+      <div class="details">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"># of Responses</th>
+              <th scope="col" class="text-center">% of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Somewhat Difficult
+              </th>
+              <td class="text-center" style="width: 50%">
+                42
+              </td>
+              <td class="text-center" style="width: 25%">
+                41.2%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Very Difficult
+              </th>
+              <td class="text-center" style="width: 50%">
+                34
+              </td>
+              <td class="text-center" style="width: 25%">
+                33.3%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Neutral
+              </th>
+              <td class="text-center" style="width: 50%">
+                16
+              </td>
+              <td class="text-center" style="width: 25%">
+                15.7%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Somewhat Easy
+              </th>
+              <td class="text-center" style="width: 50%">
+                8
+              </td>
+              <td class="text-center" style="width: 25%">
+                7.8%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Very Easy
+              </th>
+              <td class="text-center" style="width: 50%">
+                2
+              </td>
+              <td class="text-center" style="width: 25%">
+                2%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Responses
+              </th>
+              <td class="text-center" style="width: 50%">
+                102
+              </td>
+              <td class="text-center" style="width: 25%">
+                100%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="result question9">
+      <div class="title">
+        <h4>
+          What are the biggest challenges for walking 🚶 in Lake Elsinore? What keeps you from walking more?
+        </h4>
+      </div>
+      <div class="details">
+        <ol>
+
+          <li>
+            Lack of sidewalks, walking trails, shops etc are not in walking distance to my distance
+          </li>
+
+          <li>
+            Missing sidewalks
+          </li>
+
+          <li>
+            Distance
+          </li>
+
+          <li>
+            Lack of facilities
+          </li>
+
+          <li>
+            No sidewalks
+          </li>
+
+          <li>
+            no sidewalks
+          </li>
+
+          <li>
+            No sidewalks
+          </li>
+
+          <li>
+            Not enough sidewalks and too many homeless people
+          </li>
+
+          <li>
+            Lack of sidewalk connectivity and safe, legal crossings.
+          </li>
+
+          <li>
+            Lack of sidewalks.
+          </li>
+
+          <li>
+            Homeless. Lightning.
+          </li>
+
+          <li>
+            I would walk or bike from my house to the outlets, except there is one part where Nichols crosses a creekbed
+            that I would have to be directly in the road. Honestly, so far north (I live near Lake St and the 15) there
+            is really nowhere for me to walk to.
+          </li>
+
+          <li>
+            There are no sidewalks in several areas close to my home.
+          </li>
+
+          <li>
+            Sidewalks, signage, ADA, etc
+          </li>
+
+          <li>
+            Kidnapped
+          </li>
+
+          <li>
+            kidnappers
+          </li>
+
+          <li>
+            To much time
+          </li>
+
+          <li>
+            Not a lot of sidewalks , and cars driving too fast
+          </li>
+
+          <li>
+            Lake of sidewalks
+          </li>
+
+          <li>
+            No side walks
+          </li>
+
+          <li>
+            Making sure the cars notice that your walking either on a crosswalk or while crossing the street.
+          </li>
+
+          <li>
+            The biggest challenge is I don&#39;t have time to walk, but I walk dogs. What keeps me from walking is
+            school.
+          </li>
+
+          <li>
+            Everything is so far away we need somekind of transportation
+          </li>
+
+          <li>
+            No sidewalks
+          </li>
+
+          <li>
+            No sidewalks connecting routes safely
+          </li>
+
+          <li>
+            I live in a residential area where people do not abide by the speed limit. People are constantly driving at
+            dangerous speeds &amp; I do not feel comfortable with my children or I near the street or sidewalk. Crossing
+            the street can be very dangerous at times with drivers coming around the corner at a very high-speeds.
+          </li>
+
+          <li>
+            Not enough sidewalks
+          </li>
+
+          <li>
+            Safety. Lack of sidewalks. Speed limits on road to children school is too fast.
+          </li>
+
+          <li>
+            No sidewalks on railroad
+          </li>
+
+          <li>
+            There are many hills that are tiring to walk up but also many people living on the streets that make me
+            mildly uncomfortable and afraid to walk near. I also live up in Tuscany Hills so if I want to walk down
+            towards stores and restaurants I must go down Summerhill and then come back up later.
+          </li>
+
+          <li>
+            Speed limit on Lincoln and Grand
+          </li>
+
+          <li>
+            Lack of sidewalks and feeling safe to walk in busy intersections. I&#39;d really like to ride a bike but
+            there is limited bike lanes, especially on Lakeshore Dr.
+          </li>
+
+          <li>
+            No crosswalks
+          </li>
+
+          <li>
+            Busy busy 74 with multiple fatalities, and also transients.
+          </li>
+
+          <li>
+            Please put a walking path from Tuscany Hills Elementary school to the gate at Little Pony Dr. in canyon lake
+            for school children
+          </li>
+
+          <li>
+            Not enough sidewalks, especially on major roads -- even near schools! (Lakeshore near Elsinore Middle)
+          </li>
+
+          <li>
+            Lack of sidewalks
+          </li>
+
+          <li>
+            No, school bus for pick up. Parents working no choice but walking to school
+          </li>
+
+          <li>
+            Roadways are poorly lit, cars are speeding too fast, limited amount of sidewalks, a general feeling of not
+            feeling safe due to the number of intoxicated transients.
+          </li>
+
+          <li>
+            I would say the lack of sidewalks, crosswalks and the recklessness of other drivers.
+          </li>
+
+          <li>
+            No hay carreteras para caminar por donde yo camino . No hay sombra en las banquetas por donde camino como en
+            la Lincoln. En la grand is una banqueta de tierra
+          </li>
+
+          <li>
+            Poor sidewalks or lack of sidewalks. Long distances. Safety
+          </li>
+
+          <li>
+            Safety, lack of sidewalks, unsafe crime and drug filled areas that do have sidewalks are unsafe to walk
+          </li>
+
+          <li>
+            A lack of sidewalks and crosswalks near my neighborhood. The nearest stores and places of my interest are
+            more than half a mile away.
+          </li>
+
+          <li>
+            I would love to be able to run to the other side of the lake, but lack of sidewalks make it dangerous
+          </li>
+
+          <li>
+            Sidewalk infill needed
+          </li>
+
+          <li>
+            Not enough sidewalks
+          </li>
+
+          <li>
+            Lack of consistent sidewalks
+          </li>
+
+          <li>
+            Usually the lack of consistent sidewalks, bike lanes and lack of path upkeep.
+          </li>
+
+          <li>
+            No sidewalks
+          </li>
+
+          <li>
+            It would be nice to be able to walk and bike around the Lake. Lakeshore is very dangerous to walk, ride a
+            bike and dangerous for drivers
+          </li>
+
+          <li>
+            I am a runner and it is very dangerous in certain areas
+          </li>
+
+          <li>
+            Not enough sidewalks
+          </li>
+
+          <li>
+            There are not enough side walks. When I walk home from school I feel like I&#39;m close to getting run over
+            because I&#39;m super close to the cars on the road.
+          </li>
+
+          <li>
+            Far distances from housing tract to shopping or entertainment. Loose dogs, inadequate shade in the summer
+            overwhelming heat
+          </li>
+
+          <li>
+            No side walks, no many sidewalks, it&#39;s nearly no sidewalks or sidewalk on one side of the street. no
+            trials around neighborhood or at parks, some public parks have exercise equipment I have only seen one park
+            which is not in my community with an exercise machine at a public park.. all these parks that were built and
+            there&#39;s no signs or trails to encourage an active exercise life promoting to stay active
+          </li>
+
+          <li>
+            No sidewalk. Especially on riverside dr. And the residential streets on Strickland and Illinois. Cars go too
+            fast!
+          </li>
+
+          <li>
+            Sidewalks and lighting
+          </li>
+
+          <li>
+            Lack of sidewalks, kept trails, safety.
+          </li>
+
+          <li>
+            The amount of Transient homeless
+          </li>
+
+          <li>
+            Human predators
+          </li>
+
+          <li>
+            Lack of sidwalks
+          </li>
+
+          <li>
+            There are No Sides walks is my number one reason for not waking in My community alone. Cars speeding and
+            going way over the 25mph on our street that has multiple turns makes it unsafe for us talk walk outside our
+            home.
+          </li>
+
+          <li>
+            Poor Drivers violating stop signs or lights or while people are in crosswalks
+          </li>
+
+          <li>
+            No side walks on my street
+          </li>
+
+          <li>
+            No sidewalks. Traffic on 74 is very heavy.
+          </li>
+
+          <li>
+            Safety concerns. Unsafe drivers, homeless, drug addicts on the streets.
+          </li>
+
+          <li>
+            Distance, crime, lack of sidewalks
+          </li>
+
+          <li>
+            Esta muy lejos la escuela de mis hijos
+          </li>
+
+          <li>
+            Distance and safety
+          </li>
+
+          <li>
+            No side walks in some places,
+          </li>
+
+          <li>
+            There are no sidewalks on Grand ave other than in front of a school or a fire department. With exception of
+            a few businesses on Grand.
+            Other than that its just
+          </li>
+
+          <li>
+            Street lights and sidewalks!!
+          </li>
+
+          <li>
+            The homeless/drug addicts are along riverside drive where my son walks from home to school. The sidewalks
+            are here and there, not in a safe manner
+          </li>
+
+          <li>
+            Lack of clean and Safe sidewalk
+          </li>
+
+          <li>
+            Lack of sidewalks
+          </li>
+
+          <li>
+            Distance and time
+          </li>
+
+          <li>
+            There are not enough 4 way stops and
+          </li>
+
+          <li>
+            Distance to places I need to get to are somewhat far.
+          </li>
+
+          <li>
+            Paved roads and sidewalks
+          </li>
+
+          <li>
+            Lack of cement sidewalks and curb cuts
+          </li>
+
+          <li>
+            Few cross walks to get my kids to school safely, even fewer sidewalks making it safe for us to walk them to
+            school. More importantly rare presence of Officers to keep drivers abiding the laws &amp; protecting those
+            who walk the streets.
+          </li>
+
+          <li>
+            Not enough sidewalks nor bike road safety, and many residents drive too fast, I just can’t let neither me or
+            my kids walk around like this.
+          </li>
+
+          <li>
+            We live too far from amenities to be convenient to walk
+          </li>
+
+          <li>
+            Few safe sidewalks. Cross walks very far apart so you have to double back significantly after crossing the
+            street. Fast driving on Riverside
+          </li>
+
+          <li>
+            Heat &amp; snakes
+          </li>
+
+          <li>
+            Lots of vagrants and pan handlers approaching me my wife and my children. Filthy streets and sidewalks
+            littered with hypodermic needles soiled condoms and trash everywhere including &#34;legal&#34; marijuana
+            plastic containers and packaging.
+          </li>
+
+          <li>
+            Being hit by cars
+          </li>
+
+          <li>
+            Lack of sidewalks and safe crossings
+          </li>
+
+          <li>
+            Crosswalk availability and hills
+          </li>
+
+          <li>
+            lack of sidewalks on busy streets and safe clean walking trails.
+          </li>
+
+          <li>
+            5
+          </li>
+
+          <li>
+            No sidewalks
+          </li>
+
+          <li>
+            Lack of sidewalks and high speed cars.
+          </li>
+
+          <li>
+            Stop signs aren&#39;t visible, lane colors are faded,no side walks , people dont respect speed limits in
+            residential areas and no street lights.
+          </li>
+
+          <li>
+            Safe walking areas/trails to encourage walking (like the trail in Wildomar along Grand Ave)
+          </li>
+
+          <li>
+            Shopping areas are too far from home.
+          </li>
+
+          <li>
+            No sidewalks next to busy streets
+          </li>
+
+          <li>
+            There are no sidewalks where I live
+          </li>
+
+          <li>
+            Lack of sidewalks or trails.
+          </li>
+
+        </ol>
+      </div>
+    </div>
+    <div class="result question10">
+      <div class="title">
+        <h4>
+          In general, how easy/difficult do you feel it is to bike 🚴‍ in Lake Elsinore?
+        </h4>
+      </div>
+      <div class="details">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="text-center"># of Responses</th>
+              <th scope="col" class="text-center">% of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Somewhat Difficult
+              </th>
+              <td class="text-center" style="width: 50%">
+                34
+              </td>
+              <td class="text-center" style="width: 25%">
+                34%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Very Difficult
+              </th>
+              <td class="text-center" style="width: 50%">
+                31
+              </td>
+              <td class="text-center" style="width: 25%">
+                31%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Neutral
+              </th>
+              <td class="text-center" style="width: 50%">
+                26
+              </td>
+              <td class="text-center" style="width: 25%">
+                26%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Somewhat Easy
+              </th>
+              <td class="text-center" style="width: 50%">
+                7
+              </td>
+              <td class="text-center" style="width: 25%">
+                7%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Very Easy
+              </th>
+              <td class="text-center" style="width: 50%">
+                2
+              </td>
+              <td class="text-center" style="width: 25%">
+                2%
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" style="width: 25%">
+                Total Responses
+              </th>
+              <td class="text-center" style="width: 50%">
+                100
+              </td>
+              <td class="text-center" style="width: 25%">
+                100%
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="result question11">
+      <div class="title">
+        <h4>
+          What are the biggest challenges for biking 🚴‍ in Lake Elsinore? What keeps you from biking more?
+        </h4>
+      </div>
+      <div class="details">
+        <ol>
+
+          <li>
+            Would like more bike lanes
+          </li>
+
+          <li>
+            No facilities
+          </li>
+
+          <li>
+            Safety
+          </li>
+
+          <li>
+            Lack facilities
+          </li>
+
+          <li>
+            No bike lines
+          </li>
+
+          <li>
+            narrow streets
+          </li>
+
+          <li>
+            No bike lanes
+          </li>
+
+          <li>
+            Poor lighting and narrow streets
+          </li>
+
+          <li>
+            Interfacing with vehicles
+          </li>
+
+          <li>
+            Lack of bike lanes
+          </li>
+
+          <li>
+            Road conditions. Lighting. Homeless.
+          </li>
+
+          <li>
+            Nowhere close for me to ride to really except the outlets and I&#39;m afraid to cross that narrow part over
+            the creekbed that would put me directly in the road.
+          </li>
+
+          <li>
+            We need badly need a sidewalk ramp by the entrance to Huntsman Mobile Home Park on Machado!!
+          </li>
+
+          <li>
+            Need more bike lanes
+          </li>
+
+          <li>
+            Cars hitting me or my
+          </li>
+
+          <li>
+            cars hitting you
+          </li>
+
+          <li>
+            Don&#39;t have a bike
+          </li>
+
+          <li>
+            Cars driving too fast
+          </li>
+
+          <li>
+            My age
+          </li>
+
+          <li>
+            No trails or bike lanes
+          </li>
+
+          <li>
+            Cars driving not respecting a biker.
+          </li>
+
+          <li>
+            The biggest challenge is I don&#39;t have a bike, but if I did it would be that the side walks are bumpy and
+            small. I don&#39;t own a bike but when I did, I could only
+          </li>
+
+          <li>
+            Hills
+          </li>
+
+          <li>
+            Safety since Ive heard of way too many people get hit on Lake Street Grand Ave Riverside Drive and Lakeshore
+          </li>
+
+          <li>
+            No dedicated bike Lanes connecting major routes and fast traffic. Congested traffic at peak times.
+          </li>
+
+          <li>
+            Drivers not abiding by speed limits
+            see limits.
+          </li>
+
+          <li>
+            Not enough sidewalks
+          </li>
+
+          <li>
+            Safety. Speed limits on highway and lack of bike lane
+          </li>
+
+          <li>
+            Busy streets
+          </li>
+
+          <li>
+            The hills are mainly a struggle but also the traffic is sometimes hard to maneuver around.
+          </li>
+
+          <li>
+            Speed limit of cars
+          </li>
+
+          <li>
+            Lack of bike lanes especially on Lakeshire Dr to get down town or Diamond Dr/ Railroad canyon
+          </li>
+
+          <li>
+            No crosswalks
+          </li>
+
+          <li>
+            Same as above, plus I dont have a bike with gears to go up hill.
+          </li>
+
+          <li>
+            Please put a bike path from Tuscany Hills Elementary school to the gate at Little Pony Dr. in canyon lake
+            for school children
+          </li>
+
+          <li>
+            Not enough safe routes, not enough bike lanes, speeds too high when roads are shared with automobiles,
+            passing vehicles do not provide adequate cushion, laws not adequately enforced
+          </li>
+
+          <li>
+            There are barely any bike lanes and the road surface is very rough.
+          </li>
+
+          <li>
+            Don&#39;t feel comfortable. Streets small and crowded
+          </li>
+
+          <li>
+            No trails or proper space to safely bike
+          </li>
+
+          <li>
+            I would say the lack of sidewalks, crosswalks, bike lanes, and the recklessness of other drivers.
+          </li>
+
+          <li>
+            Por el lado donde vivo (Grand Ave) la banqueta es hecha de tierra. La
+          </li>
+
+          <li>
+            Poor sidewalks or lack of. Safety. Bike lanes needed.
+          </li>
+
+          <li>
+            Not enough bike lanes or paved sidewalks and crosswalks
+          </li>
+
+          <li>
+            Rocks, glass, debris, and thorns due to dry conditions make it easier for riders to get flat tires and other
+            damages. Certain areas are difficult to cross and ride through due to fast traffic and having to share the
+            road with vehicles.
+          </li>
+
+          <li>
+            Some places have very tiny streets
+          </li>
+
+          <li>
+            Not many bike facilities outside of downtown
+          </li>
+
+          <li>
+            Not enough bike lanes
+          </li>
+
+          <li>
+            Everything is far and there are no bike lanes it’s very dangerous
+          </li>
+
+          <li>
+            Bike lanes usually aren&#39;t marked accordingly
+          </li>
+
+          <li>
+            Probably no sidewalks
+          </li>
+
+          <li>
+            Not enough bike lanes down Lakeshore or around lake.
+          </li>
+
+          <li>
+            There are not enough paths for road bikes. I know many people who would love to cycle around the lake but
+            cannot because it is too dangerous- especially on lakeshore drive
+          </li>
+
+          <li>
+            Not enough bike lanes
+          </li>
+
+          <li>
+            Since there are not enough side walks, most of the roads are dirt. It is nearly impossible to ride a bike on
+            dirt, unless the bike is made for riding on dirt.
+          </li>
+
+          <li>
+            Lack of bike lanes or shoulders, heavy traffic with inattentive drivers high number of hit and run
+            fatalities in LE theft of bikes
+          </li>
+
+          <li>
+            No side walks, no many sidewalks, it&#39;s nearly no sidewalks or sidewalk on one side of the street. no
+            trials around neighborhood or at parks, some public parks have exercise equipment I have only seen one park
+            which is not in my community with an exercise machine at a public park.. all these parks that were built and
+            there&#39;s no signs or trails to encourage an active exercise life promoting to stay active
+            No designated areas and or no bike lane however I would prefer bike trail at a park as oppose to designated
+            bike lane too many road ragers and people driving wreck less
+          </li>
+
+          <li>
+            No bike lanes or sidewalks
+          </li>
+
+          <li>
+            Bike lanes
+          </li>
+
+          <li>
+            Lack of safe bike lanes, and planned and connected destination routes/ trails
+          </li>
+
+          <li>
+            Same just feels unsafe because there are so many homeless around the river walk
+          </li>
+
+          <li>
+            Lack of bike lanes
+          </li>
+
+          <li>
+            Lack of bike lanes and sidewalks
+          </li>
+
+          <li>
+            The cars speeding through makes it difficult for me to take my kids out to ride their bikes. I have to be
+            extremely cautious of them not getting ahead of me or behind me so that I can help them move over to let the
+            cars pass by.
+          </li>
+
+          <li>
+            I don&#39;t care to bico
+          </li>
+
+          <li>
+            Traffic
+          </li>
+
+          <li>
+            No bike lanes and sidewalks are closer to the 15 freeway on the 74. Traffic is very heavy at all times of
+            the day on the 74
+          </li>
+
+          <li>
+            Unsafe drivers and large hills
+          </li>
+
+          <li>
+            Small roads
+          </li>
+
+          <li>
+            Nunca lo hemos intentado
+          </li>
+
+          <li>
+            Hills
+          </li>
+
+          <li>
+            No designated bike lanes
+          </li>
+
+          <li>
+            No clear bike lanes, very little room for bycycling.
+          </li>
+
+          <li>
+            Street lights and sidewalks!
+          </li>
+
+          <li>
+            I see bike lanes end, so the bikes have to ride in the same lane as the cars, suddenly which can cause an
+            accident
+          </li>
+
+          <li>
+            Limited bike lanes
+          </li>
+
+          <li>
+            Not enough bike lanes
+          </li>
+
+          <li>
+            Cars
+          </li>
+
+          <li>
+            There are not enough 4 way stops
+          </li>
+
+          <li>
+            I don&#39;t bike
+          </li>
+
+          <li>
+            Not enough clearly marked bike paths.
+          </li>
+
+          <li>
+            2 lane busy roads with no bike lanes or shoulders
+          </li>
+
+          <li>
+            Lack of biking lanes to keep you safe from traffic.
+          </li>
+
+          <li>
+            We need bike lines and more sidewalks, on Lakeshore, Grand Ave., Riverside Dr.
+          </li>
+
+          <li>
+            Roads are in bad condition and riding in a bike lane does not make me feel safe.
+          </li>
+
+          <li>
+            No parking at bike lane entrance on Riverside and Collier. Few safe bike lanes. Fast driving on Riverside
+          </li>
+
+          <li>
+            Don&#39;t have a bike
+          </li>
+
+          <li>
+            Exact same as previous response.
+          </li>
+
+          <li>
+            Being hit by cars
+          </li>
+
+          <li>
+            Lack of bike lanes and/or safe bike lanes away from heavy traffic
+          </li>
+
+          <li>
+            Hills
+          </li>
+
+          <li>
+            If you want to ride any type of distance, there are only a few roads out of town to neighboring cities and
+            they are very, very busy. Too dangerous to be on them with the amount of cars and speeds they are traveling.
+          </li>
+
+          <li>
+            4
+          </li>
+
+          <li>
+            No bike lanes
+          </li>
+
+          <li>
+            Room to bike on roads with cars.
+          </li>
+
+          <li>
+            Stop signs aren&#39;t visible, lane colors are faded,no side walks , people dont respect speed limits in
+            residential areas and no street lights.
+          </li>
+
+          <li>
+            Bike lanes, aware drivers, poor road conditions
+          </li>
+
+          <li>
+            Too many 2 lane roads with distracted drivers.
+          </li>
+
+          <li>
+            No bike lanes next to busy streets
+          </li>
+
+          <li>
+            Not related to city, I just don&#39;t have a bike
+          </li>
+
+          <li>
+            Lack of bike lanes and traffic
+          </li>
+
+        </ol>
+      </div>
+    </div>
+    <div class="result map-summary">
+      <div class="title">
+        <h1>Summary of Map Comments</h1>
+      </div>
+      <!-- TODO REFACTOR TO COMPONENTS IN SEPERATE JS FILE -->
+      <div class="result esri-map">
+        <div id="irse"></div>
+        <script>
+          var irseMap = L.map('irse').setView([33.6933447075328, -117.38131905537], 12);
+          L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            id: 'mapbox.streets'
+          }).addTo(irseMap);
+          var irseGeo = [{ "type": "Feature", "properties": { "comment": "Would be great if kids had a path to ride bikes and scooters so they don’t plow into other kids walking to/from school from Westwind Dr to Regatta Way. Thank you for the consideration.", "email": "Ms_cio@hotmail.com", "mode": null, "status": null }, "geometry": { "type": "Point", "coordinates": [-117.401328334618, 33.6967947656104] } }, { "type": "Feature", "properties": { "comment": "Most of Lakeshore Dr is missing sidewalks although parts are now being paved. Would be great to see the whole street from Lake to Main St properly paved for walking and biking.  Thank you", "email": "Ms_cio@hotmail.com", "mode": "Walking", "status": "Like" }, "geometry": { "type": "Point", "coordinates": [-117.38131905537, 33.6933447075328] } }, { "type": "Feature", "properties": { "comment": "Walking path from Tuscany Hills Elementary to Canyon lake Little Pony Street gate", "email": "Kkwmorris@gmail.com", "mode": "Walking", "status": "Like" }, "geometry": { "type": "Point", "coordinates": [-117.285373251161, 33.6888521190228] } }, { "type": "Feature", "properties": { "comment": "There should be a bike lane / path AND sidewalks along grand avenue for our Withrow and Lakeside students.", "email": "sueite@gmail.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.389510521699, 33.6752664601398] } }, { "type": "Feature", "properties": { "comment": "bike lane should come down Nichols, Collier Ave", "email": "hoggie_bear@yahoo.com", "mode": "Biking", "status": null }, "geometry": { "type": "Point", "coordinates": [-117.358107218554, 33.7042969363677] } }, { "type": "Feature", "properties": { "comment": "dangerous corner for bike, needs bike lane", "email": "hoggie_bear@yahoo.com", "mode": "Biking", "status": null }, "geometry": { "type": "Point", "coordinates": [-117.364716181566, 33.6871137212841] } }, { "type": "Feature", "properties": { "comment": "common route for cyclist, need bike lane and road improvements, bumps on shoulder hard on bikes", "email": "hoggie_bear@yahoo.com", "mode": "Biking", "status": null }, "geometry": { "type": "Point", "coordinates": [-117.383845696259, 33.6635336525556] } }, { "type": "Feature", "properties": { "comment": "My son Vance Gerdes lives at 28066 Lindell Rd. , he walks to school everyday with no sidewalk. The area has traffic & has no space for pedestrians to walk,  it also has no bike path.  If the city put either one along El Toror rd. it would be wonderful!", "email": "cgerdes714@gmail.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.342904457855, 33.7113834536362] } }, { "type": "Feature", "properties": { "comment": "bad", "email": null, "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.346787385677, 33.705071985821] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.309795269776, 33.7126329048575] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.326491249247, 33.7022033970909] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.336662185832, 33.6929201983037] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.33988083665, 33.6900279199309] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.356231582805, 33.702881745367] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.384684456036, 33.7124494556293] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.393353355572, 33.726941792098] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.37884796922, 33.6710293023344] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.374127281353, 33.6763864803939] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.300015594548, 33.6609220479525] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.297011520451, 33.6640653355276] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.275639679021, 33.6637081495414] } }, { "type": "Feature", "properties": { "comment": "Add protected bikeway (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.263880874699, 33.6684228851448] } }, { "type": "Feature", "properties": { "comment": "Add bike route (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.354580805591, 33.689195138595] } }, { "type": "Feature", "properties": { "comment": "Add buffer to existing bike lane along Hwy 74. Make it a Class I or IV. (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.314111635974, 33.7108315151061] } }, { "type": "Feature", "properties": { "comment": "I like Grand Ave in Wildomar (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Like" }, "geometry": { "type": "Point", "coordinates": [-117.298061297229, 33.6101846371502] } }, { "type": "Feature", "properties": { "comment": "Need a bike path/trail on Lakeshore Dr. (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.345139429859, 33.6742442073889] } }, { "type": "Feature", "properties": { "comment": "Consider putting a bike trail/path around the lake (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.372433588795, 33.6611360613224] } }, { "type": "Feature", "properties": { "comment": "Missing sidewalks (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.322179720691, 33.66352925066] } }, { "type": "Feature", "properties": { "comment": "Missing sidewalks (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.31608574181, 33.662743434636] } }, { "type": "Feature", "properties": { "comment": "Missing sidewalk (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.312566683582, 33.6623862431614] } }, { "type": "Feature", "properties": { "comment": "Missing sidewalk (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.354623720935, 33.6794583367632] } }, { "type": "Feature", "properties": { "comment": "Missing sidewalk (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.351447985462, 33.6776012858403] } }, { "type": "Feature", "properties": { "comment": "Missing sidewalk (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.359516070179, 33.6481688184926] } }, { "type": "Feature", "properties": { "comment": "Missing sidewalk (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.35436622887, 33.645167855831] } }, { "type": "Feature", "properties": { "comment": "Unimproved Intersection (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.297374651722, 33.6638150001618] } }, { "type": "Feature", "properties": { "comment": "Faded crosswalk (DDML Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.29917709618, 33.6616718557633] } }, { "type": "Feature", "properties": { "comment": "Lack of shade (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.299692080311, 33.6609574624334] } }, { "type": "Feature", "properties": { "comment": "Railroad Canyon interchange roundabout project must have raised crosswalk (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.29857628136, 33.662743434636] } }, { "type": "Feature", "properties": { "comment": "People who run red lights too fast on 74 (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.317549063468, 33.7100764165375] } }, { "type": "Feature", "properties": { "comment": "Add more lights on 74 (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.319265677238, 33.7093624253821] } }, { "type": "Feature", "properties": { "comment": "Motorists drive too fast on Nichols Rd (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.371622397209, 33.7055067705709] } }, { "type": "Feature", "properties": { "comment": "Grand Ave needs more light (DDLM Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.386008531756, 33.6646547649412] } }, { "type": "Feature", "properties": { "comment": "Connect sidewalks in Country Club Heights (WF Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.320112020679, 33.6649699578054] } }, { "type": "Feature", "properties": { "comment": "Bikeway on Corydon/Palomar is great", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Like" }, "geometry": { "type": "Point", "coordinates": [-117.301331414728, 33.6214111021446] } }, { "type": "Feature", "properties": { "comment": "Need sidewalks around Grand/Gregory (WF Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.324108059752, 33.6262722745082] } }, { "type": "Feature", "properties": { "comment": "Need sidewalk along El Toro Rd near Temescal Canyon High School (WF Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.346874649871, 33.7019776242733] } }, { "type": "Feature", "properties": { "comment": "Lakeshore Dr needs sidewalks (WF Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.349744901644, 33.6765771621977] } }, { "type": "Feature", "properties": { "comment": "Roads need to be safer for students around the school (WF Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.308842210411, 33.664544404329] } }, { "type": "Feature", "properties": { "comment": "More lighting is needed on Mission Trail (WF Event)", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.290794211499, 33.6363623642999] } }, { "type": "Feature", "properties": { "comment": "Pathway is missing on Mission Trail", "email": "amurillofelix@placeworks.com", "mode": "Walking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.290751296155, 33.635504839492] } }, { "type": "Feature", "properties": { "comment": "Will Terra Cotta Rd get paved by Nichols Rd? (WF Event)", "email": "amurillofelix@placeworks.com", "mode": "Other", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.374382573242, 33.7054989718673] } }, { "type": "Feature", "properties": { "comment": "Add flood control to ramp ends by Nichols Rd (WF Event)", "email": "amurillofelix@placeworks.com", "mode": "Other", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.358955807013, 33.7068981821228] } }, { "type": "Feature", "properties": { "comment": "Add walking/biking improvements to Railroad Canyon (WF Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.267909893799, 33.6639265578519] } }, { "type": "Feature", "properties": { "comment": "Make Railroad Canyon safer (WF Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.285762677002, 33.6643551797693] } }, { "type": "Feature", "properties": { "comment": "Improve Lakeshore for bikes (WF Event)", "email": "amurillofelix@placeworks.com", "mode": "Biking", "status": "Dislike" }, "geometry": { "type": "Point", "coordinates": [-117.325759777832, 33.6633550586402] } }]
+          geojsonLayer = L.geoJson(irseGeo, {
+            style: function (feature) {
+              if (feature.properties.status === 'Like') {
+                return { color: "#31e0a3" };
+              } else if (feature.properties.status === 'Dislike') {
+                return { color: "#e05131" };
+              } else {
+                return { color: "#9b9fa5" };
+              }
+            },
+            pointToLayer: function (feature, latlng) {
+              return new L.CircleMarker(latlng, { radius: 5, fillOpacity: 0.75 });
+            },
+            onEachFeature: function (feature, layer) {
+              if (feature.properties.status === null) {
+                var theStatus = 'n/a'
+              } else {
+                var theStatus = feature.properties.status;
+              }
+              if (feature.properties.mode === null) {
+                var theMode = 'n/a'
+              } else {
+                var theMode = feature.properties.mode;
+              }
+
+              layer.bindPopup(
+                '<p>' + '<b>Comment: </b>' + feature.properties.comment + '</p>' +
+                '<p>' + '<b>Status: </b>' + theStatus + '</p>' +
+                '<p>' + '<b>Mode: </b>' + theMode + '</p>'
+              );
+            }
+          });
+          irseMap.addLayer(geojsonLayer);</script>
+      </div>
+      <div class="result map-comments">
+        <div class="title">
+          <h4>Map Comments</h4>
+        </div>
+        <div class="details">
+          <h5>
+            A total of
+            55 participants provided input on the online map.
+          </h5>
+          <ol>
+
+            <li>
+              Would be great if kids had a path to ride bikes and scooters so they don’t plow into other kids walking
+              to/from school from Westwind Dr to Regatta Way. Thank you for the consideration.
+            </li>
+
+            <li>
+              Most of Lakeshore Dr is missing sidewalks although parts are now being paved. Would be great to see the
+              whole street from Lake to Main St properly paved for walking and biking. Thank you
+            </li>
+
+            <li>
+              Walking path from Tuscany Hills Elementary to Canyon lake Little Pony Street gate
+            </li>
+
+            <li>
+              There should be a bike lane / path AND sidewalks along grand avenue for our Withrow and Lakeside students.
+            </li>
+
+            <li>
+              bike lane should come down Nichols, Collier Ave
+            </li>
+
+            <li>
+              dangerous corner for bike, needs bike lane
+            </li>
+
+            <li>
+              common route for cyclist, need bike lane and road improvements, bumps on shoulder hard on bikes
+            </li>
+
+            <li>
+              My son Vance Gerdes lives at 28066 Lindell Rd. , he walks to school everyday with no sidewalk. The area
+              has traffic &amp; has no space for pedestrians to walk, it also has no bike path. If the city put either
+              one along El Toror rd. it would be wonderful!
+            </li>
+
+            <li>
+              bad
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add protected bikeway (DDLM Event)
+            </li>
+
+            <li>
+              Add bike route (DDLM Event)
+            </li>
+
+            <li>
+              Add buffer to existing bike lane along Hwy 74. Make it a Class I or IV. (DDLM Event)
+            </li>
+
+            <li>
+              I like Grand Ave in Wildomar (DDLM Event)
+            </li>
+
+            <li>
+              Need a bike path/trail on Lakeshore Dr. (DDLM Event)
+            </li>
+
+            <li>
+              Consider putting a bike trail/path around the lake (DDLM Event)
+            </li>
+
+            <li>
+              Missing sidewalks (DDLM Event)
+            </li>
+
+            <li>
+              Missing sidewalks (DDLM Event)
+            </li>
+
+            <li>
+              Missing sidewalk (DDLM Event)
+            </li>
+
+            <li>
+              Missing sidewalk (DDLM Event)
+            </li>
+
+            <li>
+              Missing sidewalk (DDLM Event)
+            </li>
+
+            <li>
+              Missing sidewalk (DDLM Event)
+            </li>
+
+            <li>
+              Missing sidewalk (DDLM Event)
+            </li>
+
+            <li>
+              Unimproved Intersection (DDLM Event)
+            </li>
+
+            <li>
+              Faded crosswalk (DDML Event)
+            </li>
+
+            <li>
+              Lack of shade (DDLM Event)
+            </li>
+
+            <li>
+              Railroad Canyon interchange roundabout project must have raised crosswalk (DDLM Event)
+            </li>
+
+            <li>
+              People who run red lights too fast on 74 (DDLM Event)
+            </li>
+
+            <li>
+              Add more lights on 74 (DDLM Event)
+            </li>
+
+            <li>
+              Motorists drive too fast on Nichols Rd (DDLM Event)
+            </li>
+
+            <li>
+              Grand Ave needs more light (DDLM Event)
+            </li>
+
+            <li>
+              Connect sidewalks in Country Club Heights (WF Event)
+            </li>
+
+            <li>
+              Bikeway on Corydon/Palomar is great
+            </li>
+
+            <li>
+              Need sidewalks around Grand/Gregory (WF Event)
+            </li>
+
+            <li>
+              Need sidewalk along El Toro Rd near Temescal Canyon High School (WF Event)
+            </li>
+
+            <li>
+              Lakeshore Dr needs sidewalks (WF Event)
+            </li>
+
+            <li>
+              Roads need to be safer for students around the school (WF Event)
+            </li>
+
+            <li>
+              More lighting is needed on Mission Trail (WF Event)
+            </li>
+
+            <li>
+              Pathway is missing on Mission Trail
+            </li>
+
+            <li>
+              Will Terra Cotta Rd get paved by Nichols Rd? (WF Event)
+            </li>
+
+            <li>
+              Add flood control to ramp ends by Nichols Rd (WF Event)
+            </li>
+
+            <li>
+              Add walking/biking improvements to Railroad Canyon (WF Event)
+            </li>
+
+            <li>
+              Make Railroad Canyon safer (WF Event)
+            </li>
+
+            <li>
+              Improve Lakeshore for bikes (WF Event)
+            </li>
+
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="result map-summary">
+      <div class="title">
+        <h1>Outreach Activity</h1>
+      </div>
+      <!-- TODO REFACTOR TO COMPONENTS IN SEPERATE JS FILE -->
+      <div class="result esri-map">
+        <div id="recos"></div>
+        <script>
+          var recosMap = L.map('recos').setView([33.6933447075328, -117.38131905537], 12);
+          L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            id: 'mapbox.streets'
+          }).addTo(recosMap);
+          var recosGeo = [{ "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.39668369293211, 33.69253088092924] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.3896026611328, 33.70324222365097] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.38539695739746, 33.71612976897047] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.36874580383301, 33.70531292919567] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.35552787780762, 33.7077048889793] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.37621307373047, 33.690459867299325] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.36097812652588, 33.68206818063879] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.35466957092284, 33.67928267376934] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.35321044921875, 33.67853271419265] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.35115051269531, 33.677282767028245] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.31046676635741, 33.661639034684214] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.30025291442871, 33.65992448007282] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.29235649108887, 33.64359878031191] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.29046821594238, 33.67378281830218] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.29784965515137, 33.62539393958005] } }, { "type": "Feature", "properties": { "group": "bike", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.30883598327637, 33.626591039442545] } }, { "type": "Feature", "properties": { "group": "bike", "type": "comment", "comment": "Lots of long distance cyclists use Lake. Be great to improve bikeways." }, "geometry": { "type": "Point", "coordinates": [-117.3914051055908, 33.72248358076708] } }, { "type": "Feature", "properties": { "group": "bike", "type": "comment", "comment": "great to see a bike lane on Temescal as well to copmlete a bike loop." }, "geometry": { "type": "Point", "coordinates": [-117.37707138061522, 33.69810094579916] } }, { "type": "Feature", "properties": { "group": "bike", "type": "comment", "comment": "improve visibility and safety on riverwalk." }, "geometry": { "type": "Point", "coordinates": [-117.32904911041258, 33.670407732836054] } }, { "type": "Feature", "properties": { "group": "bike", "type": "comment", "comment": "improve safety on butterfield." }, "geometry": { "type": "Point", "coordinates": [-117.35286712646484, 33.643920322889755] } }, { "type": "Feature", "properties": { "group": "ped", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.37483978271484, 33.68953146567816] } }, { "type": "Feature", "properties": { "group": "ped", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.37655639648438, 33.68581775890573] } }, { "type": "Feature", "properties": { "group": "ped", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.36754417419434, 33.683353768754664] } }, { "type": "Feature", "properties": { "group": "ped", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.36042022705078, 33.68799601021913] } }, { "type": "Feature", "properties": { "group": "ped", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.35986232757567, 33.68149680197185] } }, { "type": "Feature", "properties": { "group": "ped", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.35295295715332, 33.67846128912991] } }, { "type": "Feature", "properties": { "group": "ped", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.39252090454102, 33.724446742118076] } }, { "type": "Feature", "properties": { "group": "ped", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.29072570800781, 33.67196136005845] } }, { "type": "Feature", "properties": { "group": "ped", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.27364540100096, 33.663639305213515] } }, { "type": "Feature", "properties": { "group": "ped", "type": "agree" }, "geometry": { "type": "Point", "coordinates": [-117.38033294677733, 33.66106752027675] } }, { "type": "Feature", "properties": { "group": "ped", "type": "comment", "comment": "add crosswalks & flashing beacon near middle school" }, "geometry": { "type": "Point", "coordinates": [-117.3915445804596, 33.693735973648394] } }, { "type": "Feature", "properties": { "group": "ped", "type": "comment", "comment": "southwest side of city needs ped lights" }, "geometry": { "type": "Point", "coordinates": [-117.38093376159667, 33.66128183862443] } }, { "type": "Feature", "properties": { "group": "ped", "type": "comment", "comment": "add light on grand and macy. too dark." }, "geometry": { "type": "Point", "coordinates": [-117.379732131958, 33.66063888197982] } }, { "type": "Feature", "properties": { "group": "ped", "type": "comment", "comment": "YES! to sidewalk all the way down Grand Ave." }, "geometry": { "type": "Point", "coordinates": [-117.37702846527098, 33.6590850502525] } }, { "type": "Feature", "properties": { "group": "ped", "type": "comment", "comment": "adding a pathway and park along the west side of Lakeshore is a GREAT idea!" }, "geometry": { "type": "Point", "coordinates": [-117.3522126674652, 33.67795238384036] } }, { "type": "Feature", "properties": { "group": "ped", "type": "comment", "comment": "Improve congestion & road surface on Diamond Dr / Railroad Canyon." }, "geometry": { "type": "Point", "coordinates": [-117.30031728744505, 33.65992448007282] } }, { "type": "Feature", "properties": { "group": "ped", "type": "comment", "comment": "this flooded when it rained! improve grand for winter!" }, "geometry": { "type": "Point", "coordinates": [-117.32213973999023, 33.62498299101598] } }, { "type": "Feature", "properties": { "group": "ped", "type": "comment", "comment": "more light on Riverwalk." }, "geometry": { "type": "Point", "coordinates": [-117.32879161834717, 33.67088989601194] } }, { "type": "Feature", "properties": { "group": "ped", "type": "comment", "comment": "add lights on audrey and patrick." }, "geometry": { "type": "MultiPoint", "coordinates": [[-117.3777687549591, 33.686487309242885], [-117.39724695682524, 33.68409922250183]] } }, { "type": "Feature", "properties": { "group": "ped", "type": "comment", "comment": "missing a comment" }, "geometry": { "type": "Point", "coordinates": [-117.39587903022765, 33.6841393964723] } }, { "type": "Feature", "properties": { "group": "ped", "type": "comment", "comment": "improve access to walker canyon" }, "geometry": { "type": "Point", "coordinates": [-117.39380836486816, 33.73181711987024] } }]
+          geojsonLayer = L.geoJson(recosGeo, {
+            style: function (feature) {
+              if (feature.properties.type === 'agree') {
+                return { color: "#31e0a3" };
+              } else if (feature.properties.type === 'comment') {
+                return { color: "#e05131" };
+              } else {
+                return { color: "#9b9fa5" };
+              }
+            },
+            pointToLayer: function (feature, latlng) {
+              return new L.CircleMarker(latlng, { radius: 5, fillOpacity: 0.75 });
+            },
+            onEachFeature: function (feature, layer) {
+              if (feature.properties.group === null) {
+                var theMode = 'n/a'
+              } else {
+                var theMode = feature.properties.group;
+              }
+              if (!feature.properties.comment) {
+                var theComment = 'n/a'
+              } else {
+                var theComment = feature.properties.comment;
+              }
+              layer.bindPopup(
+                '<p>' + '<b>Comment: </b>' + theComment + '</p>' +
+                // '<p>'+'<b>Status: </b>' + theStatus +'</p>'+
+                '<p>' + '<b>Mode: </b>' + theMode + '</p>'
+              );
+            }
+          });
+          recosMap.addLayer(geojsonLayer);</script>
+      </div>
+      <!-- TODO REFACTOR TO COMPONENTS IN SEPERATE JS FILE -->
+
+      <div class="result map-comments">
+        <div class="title">
+          <h4>Summary of Outreach Activity Results</h4>
+        </div>
+        <div class="details">
+          <!-- MANUAL -->
+          <h5>
+            A total of 49 comments were collected during the outreach activity.
+          </h5>
+          <h4>Agreement</h4>
+          <!-- MANUAL -->
+          <p>
+            A total of
+            28 comments agreed with recommendations presented during the outreach activity.
+          </p>
+          <h4>Agreement for Bike Recommendations</h4>
+          <ol>
+
+            <li>
+              Lakeshore Dr (7)
+            </li>
+            <li>
+              Diamond Dr / Railroad Cyn Rd. (2)
+            </li>
+
+            <li>
+              Nichols Rd (2)
+            </li>
+
+            <li>
+              Lake St (2)
+            </li>
+
+            <li>
+              Multi-Use Path Between Stoneman Street and Corydon St (1)
+            </li>
+
+            <li>
+              Corydon St (1)
+            </li>
+
+            <li>
+              Summerhill Dr (1)
+            </li>
+
+            <li>
+              Mission Trail (1)
+            </li>
+
+            <li>
+              Lincoln St (1)
+            </li>
+
+          </ol>
+          <h4>Agreement for Pedestrian Recommendations</h4>
+          <ol>
+
+            <li>
+              Lakeshore Dr (3)
+            </li>
+
+            <li>
+              Riverside Dr (2)
+            </li>
+
+            <li>
+              Grand Ave (1)
+            </li>
+
+            <li>
+              Railroad Canyon Rd (1)
+            </li>
+
+            <li>
+              Summerhill Dr (1)
+            </li>
+
+            <li>
+              Lake St (1)
+            </li>
+
+            <li>
+              Machado St (1)
+            </li>
+
+          </ol>
+          <h4>Suggestions</h4>
+          <ol>
+            <li>These recommendations are GREAT! Looking forward to seeing more bikeways and sidewalks in Lake Elsinore.
+            </li>
+            <li>These bicycle and pedestrian recommendations are GREAT! When will they get built?</li>
+            <li>Lots of long distance cyclists use Lake Street (via Temescal Canyon Road). It would be great to improve
+              bicycle infrastructure along this corridor.</li>
+
+            <li>It would be great to see a bike lane on Terra Cotta Road (as well as it being paved) to complete a bike
+              loop along Lake Street Nichols Road, Terra Cotta Road and Lakeshore Drive in northwest Lake Elsinore.</li>
+
+            <li>Would like to see improvements on visibility and safety on the Riverwalk.</li>
+
+            <li>Improve safety along Butterfield Overland Trail, including along Grand Avenue segment.</li>
+
+            <li>Add crosswalks and a flashing beacon near Terra Cotta Middle School.</li>
+
+            <li>Southwest side of the city (especially along Grand Avenue) needs pedestrian lights.</li>
+
+            <li>Add lighting at the Grand Avenue and Machado Street intersection, it is currently too dark.</li>
+
+            <li>YES – to a sidewalk all the way down Grand Avenue.</li>
+
+            <li>Adding a pathway and park along the west side of Lakeshore Drive is a GREAT idea!</li>
+            <li>Improve congestion and the road surface along Diamond Drive and Railroad Canyon Road.</li>
+
+            <li>Grand Avenue flooded when it rained this past winter, please improve Grand Avenue so it will not flood
+              in the future.</li>
+
+            <li>Please add more lighting on the Riverwalk.</li>
+
+            <li>Add lighting on Audrey Drive and Patrick Court.</li>
+
+            <li>Improve bicycle and pedestrian access to Walker Canyon Trail.</li>
+
+            <li>Coordinate with County to extend McVicker Stairs Trail.</li>
+
+            <li>Support safer connections to connect Tuscany Hills students to schools in Canyon Hills.</li>
+
+            <li>Improve driver awareness of bicyclists.</li>
+
+            <li>Need traffic calming/improved visibility on Audelo Street near Withrow Elementary School.</li>
+
+            <li>Support for a dedicated bicycle/pedestrian path surrounding the lake in Lake Elsinore.</li>
+
+
+          </ol>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+
+</html>
